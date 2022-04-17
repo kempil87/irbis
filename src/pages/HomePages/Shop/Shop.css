@@ -1,0 +1,94 @@
+.shop-wrap{
+    margin: 40px 0;
+}
+
+
+.product-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 90%;
+    height: 340px;
+    transition: linear .2s;
+}
+
+.product-card:hover {
+    box-shadow: 0  13px 15px rgba(0, 0, 0, 0.3);
+}
+.home-title-shop{
+    font-size: 24px;
+    font-weight: bold;
+    color: #173460;
+}
+.all-shop {
+    color: #173460;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+}
+
+.all-shop:hover {
+    color: #173460;
+
+}
+
+.all-shop:hover > span { /*стиль для всех span - прямых наследников div */
+    transform: translateX(8px);
+    transition: ease .2s;
+}
+
+.all-shop span {
+    margin-left: 5px;
+    transition: ease .2s;
+}
+.product-img {
+    width: 189px;
+    height: 189px;
+    transition: linear .2s;
+    /*transform: scale(1.14);*/
+}
+
+.product-img:hover {
+    transition: linear .2s;
+    transform: scale(1.14);
+}
+
+.product-name {
+    text-align: center;
+    width: 80%;
+    margin-top: 14px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.product-price {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.product-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 12px;
+    background-color: #173460;
+    color: white;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: linear .2s;
+    border: 1px solid #173460;
+}
+
+.product-btn:hover {
+    background-color:transparent;
+    border: 1px solid #173460;
+    color: #173460;
+    transition: linear .2s;
+}
+.react-multiple-carousel__arrow{
+    border-radius: 0!important;
+    background-color: #173460;
+}

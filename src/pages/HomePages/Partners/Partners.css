@@ -1,0 +1,37 @@
+.partners-wrap{
+    background: #1c252b;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 24px 0;
+}
+.page-tittle-partners{
+    color: #6e6c6c;
+    font-size: 24px;
+}
+.sponsor-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+    height: 200px;
+    text-decoration: none;
+}
+.sponsor-item:last-child{
+    margin-right: 0;
+}
+.sponsor-label{
+    color: #868686;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.sponsors-banner-oxdog{
+    transform: scale(.43);
+}
+.sponsors-banner-cheer{
+    transform: scale(.14);
+}

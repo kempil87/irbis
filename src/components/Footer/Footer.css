@@ -1,0 +1,8 @@
+.footer{
+    width: 100%;
+    padding: 20px 0;
+    background-color: rgb(24,24,24);
+    border-top: 5px solid #173460;
+    text-align: center;
+}
+h3{color: white}

@@ -1,0 +1,289 @@
+.header {
+    width: 100%;
+    height: 130px;
+    background-image: url("http://sun9-79.userapi.com/c851536/v851536877/e65ff/puZ839ZX_Xc.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 1px solid #173460;
+
+}
+
+.header-wrap {
+    opacity: .87;
+    background: linear-gradient(45deg, #173460, #C5DDE8);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+
+}
+
+.header-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.irbis-logo {
+    width: 111px;
+    height: 128px;
+    margin-left: 70px;
+    transform: scale(.9);
+}
+
+.hashtag {
+    margin-left: 8px;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+}
+
+.burger-btn {
+    background: #000;
+    width: 25px;
+    height: 2px;
+    right: 0;
+
+}
+
+.burger-btn:before {
+    content: "";
+    background: #000;
+    width: 25px;
+    height: 2px;
+    position: absolute;
+    top: 3px;
+    right: 0;
+}
+
+.header-navbar {
+    /*width: 25px;*/
+    /*height:22px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin-right: 70px;
+}
+
+.header-club-info {
+    margin-left: 12px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header-club-name {
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #1d2433;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.header-club-city {
+    color: rgba(0, 0, 0, .4);
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.header-club-city span{
+    font-size: 20px;
+}
+
+.header-content {
+    margin-top: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-link {
+    font-size: 15px;
+    text-decoration: none;
+    margin-left: 14px;
+    color: #fff;
+    text-transform: uppercase;
+
+    width: 100%;
+    transition: linear .2s;
+}
+
+.header-alink {
+    font-size: 15px;
+    text-decoration: none;
+    margin-left: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+    border-bottom: 2px solid #fff;
+    width: 100%;
+    transition: linear .2s;
+}
+.header-alink:hover {
+
+    color: #173460;
+
+}
+
+.header-link:hover {
+    color: #173460;
+    transition: linear .2s;
+
+}
+
+.header-link:nth-child(5) {
+    margin: 0;
+}
+
+.dropdown {
+}
+
+.dropdown-toggle {
+    background: none !important;
+    font-family: 'Montserrat', sans-serif !important;
+    border: none !important;
+    padding: 0 !important;
+    transition: linear .2s !important;
+    outline: none;
+    /*border-color:transparent!important;*/
+    margin-bottom: 3px;
+    box-shadow: none !important;
+}
+
+.dropdown-toggle:hover {
+    color: #173460 !important;
+    transition: linear .2s !important;
+}
+
+.dropdown-menu {
+    border-radius: 0 !important;
+    background-color: #173460 !important;
+}
+
+.dropdown-menu p {
+    margin: 6px;
+}
+
+.header-link-drop {
+    margin-top: 6px;
+    font-size: 15px;
+    text-decoration: none;
+    margin-left: 14px;
+    color: #fff;
+    text-transform: uppercase;
+
+    width: 100%;
+    transition: linear .2s !important;
+}
+
+.header-link-drop:hover {
+    color: #fff;
+    transition: linear .2s !important;
+    border-bottom: 1px solid #fff;
+}
+
+.header-icon {
+    align-items: center;
+    text-align: center;
+    margin-left: 90px;
+    text-decoration: none;
+    color: #173460;
+    margin-top: 5px;
+
+}
+
+.header-icon:hover {
+    border-bottom: #173460;
+}
+
+.btn-header {
+    margin-right: 40px !important;
+    background-color: #173460 !important;
+    color: white !important;
+    border: none !important;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.btn-header:hover {
+    color: #173460;
+    background-color: white;
+}
+
+.modal-header {
+
+}
+
+.modal {
+    justify-content: center;
+    display: flex !important;
+    align-items: center;
+
+}
+
+.modal-title {
+}
+
+.modal-content {
+    width: 420px !important;
+    border-radius: 12px !important;
+}
+
+.modal-link-mail {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.mail-logo {
+    width: 80px;
+    height: 38px;
+}
+
+.mail-logo-yandex {
+    margin-top: 5px;
+    width: 120px;
+    height: 80px;
+}
+
+.mail-logo-gmail {
+    width: 90px;
+    height: 54px;
+}
+
+.mail-logo-other {
+    font-size: 18px;
+    text-decoration: none;
+    color: #173460;
+}
+
+.modal-footer {
+    padding-left: 0 !important;
+    justify-content: space-around !important;
+
+}
+
+.footer-mail-link {
+    text-decoration: none;
+}
+
+.footer-mail-link:hover {
+    text-decoration: underline;
+}
+
+.mail-field {
+    width: 60%;
+    height: 45px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 0.25rem;
+}
+
+.mail-field-btn {
+    height: 45px;
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+
