@@ -82,6 +82,18 @@ text-transform: uppercase;
     margin: auto;
 
 }
+.player-position{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+}
 .player-number{
     position: absolute;
     top: 150px;

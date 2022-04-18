@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link, useParams} from "react-router-dom";
-import {MediaData} from "../../data/MediaData";
+import {MediaData} from "../../data/mediaData/MediaData";
 import Stories from 'react-insta-stories';
 
 const MediaPage = () => {

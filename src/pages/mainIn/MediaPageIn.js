@@ -1,6 +1,6 @@
 import React from 'react';
 import {useParams} from "react-router-dom";
-import {MediaData} from "../../data/MediaData";
+import {MediaData} from "../../data/mediaData/MediaData";
 
 const MediaPageIn = () => {
     const {id} = useParams()

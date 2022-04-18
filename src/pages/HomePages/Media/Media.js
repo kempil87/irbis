@@ -1,8 +1,8 @@
 import React from "react";
 import "./Media.css"
 import {Link} from "react-router-dom";
-import {MediaData} from "../../../data/MediaData";
-import {MediaDataHome} from "../../../data/MediaDataHome";
+import {MediaData} from "../../../data/mediaData/MediaData";
+import {MediaDataHome} from "../../../data/mediaData/MediaDataHome";
 
 export const Media = () => {
 

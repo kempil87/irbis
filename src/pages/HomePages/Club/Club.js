@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import "./Club.css"
 import {Col, Nav, Row, Tab, Tabs} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import {SnipersData} from "../../../data/SnipersData";
+import {SnipersData} from "../../../data/allPlayers/SnipersData";
 
 export const Club = () => {
 
@@ -14,7 +14,7 @@ export const Club = () => {
             <div className="club-wrap ">
                 <div className="container ">
                     <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-                        <Row>
+                        <Row className="d-flex flex-column">
                             <Col>
                                 <Nav variant="pills" className="flex-column">
                                     <div className="d-flex justify-content-between">
@@ -41,9 +41,12 @@ export const Club = () => {
                             <Col>
                                 <Tab.Content>
                                     <Tab.Pane eventKey="first">
-                                        <div className="d-flex justify-content-between">
+                                        <div className="d-flex flex-wrap">
                                             {SnipersData.map((i,index) => (
-                                                <Link to={`/club${i.id}`} className="d-flex  mt-3 " key={i.id}>
+                                                <Link to={`/club${i.id}`}
+                                                      className="d-flex  mt-3 col-3 justify-content-center"
+                                                      key={i.id}
+                                                >
                                                     <div className=" top-info-player">
                                                         <img className="player-img" src={i.image} alt="//"/>
                                                         <img className="player-img-main" src={i.mainImage} alt="//"/>

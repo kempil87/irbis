@@ -3,3 +3,16 @@
     background-color: rgb(23, 52, 96);
     height: 100%;
 }
+.tabs-club-link{
+    font-size: 17px;
+    margin-top: 16px;
+    margin-left: 0;
+}
+.top-info-allPlayer{
+    margin-top: 32px;
+    position: relative;
+    width: 276px;
+    height: 424px;
+    cursor: pointer;
+    transition: ease .3s;
+}
