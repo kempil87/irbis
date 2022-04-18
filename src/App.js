@@ -13,7 +13,8 @@ import {Menu} from "./components/Menu/Menu";
 import React, {useState} from "react";
 import ClubPage from "./pages/main/ClubPage";
 import MediaPage from "./pages/main/MediaPage";
-import PlayerIn from "./pages/Players/PlayerIn";
+import PlayerIn from "./pages/mainIn/PlayerIn";
+import MediaPageIn from "./pages/mainIn/MediaPageIn";
 
 function App() {
 
@@ -32,7 +33,8 @@ function App() {
                     <Route path="/club:id" element={<PlayerIn/>}/>
                     <Route path="/club" element={<ClubPage/>}/>
                     <Route path="/news" element={<News/>}/>
-                    <Route path="/media:id" element={<MediaPage/>}/>
+                    <Route path="/media:id" element={<MediaPageIn/>}/>
+                    <Route path="/media" element={<MediaPage/>}/>
                     <Route path="/shop" element={<Shop/>}/>
                     <Route path="/partners" element={<Partners/>}/>
                 </Routes>

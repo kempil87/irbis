@@ -1,4 +1,4 @@
-export  const MediaData = [
+export  const MediaDataHome = [
     {
         id: 5,
         image: "https://sun9-55.userapi.com/impg/hEKzvXRSWLAmnnTsDBsTykXn9o18w8fHEY4oNQ/quu5p11DjG4.jpg?size=1280x853&quality=95&sign=0675072c2f6cc4af96285ff6fb3dd073&type=album",
@@ -39,29 +39,6 @@ export  const MediaData = [
     },
     {
         id: 6,
-        image: "https://sun9-26.userapi.com/impf/hp5ZUhpk_FUALkW9ZgOzIFBk4aVPywIMVrTTsw/Z4cnGlIsdS8.jpg?size=400x267&quality=95&sign=74aad7105fb9e139777978de525d28a8&type=album",
-        all: 59,
-        name: "Совместная тренировка с Ирбис U16",
-        date: "5.ноябрь.2021"
-    },
-    {
-        id: 7,
-        image: "https://sun9-80.userapi.com/impf/aIgKH_6FhNfQ2Snp65KBP-XAnB9NI3jlaK00Wg/k_mZdayc18E.jpg?size=400x267&quality=95&sign=6022d479dece943e5a69d89c08c87726&type=album",
-
-        all: 135,
-        name: "Ирбис VS Кольчуга",
-        date: "18.сентябрь.2021"
-    },
-    {
-        id: 8,
-        image: "https://sun9-27.userapi.com/impf/sMEuM38cVZwTRDzeZdUYpYu1KMaDdKE89JFdMg/-mxCskZtZfI.jpg?size=400x267&quality=95&sign=2f41ecf539ae1823df318022a5c2a454&type=album",
-
-        all: 124,
-        name: "Ирбис VS Олимп НН",
-        date: "18.декабрь.2021"
-    },
-    {
-        id: 9,
         image: "https://sun9-26.userapi.com/impf/hp5ZUhpk_FUALkW9ZgOzIFBk4aVPywIMVrTTsw/Z4cnGlIsdS8.jpg?size=400x267&quality=95&sign=74aad7105fb9e139777978de525d28a8&type=album",
         all: 59,
         name: "Совместная тренировка с Ирбис U16",

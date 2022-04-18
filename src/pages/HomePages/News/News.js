@@ -18,7 +18,7 @@ export const News = () => {
                     </span>
                 </Link>
             </div>
-            <div className="mt-3 ">
+            <div className="mt-3 container">
                 <div className="carousel-news">
                     <Carousel>
                         <Carousel.Item>

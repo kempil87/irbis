@@ -10,6 +10,15 @@
 .media-wrap{
 
 }
+.media-wrapper{
+    background-color: #173460;
+    width: 100%;
+    display: flex;
+
+    flex-direction: column;
+    padding: 24px 0;
+    color: white;
+}
 
 .page-tittle-media{
     color: #6e6c6c;

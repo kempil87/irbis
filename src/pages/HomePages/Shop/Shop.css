@@ -1,5 +1,5 @@
 .shop-wrap{
-    margin: 40px 0;
+    padding: 40px ;
 }
 
 
@@ -11,6 +11,9 @@
     width: 90%;
     height: 340px;
     transition: linear .2s;
+}
+.react-multi-carousel-item{
+
 }
 
 .product-card:hover {
@@ -26,7 +29,6 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-
 }
 
 .all-shop:hover {

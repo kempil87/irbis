@@ -27,7 +27,7 @@ export const Header = ({showMenu}) => {
                     <div className="header-navbar">
                         <div className="header-club-info d-flex align-items-center justify-content-between">
                             <div className="header-club-name">Флорбольный клуб «Ирбис»</div>
-                            <div className="header-club-city align-items-center">
+                            <div onClick={handleShow} className="header-club-city align-items-center ">
                                 Казань
                                 <span className="material-icons-outlined">
                                         location_on
@@ -48,12 +48,12 @@ export const Header = ({showMenu}) => {
                                         <Link  to="/media" className="header-link-drop">Фото</Link>
                                     </p>
                                     <p>
-                                        <Link  to="/media" className="header-link-drop">Видео</Link>
+                                        <a href="/media#video" className="header-link-drop">Видео</a>
                                     </p>
                                 </Dropdown.Menu>
                             </Dropdown>
-                            {/*<NavLink to="/shop" className={({isActive}) => isActive ? "header-alink" : "header-link"}>Магазин</NavLink>*/}
-                            <a href="#a" className={"header-link"}>Магазин</a>
+                            <NavLink to="/shop" className={({isActive}) => isActive ? "header-alink" : "header-link"}>Магазин</NavLink>
+                            <a href="#a" className={"header-link"}>|</a>
                             <NavLink to="/partners" className={({isActive}) => isActive ? "header-alink" : "header-link"}>Партнерство</NavLink>
                             {/*<div to="/account" className="header-icon">*/}
                             {/*    <button onClick={handleShow} id="myBtn" className="btn-header">Войти</button>*/}
@@ -68,45 +68,57 @@ export const Header = ({showMenu}) => {
                     {/*<div className="btn-header" onClick={setShow}>Войти</div>*/}
                 </div>
             </div>
+            {/*<Modal show={show} onHide={handleClose} animation={false}>*/}
+            {/*    <Modal.Header closeButton>*/}
+            {/*        <Modal.Title>Войти в аккаунт</Modal.Title>*/}
+            {/*    </Modal.Header>*/}
+            {/*    <Modal.Body>*/}
+            {/*        <div className="modal-link-mail">*/}
+            {/*            <Link to="/">*/}
+            {/*                <img className="mail-logo"*/}
+            {/*                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Mail.Ru_Logo_2018.svg/1200px-Mail.Ru_Logo_2018.svg.png"*/}
+            {/*                     alt=""/>*/}
+            {/*            </Link>*/}
+            {/*            <Link to="/">*/}
+            {/*                <img className="mail-logo-yandex"*/}
+            {/*                     src="https://images11.popmeh.ru/upload/custom/e0c/e0c8d2db9bfe3c3afc632495afb6ac08.jpg"*/}
+            {/*                     alt=""/>*/}
+            {/*            </Link>*/}
+            {/*            <Link to="/">*/}
+            {/*                <img className="mail-logo-gmail"*/}
+            {/*                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFaQFkA43hiHZkHNrl9Wp-lzbv3NZwICreL7k93cc3QY_KVgHhiJ2eRTdssrDWOzE3adE&usqp=CAU"*/}
+            {/*                     alt=""/>*/}
+            {/*            </Link>*/}
+            {/*            <Link className="mail-logo-other" to="/">Другой</Link>*/}
+            {/*        </div>*/}
+            {/*        <form className="d-flex align-items-center">*/}
+            {/*            <input className="mail-field" type="text" placeholder="Имя Аккаунта"/>*/}
+            {/*            <Button className="mail-field-btn" variant={"light"}>@mail.ru</Button>*/}
+            {/*        </form>*/}
+            {/*        <form className="mt-3 d-flex justify-content-between align-items-center">*/}
+            {/*            <Button className="d-flex align-items-center">Ввести пароль</Button>*/}
+            {/*            <div className="d-flex align-items-center">*/}
+            {/*                <input type="checkbox"/>*/}
+            {/*                <h6 style={{marginBottom: 0, marginLeft: 8}}>Запомнить</h6>*/}
+            {/*            </div>*/}
+            {/*        </form>*/}
+            {/*    </Modal.Body>*/}
+            {/*    <Modal.Footer>*/}
+            {/*        <Link className="footer-mail-link" to="">Восстановить доступ</Link>*/}
+            {/*        <Link className="footer-mail-link" to="">Создать аккаунт</Link>*/}
+            {/*    </Modal.Footer>*/}
+            {/*</Modal>*/}
             <Modal show={show} onHide={handleClose} animation={false}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Войти в аккаунт</Modal.Title>
+                    <Modal.Title>Флорбольный клуб "Ирбис"</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <div className="modal-link-mail">
-                        <Link to="/">
-                            <img className="mail-logo"
-                                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Mail.Ru_Logo_2018.svg/1200px-Mail.Ru_Logo_2018.svg.png"
-                                 alt=""/>
-                        </Link>
-                        <Link to="/">
-                            <img className="mail-logo-yandex"
-                                 src="https://images11.popmeh.ru/upload/custom/e0c/e0c8d2db9bfe3c3afc632495afb6ac08.jpg"
-                                 alt=""/>
-                        </Link>
-                        <Link to="/">
-                            <img className="mail-logo-gmail"
-                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFaQFkA43hiHZkHNrl9Wp-lzbv3NZwICreL7k93cc3QY_KVgHhiJ2eRTdssrDWOzE3adE&usqp=CAU"
-                                 alt=""/>
-                        </Link>
-                        <Link className="mail-logo-other" to="/">Другой</Link>
+                    <h5>ул. Краснококшайская , Казань</h5>
+                    <div className="d-flex justify-content-center align-items-center">
+                        <iframe  src="https://yandex.ru/map-widget/v1/-/CCUFQRXh3A" width="460" height="300" frameBorder="1"
+                                 allowFullScreen="true" />
                     </div>
-                    <form className="d-flex align-items-center">
-                        <input className="mail-field" type="text" placeholder="Имя Аккаунта"/>
-                        <Button className="mail-field-btn" variant={"light"}>@mail.ru</Button>
-                    </form>
-                    <form className="mt-3 d-flex justify-content-between align-items-center">
-                        <Button className="d-flex align-items-center">Ввести пароль</Button>
-                        <div className="d-flex align-items-center">
-                            <input type="checkbox"/>
-                            <h6 style={{marginBottom: 0, marginLeft: 8}}>Запомнить</h6>
-                        </div>
-                    </form>
                 </Modal.Body>
-                <Modal.Footer>
-                    <Link className="footer-mail-link" to="">Восстановить доступ</Link>
-                    <Link className="footer-mail-link" to="">Создать аккаунт</Link>
-                </Modal.Footer>
             </Modal>
 
         </>

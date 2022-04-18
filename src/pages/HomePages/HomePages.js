@@ -12,8 +12,7 @@ export const HomePages = () => {
 
             <nav className="item-nav ">
 
-                    {/*<iframe src="https://yandex.ru/map-widget/v1/-/CCUFQRXh3A" width="560" height="400" frameBorder="1"*/}
-                    {/*        allowFullScreen="true" ></iframe>*/}
+
 
                 <News/>
                 <Championship/>

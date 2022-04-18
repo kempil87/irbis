@@ -71,7 +71,7 @@ export const Shop = () => {
         }
     };
     return (
-        <div id="a" className=" shop-wrap container">
+        <div id="a" className="shop-wrap container">
             <div className="d-flex justify-content-between">
                 <div className="home-title-shop mb-3 ">Магазин Атрибутики ФБК Ирбиса</div>
                 <Link to="/shop" className="all-shop">

@@ -2,6 +2,7 @@ import React from "react";
 import "./Media.css"
 import {Link} from "react-router-dom";
 import {MediaData} from "../../../data/MediaData";
+import {MediaDataHome} from "../../../data/MediaDataHome";
 
 export const Media = () => {
 
@@ -10,7 +11,7 @@ export const Media = () => {
         <div className="media">
             <div className="media-wrap"/>
             <div className="d-flex justify-content-between container">
-                <h3 className=" ">Медиа</h3>
+                <h3 >Медиа</h3>
                 <Link to="/media" className="all-players ">
                     Все Фото
                     <span className="material-icons-outlined">
@@ -22,7 +23,7 @@ export const Media = () => {
             </div>
             <div className="d-flex  ">
                 <div className=" container d-flex flex-wrap justify-content-between">
-                    {MediaData.map((card) => (
+                    {MediaDataHome.map((card) => (
 
                         <Link to={`/media${card.id}`} key={card.id} className="d-flex flex-column photo-card">
                             <img width="400" height='267' className="media-image" src={card.image} alt='фото'/>

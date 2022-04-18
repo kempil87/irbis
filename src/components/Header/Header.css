@@ -13,7 +13,7 @@
     background: linear-gradient(45deg, #173460, #C5DDE8);
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     height: 100%;
 
@@ -23,13 +23,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin-right: 25px;
 }
 
 .irbis-logo {
     width: 111px;
     height: 128px;
-    margin-left: 70px;
     transform: scale(.9);
 }
 
@@ -64,7 +63,7 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
-    margin-right: 70px;
+    margin-left: 25px;
 }
 
 .header-club-info {
@@ -81,6 +80,7 @@
 }
 
 .header-club-city {
+    cursor: pointer;
     color: rgba(0, 0, 0, .4);
     font-size: 16px;
     text-transform: uppercase;
@@ -146,8 +146,10 @@
     transition: linear .2s !important;
     outline: none;
     /*border-color:transparent!important;*/
-    margin-bottom: 3px;
     box-shadow: none !important;
+    font-size:15px!important; ;
+    margin-right: 6px;
+    margin-left: 8px;
 }
 
 .dropdown-toggle:hover {
@@ -225,8 +227,9 @@
 }
 
 .modal-content {
-    width: 420px !important;
+    /*width: 420px !important;*/
     border-radius: 12px !important;
+    padding: 0 25px 25px 25px;
 }
 
 .modal-link-mail {
