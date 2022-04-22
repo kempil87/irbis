@@ -29,6 +29,9 @@ const ClubPage = () => {
                                         <Nav.Item>
                                             <Nav.Link className="tabs-club-link" eventKey="third">Руководство Клуба</Nav.Link>
                                         </Nav.Item>
+                                        <Nav.Item>
+                                            <Nav.Link className="tabs-club-link" eventKey="fourth">О Клубе</Nav.Link>
+                                        </Nav.Item>
                                     </div>
                                 </div>
                             </Nav>
@@ -82,9 +85,9 @@ const ClubPage = () => {
                                             <Link to={`/club${i.id}`} className="d-flex col-3 justify-content-center" key={i.id}>
                                                 <div className=" top-info-allPlayer">
                                                     <img className="player-img" src={i.image} alt="//"/>
-                                                    <img className="player-img-main" src={i.mainImage} alt="//"/>
+                                                    {/*<img className="player-img-main" src={i.mainImage} alt="//"/>*/}
                                                     <div className="player-name mb-2">{i.name}</div>
-                                                    <div className="player-position">{i.position}</div>
+                                                    <div className="player-position col-10">{i.position}</div>
 
                                                 </div>
                                             </Link>
@@ -99,10 +102,15 @@ const ClubPage = () => {
                                                     <img className="player-img" src={i.image} alt="//"/>
                                                     <img className="player-img-main" src={i.mainImage} alt="//"/>
                                                     <div className="player-name mb-2">{i.name}</div>
-                                                    <div className="player-position">{i.position}</div>
+                                                    <div className="player-position col-6">{i.position}</div>
                                                 </div>
                                             </Link>
                                         ))}
+                                    </div>
+                                </Tab.Pane>
+                                <Tab.Pane eventKey="fourth">
+                                    <div className="d-flex mt-2">
+                                        <h3>Профессиональный флорбольный клуб «Ирбис»</h3>
                                     </div>
                                 </Tab.Pane>
                             </Tab.Content>

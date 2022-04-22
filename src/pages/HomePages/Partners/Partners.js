@@ -47,6 +47,15 @@ export const Partners = () => {
                 <div className="partners-des">Информационный партнер</div>
                 <div className="partners-des">Информационный партнер</div>
             </div>
+            <div  className="to-top" onClick={() => window.scrollTo(0, 0)}>
+                    <span className="material-icons-outlined">
+                     straight
+                    </span>
+                Наверх
+                <span className="material-icons-outlined">
+                 straight
+                </span>
+            </div>
         </div>
     )
 }

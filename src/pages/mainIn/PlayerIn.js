@@ -4,22 +4,23 @@ import {PlayersCardInfo} from "../../data/allPlayers/PlayersCardInfo";
 
 const PlayerIn = () => {
     const {id} = useParams()
-    const sniper = PlayersCardInfo.find(s => s.id === +id)
+    const playerIn = PlayersCardInfo.find(s => s.id === +id)
 
     return (
         <div className="d-flex justify-content-center align-items-center" style={{background:'#000'}}>
-            {sniper.id <99 ? (
+            {!playerIn.position   ? (
                 <div className=" top-info-player">
-                    <img className="player-img" src={sniper.image} alt="//"/>
-                    <img className="player-img-main" src={sniper.mainImage} alt="//"/>
-                    <div className="player-name mb-2">{sniper.name}</div>
-                    <div className="player-number">{sniper.number}</div>
+                    <img className="player-img" src={playerIn.image} alt="//"/>
+                    <img className="player-img-main" src={playerIn.mainImage} alt="//"/>
+                    <div className="player-name mb-2">{playerIn.name}</div>
+                    <div className="player-number">{playerIn.number}</div>
                 </div>
             ):(
                 <div className=" top-info-player">
-                    <img className="player-img" src={sniper.image} alt="//"/>
-                    <img className="player-img-main" src={sniper.mainImage} alt="//"/>
-                    <div className="player-name mb-2">{sniper.name}</div>
+                    <img className="player-img" src={playerIn.image} alt="//"/>
+                    <img className="player-img-main" src={playerIn.mainImage} alt="//"/>
+                    <div className="player-name mb-2">{playerIn.name}</div>
+                    <div className="player-position ">{playerIn.position}</div>
                 </div>
             )}
 

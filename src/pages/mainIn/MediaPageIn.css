@@ -1,0 +1,99 @@
+
+.backMedia {
+    justify-content: center;
+    color: #173460;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 9%;
+    font-size: 15px;
+}
+
+.backMedia:hover {
+    color: #173460;
+}
+
+.backMedia:hover > span { /*стиль для всех span - прямых наследников div */
+    transform: translateX(-8px);
+    transition: ease .2s;
+}
+
+.backMedia span {
+    margin-left: 5px;
+    transition: ease .2s;
+    font-size: 20px;
+}
+
+
+
+.mediaIn-all {
+    margin-left: 22px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.mediaIn-all span {
+    margin-right: 6px;
+}
+
+.mediaIn-date {
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 20px;
+    text-transform: uppercase;
+}
+
+.mediaIn-title {
+    margin-left: 22px;
+    font-weight: 600;
+    font-size: 34px;
+}
+
+.photograph {
+    font-size: 16px;
+    margin-left: 20px;
+    color: #173460;
+}
+
+.image-gallery-play-button {
+    display: none;
+
+}
+.image-gallery-fullscreen-button{
+    background: none!important;
+color: #173460!important;
+}
+.image-gallery-right-nav{
+    background: #173460!important;
+    right: 78px;
+    opacity: .84;
+}
+.image-gallery-left-nav{
+    background: #173460!important;
+    left: 78px;
+    opacity: .84;
+}
+.image-gallery-right-nav:hover{
+    background: none!important;
+    color: #173460!important;
+}
+.image-gallery-left-nav:hover{
+    background: none!important;
+    color: #173460!important;
+}
+.image-gallery-right-nav:hover >svg{
+    color: #173460!important;
+}
+.image-gallery-left-nav:hover >svg{
+    color: #173460!important;
+}
+.image-gallery-svg {
+    height: 80px !important;
+    width: 30px !important;
+
+}
+
+.image-gallery-thumbnail{
+    /*border-color: #173460!important;*/
+    border: none!important;
+}

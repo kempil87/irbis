@@ -67,6 +67,13 @@ export const PlayersCardInfo = [
         number: 23,
         name: "Каюков Денис"
     },
+    {
+        id: 96,
+        image: "https://sun1-57.userapi.com/impf/kiRu455-ACvJ4Ogp-0WuPlht-mbrlul-HRw1Qg/KeRNqf4FTtA.jpg?size=411x575&quality=95&sign=23f493eb15293fb3f6173c25a4df38cd&type=album",
+        mainImage: "https://sun1-84.userapi.com/impf/jRxniY_uToJJNzgf1hoZLlRjJ2OhQVTvf1e94w/MvSFDQsblfE.jpg?size=280x330&quality=95&sign=78696dea09861b0027d3464de20d5afe&type=album",
+        number:96,
+        name: "Ахметшин Нияз"
+    },
     //goalkep
     {
         id: 30,
@@ -143,13 +150,36 @@ export const PlayersCardInfo = [
         id:99,
         image:"https://sun9-58.userapi.com/impg/a4NerXNjwRMwTXWqtK92pC5t7rDQXNaGH9rCJw/RsVUSymCF3Y.jpg?size=721x1080&quality=96&sign=320d63e88dcdf911b82de39bb58b511d&type=album",
         mainImage:"https://sun9-58.userapi.com/impg/a4NerXNjwRMwTXWqtK92pC5t7rDQXNaGH9rCJw/RsVUSymCF3Y.jpg?size=721x1080&quality=96&sign=320d63e88dcdf911b82de39bb58b511d&type=album",
-        name:"Нигмедзянов Рамис Рафисович"
+        name:"Нигмедзянов Рамис Рафисович",
+        position:"Главный тренер"
     },
     {
         id:98,
         image:"https://sun9-58.userapi.com/impg/a4NerXNjwRMwTXWqtK92pC5t7rDQXNaGH9rCJw/RsVUSymCF3Y.jpg?size=721x1080&quality=96&sign=320d63e88dcdf911b82de39bb58b511d&type=album",
         mainImage:"https://sun9-58.userapi.com/impg/a4NerXNjwRMwTXWqtK92pC5t7rDQXNaGH9rCJw/RsVUSymCF3Y.jpg?size=721x1080&quality=96&sign=320d63e88dcdf911b82de39bb58b511d&type=album",
-        name:"Макаров Глеб Андреевич"
+        name:"Макаров Глеб Андреевич",
+        position:"Старший тренер,тренер по большинству"
     },
-
+    //management
+    {
+        id:100,
+        image:"https://sun9-58.userapi.com/impg/a4NerXNjwRMwTXWqtK92pC5t7rDQXNaGH9rCJw/RsVUSymCF3Y.jpg?size=721x1080&quality=96&sign=320d63e88dcdf911b82de39bb58b511d&type=album",
+        mainImage:"https://sun9-58.userapi.com/impg/a4NerXNjwRMwTXWqtK92pC5t7rDQXNaGH9rCJw/RsVUSymCF3Y.jpg?size=721x1080&quality=96&sign=320d63e88dcdf911b82de39bb58b511d&type=album",
+        name:"Габдрахманов Рафис Акрамович",
+        position:"Генеральный директор"
+    },
+    {
+        id:101,
+        image:"https://sun9-58.userapi.com/impg/a4NerXNjwRMwTXWqtK92pC5t7rDQXNaGH9rCJw/RsVUSymCF3Y.jpg?size=721x1080&quality=96&sign=320d63e88dcdf911b82de39bb58b511d&type=album",
+        mainImage:"https://sun9-58.userapi.com/impg/a4NerXNjwRMwTXWqtK92pC5t7rDQXNaGH9rCJw/RsVUSymCF3Y.jpg?size=721x1080&quality=96&sign=320d63e88dcdf911b82de39bb58b511d&type=album",
+        name:"Габдрахманов Булат Рафисович",
+        position:"Исполнительный директор"
+    },
+    {
+        id:102,
+        image:"https://sun9-58.userapi.com/impg/a4NerXNjwRMwTXWqtK92pC5t7rDQXNaGH9rCJw/RsVUSymCF3Y.jpg?size=721x1080&quality=96&sign=320d63e88dcdf911b82de39bb58b511d&type=album",
+        mainImage:"https://sun9-58.userapi.com/impg/a4NerXNjwRMwTXWqtK92pC5t7rDQXNaGH9rCJw/RsVUSymCF3Y.jpg?size=721x1080&quality=96&sign=320d63e88dcdf911b82de39bb58b511d&type=album",
+        name:"Макаров Глеб Андреевич",
+        position:"Старший администратор"
+    },
 ]

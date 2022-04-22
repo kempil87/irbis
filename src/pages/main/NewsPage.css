@@ -1,0 +1,81 @@
+
+.newsPage-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 93%;
+}
+
+.newsCard-wrap {
+text-decoration: none;
+    color: black;
+    cursor: pointer;
+    transition: linear .3s;
+
+}
+.newsCard-wrap:hover {
+    color: black;
+    transition: ease-in-out .3s;
+}
+
+.newsHome-tittle {
+    color: #173460;
+    font-size: 25px;
+}
+
+.newsPage-top {
+    position: relative;
+    width: 335px;
+    height: 310px;
+}
+.newsPage-top:hover img {
+    transform: translate(0,-5px);
+    transition: ease-in-out .2s;
+}
+.newsPage-top:hover .news-badge {
+    transform: translate(0,-5px);
+    transition: ease-in-out .2s;
+}
+.newsPage-top-grad{
+    /*background: linear-gradient(270deg, #173460, white);*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 600;
+    opacity: .77;
+}
+
+.news-image {
+    transition: ease-in-out .2s;
+/*border-top-right-radius: 12px;*/
+/*border-top-left-radius: 12px;*/
+
+}
+
+.news-badge {
+    transition: ease-in-out .2s;
+    position: absolute;
+    background: #173460;
+    color: white;
+    padding: 3px 7px;
+    top: 10px;
+    left: 25px;
+    font-size: 12px;
+    z-index: 601;
+}
+.newsPage-bottom{
+    border-bottom: 3px solid #173460 ;
+    width: 98%;
+
+}
+.news-date{
+    font-size: 12px;
+    font-weight: 600;
+    color: #1d2433;
+}
+.news-title{
+    color: #1d2433;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}

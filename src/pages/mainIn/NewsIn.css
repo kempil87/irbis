@@ -1,0 +1,111 @@
+.newsInPage-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.newsInCard-wrap {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    transition: linear .3s;
+
+}
+.newsInCard-wrap:hover {
+    color: black;
+    transition: ease-in-out .3s;
+}
+
+.newsInHome-tittle {
+    color: #173460;
+    font-size: 25px;
+}
+
+.newsInPage-top {
+}
+.newsInPage-top:hover img {
+
+}
+.newsInPage-top-grad{
+    /*background: linear-gradient(270deg, #173460, white);*/
+    width: 100%;
+    height: 100%;
+    z-index: 600;
+    opacity: .77;
+}
+.back-news{
+    width: 12%;
+    text-decoration: none;
+    color: #173460;
+}.back-news:hover{
+    opacity: .7;
+    color: #173460;
+}
+.newsIn-image {
+    transition: ease-in-out .3s;
+    /*border-top-right-radius: 12px;*/
+    /*border-top-left-radius: 12px;*/
+
+}
+
+.newsIn-badge {
+
+    background: #173460;
+    color: white;
+    padding: 3px 10px;
+    top: 10px;
+    left: 25px;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    z-index: 601;
+}
+.newsInPage-bottom{
+    width: 700px;
+    border-bottom: 3px solid #173460;
+    margin-bottom: 20px;
+}
+.newsIn-date{
+    margin-left: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1d2433;
+}
+.newsIn-title{
+    color: #1d2433;
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.newsIn-subtitle{
+    color: #1d2433;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+.show-close{
+    color: #837e7e;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.tags-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #173460;
+    padding: 4px 10px;
+    text-decoration: none;
+    color: #173460;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    font-size: 17px;
+    font-weight: 600;
+}
+.tags-link:hover{
+    background-color:#173460;
+    color: white;
+}

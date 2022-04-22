@@ -53,7 +53,7 @@ export const Header = ({showMenu}) => {
                                 </Dropdown.Menu>
                             </Dropdown>
                             <NavLink to="/shop" className={({isActive}) => isActive ? "header-alink" : "header-link"}>Магазин</NavLink>
-                            <a href="#a" className={"header-link"}>|</a>
+                            {/*<a href="#a" className={"header-link"}>|</a>*/}
                             <NavLink to="/partners" className={({isActive}) => isActive ? "header-alink" : "header-link"}>Партнерство</NavLink>
                             {/*<div to="/account" className="header-icon">*/}
                             {/*    <button onClick={handleShow} id="myBtn" className="btn-header">Войти</button>*/}

@@ -1,10 +1,14 @@
 import React from "react";
 import "./Championship.css"
 import {Table} from "react-bootstrap";
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
+import {championshipData} from "../../../data/championshipData/championshipData";
+import {MediaData} from "../../../data/mediaData/MediaData";
 
 
 export const Championship = () => {
+    const {id} =useParams()
+
     return (
         <div className="champ-wrap">
             {/*<div className="page-tittle mt-3 ">Чемпионат</div>*/}
@@ -47,12 +51,14 @@ export const Championship = () => {
                                     ДС "Фрязино"
                                 </div>
                                 <div className="game-link-wrap">
-                                    <Link className="d-flex flex-column game-link"  to="/media">
+                                    {championshipData.map(item =>(
+                                        <Link className="d-flex flex-column game-link"  to={`/media${item.albumId}`}>
                                         <span  className="material-icons-outlined">
                                         photo_camera
                                     </span>
-                                        <h6>Фото</h6>
-                                    </Link>
+                                            <h6>Фото</h6>
+                                        </Link>
+                                    ))}
                                     <Link className="d-flex flex-column game-link" target="_blank"  to="//youtube.com/watch?v=9ARSWOa5vFo">
                                         <span  className="material-icons-outlined">
                                         live_tv

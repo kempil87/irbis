@@ -1,69 +1,80 @@
-.club-wrap{
+.club-wrap {
     width: 100%;
     height: 600px;
     background-color: rgb(23, 52, 96);
 
 }
-.nav-link{
-    font-family: 'Montserrat', sans-serif!important;
-    background: none!important;
+
+.nav-link {
+    font-family: 'Montserrat', sans-serif !important;
+    background: none !important;
     margin-left: 8px;
     cursor: pointer;
-border-radius: 0!important;
+    border-radius: 0 !important;
 }
-.tabs a{
+
+.tabs a {
     color: #7e7e7e;
 }
-.nav-link:hover{
-    color: rgba(255,255,255,.6) !important;
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, .6) !important;
 }
-.all-players{
+
+.all-players {
     color: white;
     text-decoration: none;
     display: flex;
     align-items: center;
 
 }
-.all-players:hover{
-    color: white;
 
+.all-players:hover {
+    color: white;
 }
-.all-players:hover > span {/*стиль для всех span - прямых наследников div */
+
+.all-players:hover > span { /*стиль для всех span - прямых наследников div */
     transform: translateX(8px);
     transition: ease .2s;
 }
-.all-players span{
+
+.all-players span {
     margin-left: 5px;
     transition: ease .2s;
 }
 
-.top-info-player{
+.top-info-player {
     position: relative;
-    width: 276px;
+    width: 296px;
     height: 424px;
     cursor: pointer;
     transition: ease .3s;
 
 }
-.top-info-player:hover{
+
+.top-info-player:hover {
     transition: ease .3s;
     transform: translateY(-8px);
 }
-.player-img{
-position: absolute;
-    opacity: .3;
+
+.player-img {
+    position: absolute;
+    opacity: .5;
     width: 100%;
     height: 100%;
     transition: ease .3s;
 }
-.player-img:hover{
-    opacity: .5;
+
+.player-img:hover {
+    opacity: .78;
     transition: ease .3s;
 }
-.player-img-main{
+
+.player-img-main {
     top: 0;
     left: 0;
-    bottom: 0; right: 0;
+    bottom: 0;
+    right: 0;
     margin: auto;
     position: absolute;
     width: 140px;
@@ -71,46 +82,53 @@ position: absolute;
     border-radius: 50%;
 
 }
-.player-name{
+
+.player-name {
     position: absolute;
-text-transform: uppercase;
-    left: 19%;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     bottom: 55px;
     color: white;
     font-size: 19px;
     font-weight: 500;
-    margin: auto;
+    left: 13%;
 
 }
-.player-position{
+
+.player-position {
     position: absolute;
     bottom: 15px;
-    left: 15px;
+    left: 19%;
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 36px;
-    color: #000000;
+    color: #9fe6ea;
     font-size: 16px;
     font-weight: 600;
 }
-.player-number{
+
+.player-number {
     position: absolute;
     top: 150px;
     left: 0;
-    bottom: 0; right: 0;
-    margin:  auto;
+    bottom: 0;
+    right: 0;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 36px;
     height: 36px;
-color: #173460;
-    font-size: 28px;
+    color: #173460;
+    font-size: 25px;
     font-weight: 600;
     background-color: white;
+
 }
-.player-games{
+
+.player-games {
     position: absolute;
     bottom: 8px;
     left: 25%;
@@ -123,7 +141,8 @@ color: #173460;
     font-size: 16px;
     font-weight: 600;
 }
-.player-goal{
+
+.player-goal {
     position: absolute;
     bottom: 8px;
     left: 40%;
@@ -136,7 +155,8 @@ color: #173460;
     font-size: 16px;
     font-weight: 600;
 }
-.player-assist{
+
+.player-assist {
     position: absolute;
     bottom: 8px;
     left: 55%;
@@ -149,7 +169,8 @@ color: #173460;
     font-size: 16px;
     font-weight: 600;
 }
-.player-score{
+
+.player-score {
     position: absolute;
     bottom: 8px;
     left: 70%;

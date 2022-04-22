@@ -1,0 +1,19 @@
+export const championshipData = [
+    {
+        id:1000,
+        //navlink
+        albumId:1,
+        broadcast:'',
+        //matchData
+        date:'',
+        score:"",
+        league:"",
+        place:"",
+        homeTeamLogo:'',
+        homeTeamName:'',
+        homeTeamCity:'',
+        guestTeamLogo:'',
+        guestTeamName:'',
+        guestTeamCity:'',
+    },
+]

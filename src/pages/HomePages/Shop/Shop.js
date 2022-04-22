@@ -1,54 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./Shop.css"
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
+import {Modal} from "react-bootstrap";
+import {ProductShop} from "../../../data/ShopData/ProductShop";
 
 export const Shop = () => {
-    const productShop =[
-        {
-            id:1,
-            image:"https://sun1-87.userapi.com/impg/zN1Hn4MJo6C06cmB1TdBLdmOL5WpdoqXRPudhg/jM4HTfzIYUg.jpg?size=0x179&crop=0.176,0.071,0.62,0.929&quality=95&sign=3e128d0dca531d39698f098a117b3690",
-            price:3200,
-            name:"Футболка ФБК Ирбис"
-        },
-        {
-            id:2,
-            image:"https://sun1-22.userapi.com/impg/0gSIzcDuBGkbnpOvKEB70LP0vkn6Wwi6xMeKEA/cJscfY7Qhn4.jpg?size=179x0&crop=0.016,0.188,0.976,0.651&quality=95&sign=ec7d0bca2f900ab92f9a2140cbad3a90",
-            price:690,
-            name:"Питьевая бутылка с логотипом клуба Oxdog"
-        },
-        {
-            id:3,
-            image:"https://sun1-97.userapi.com/impg/fQDy3509d1jBCWzz3FQ1Ji62zVVUrroJctOYzQ/8Fkej7yY_XE.jpg?size=0x179&crop=0.008,0.008,0.984,0.984&quality=95&sign=fd4b7dce4cae2a7d6ae34455e65d0e52",
-            price:990,
-            name:"Шарф ФБК Ирбис"
-        },
-        {
-            id:4,
-            image:"https://sun1-87.userapi.com/impg/zN1Hn4MJo6C06cmB1TdBLdmOL5WpdoqXRPudhg/jM4HTfzIYUg.jpg?size=0x179&crop=0.176,0.071,0.62,0.929&quality=95&sign=3e128d0dca531d39698f098a117b3690",
-            price:3200,
-            name:"Футболка ФБК Ирбис"
-        },
-        {
-            id:5,
-            image:"https://sun1-87.userapi.com/impg/zN1Hn4MJo6C06cmB1TdBLdmOL5WpdoqXRPudhg/jM4HTfzIYUg.jpg?size=0x179&crop=0.176,0.071,0.62,0.929&quality=95&sign=3e128d0dca531d39698f098a117b3690",
-            price:1200,
-            name:"Футболка ФБК Ирбис"
-        },
-        {
-            id:3,
-            image:"https://sun1-97.userapi.com/impg/fQDy3509d1jBCWzz3FQ1Ji62zVVUrroJctOYzQ/8Fkej7yY_XE.jpg?size=0x179&crop=0.008,0.008,0.984,0.984&quality=95&sign=fd4b7dce4cae2a7d6ae34455e65d0e52",
-            price:990,
-            name:"Шарф ФБК Ирбис"
-        },
-        {
-            id:3,
-            image:"https://sun1-97.userapi.com/impg/fQDy3509d1jBCWzz3FQ1Ji62zVVUrroJctOYzQ/8Fkej7yY_XE.jpg?size=0x179&crop=0.008,0.008,0.984,0.984&quality=95&sign=fd4b7dce4cae2a7d6ae34455e65d0e52",
-            price:990,
-            name:"Шарф ФБК Ирбис"
-        },
-    ]
+
 
 
     const responsive = {
@@ -90,22 +49,26 @@ export const Shop = () => {
                 responsive={responsive}
 
             >
-                {productShop.map((i) => (
-                    <div className="container product-card mt-3" key={i.id}>
-                        <div className="d-flex flex-column align-items-center">
-                            <img className="product-img" src={i.image}/>
-                            <div className="product-name">{i.name}</div>
-                        </div>
-                        <div className="d-flex justify-content-between ">
-                            <div className="product-price">{i.price} ₽</div>
-                            <div className="product-btn">Смотреть</div>
+                {ProductShop.map((i) => (
+
+                        <div className="container product-card mt-3" key={i.id}>
+                            <div className="d-flex flex-column align-items-center product-top">
+                                <img className="product-img" src={i.image}/>
+                                {i.badge &&(
+                                    <div className="product-badge">{i.badge}</div>
+                                )}
+                            </div>
+                            <div>
+                                <div className="product-name">{i.name}</div>
+                                <div className="d-flex justify-content-between mb-2 align-items-center">
+                                    <div className="product-price">{i.price} ₽</div>
+                                    <Link to={`/shop${i.id}`} className="product-btn">Смотреть</Link>
+                                </div>
+                            </div>
                         </div>
 
-                    </div>
-                ))}
+                    ))}
             </Carousel>
-
-
         </div>
     )
 }

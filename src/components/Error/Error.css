@@ -1,0 +1,25 @@
+.error-wrap{
+    background-image: url("https://xn--m1agla.xn--p1ai/wp-content/uploads/2021/12/Irbis-111x128.png");
+    width: 100%;
+    height: 100%;
+}
+.error-text{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background: rgba(23, 52, 96, 0.8);
+color: white;
+    font-size: 42px;
+    font-weight: 600;
+}
+.error-text h3{
+    font-size: 28px;
+}
+.error-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background: #173460;
+text-decoration: none;
+    color: #3390ec;
+}
