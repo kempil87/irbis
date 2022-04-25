@@ -22,12 +22,12 @@ export const News = () => {
             </div>
             <div className="mt-3 container">
                 <div className="carousel-news">
-                    {HomeNews.map(news => (
-                        <Link to={`/news${news.id}`}>
+
                         <Carousel
-                            indicators={false}
-                            key={news.id}>
-                                <Carousel.Item>
+                            >
+                            {HomeNews.map(news => (
+                                <Carousel.Item key={news.id} >
+                                    <Link to={`/news${news.id}`}>
                                     <img
                                         className="carousel-img"
                                         src={news.image}
@@ -40,10 +40,13 @@ export const News = () => {
                                             <p className="carousel-subtitle">{news.subtitle}</p>
                                         </div>
                                     </Carousel.Caption>
+                                    </Link>
                                 </Carousel.Item>
+
+                            ))}
                         </Carousel>
-                        </Link>
-                    ))}
+
+
                 </div>
             </div>
         </div>

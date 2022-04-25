@@ -2,7 +2,7 @@ export const championshipData = [
     {
         id:1000,
         //navlink
-        albumId:1,
+        albumId:701,
         broadcast:'',
         //matchData
         date:'',

@@ -79,3 +79,17 @@ text-decoration: none;
     font-weight: 600;
     margin-bottom: 25px;
 }
+.showMore-news{
+    cursor: pointer;
+    color: #3390ec;
+    font-weight: 600;
+    padding: 15px 0;
+    border-top: 3px solid #3390ec;
+}
+.showMore-news span{
+    font-size: 16px;
+}
+.showMore-news span:first-child{
+
+    margin-left: 6px;
+}

@@ -12,8 +12,10 @@ const NewsIn = () => {
 
     return (
         <div className="newsPage-wrap container">
-            <div className="mt-4">
-                <Link className="back-news d-flex align-items-center justify-content-center" to={"/news"}>
+            <div  className="mt-4">
+                <Link
+                      className="back-news d-flex align-items-center justify-content-center"
+                      to={"/news"}>
                     <span className="material-icons-outlined">
                         chevron_left
                     </span>
@@ -29,6 +31,7 @@ const NewsIn = () => {
                         <div className="newsIn-date ">{news.date}</div>
                     </div>
                     <div className="newsIn-title  mt-2">{news.title}</div>
+
                     <div className="newsPageIn-top-grad"/>
                     <img className="newsIn-image" src={news.image} width="700" height="560" alt="Новость"/>
                     {showDes ? (
@@ -76,8 +79,8 @@ const NewsIn = () => {
                                  style={{width:'100%',height:'100%'}}
                             >
                                 <div className="newsPage-top d-flex  justify-content-center">
-                                    <div className="newsPage-top-grad"/>
-                                    <img className="news-image" src={n.image} width="365" height="310" alt="Новость"/>
+
+                                    <img className="news-image" src={n.image} width="335" height="310" alt="Новость"/>
                                     <div className="news-badge">{n.badge}</div>
                                 </div>
 

@@ -73,9 +73,9 @@ export const Club = () => {
                                         </div>
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="second">
-                                        <div className="d-flex justify-content-between">
+                                        <div className="d-flex ">
                                             {SnipersData.map((i,index) => (
-                                                <div className="d-flex  mt-3 " key={i.id}>
+                                                <div className="d-flex col-3 mt-3 justify-content-center" key={i.id}>
                                                     <div className=" top-info-player">
                                                         <img className="player-img" src={i.image} alt="//"/>
                                                         {/*<img className="player-img-main" src={i.mainImage} alt="//"/>*/}

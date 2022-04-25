@@ -61,7 +61,16 @@ export const Shop = () => {
                             <div>
                                 <div className="product-name">{i.name}</div>
                                 <div className="d-flex justify-content-between mb-2 align-items-center">
-                                    <div className="product-price">{i.price} ₽</div>
+                                    {i.salePrice ?(
+                                            <div>
+                                                <div className="product-price">{i.salePrice} ₽</div>
+                                                <div className="product-salePrice">{i.price} ₽</div>
+                                            </div>
+                                    ):(
+
+                                        <div className="product-price">{i.price} ₽</div>
+                                    )}
+
                                     <Link to={`/shop${i.id}`} className="product-btn">Смотреть</Link>
                                 </div>
                             </div>
