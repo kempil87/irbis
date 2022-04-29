@@ -25,6 +25,7 @@
     color: #173460;
 }
 .all-shop {
+    font-weight: 500;
     color: #173460;
     text-decoration: none;
     display: flex;
@@ -98,10 +99,12 @@ position: absolute;
 ;
 }
 .product-salePrice{
+    margin-left: 8px;
     text-align: center;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 600;
-    text-decoration: line-through
+    text-decoration: line-through;
+    color:#be1a30;
 ;
 }
 

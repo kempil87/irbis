@@ -100,7 +100,6 @@ const ClubPage = () => {
                                             <Link to={`/club${i.id}`} className="d-flex col-3 justify-content-center" key={i.id}>
                                                 <div className=" top-info-allPlayer">
                                                     <img className="player-img" src={i.image} alt="//"/>
-                                                    <img className="player-img-main" src={i.mainImage} alt="//"/>
                                                     <div className="player-name mb-2">{i.name}</div>
                                                     <div className="player-position col-6">{i.position}</div>
                                                 </div>
@@ -109,7 +108,10 @@ const ClubPage = () => {
                                     </div>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="fourth">
-                                    <div className="d-flex mt-2">
+                                    <div className=" mt-2">
+                                        <h3>Профессиональный флорбольный клуб «Ирбис»</h3>
+                                        <h3>Профессиональный флорбольный клуб «Ирбис»</h3>
+                                        <h3>Профессиональный флорбольный клуб «Ирбис»</h3>
                                         <h3>Профессиональный флорбольный клуб «Ирбис»</h3>
                                     </div>
                                 </Tab.Pane>

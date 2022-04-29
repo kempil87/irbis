@@ -12,7 +12,7 @@ export const Championship = () => {
     return (
         <div className="champ-wrap">
             {/*<div className="page-tittle mt-3 ">Чемпионат</div>*/}
-            <div className="d-flex justify-content-between">
+            <div className="d-sm-block d-md-flex justify-content-between">
                 <div className='col-6  mt-4'>
                     <div className="next-game ">
                         <div className="d-flex align-items-center">

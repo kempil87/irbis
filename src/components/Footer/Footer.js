@@ -40,7 +40,7 @@ export const Footer = () => {
                             <p className="mt-2">Copyright 2009-2018</p>
                         </h6>
                     </div>
-                    <div className="footer-right d-flex col-4">
+                    <div className="footer-right d-flex col-4 justify-content-center">
                         <div className="d-flex mt-5">
                             <Link style={{textDecoration:'none'}} to="//vk.com/glebofficial87" target={'_blank'}>Разработка сайта</Link>
                             <div style={{marginLeft:8,fontFamily:'cursive'}}>GM87.</div>

@@ -24,7 +24,7 @@ export const Media = () => {
                 <div className=" container d-flex flex-wrap ">
                     {MediaData.slice(0,6).map((card) => (
 
-                        <Link to={`/media${card.id}`} key={card.id} className="col-4 d-flex flex-column photo-card">
+                        <Link to={`/media${card.id}`} key={card.id} className="col-sm-12 col-md-6 col-lg-4 d-flex flex-column photo-card">
                             <img width="400" height='267' className="media-image" src={card.image} alt='фото'/>
                             <div className="media-image-grad"/>
                             <div className="media-all d-flex align-items-center">

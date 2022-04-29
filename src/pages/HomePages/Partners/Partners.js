@@ -40,13 +40,13 @@ export const Partners = () => {
                     {/*<h6 className="sponsor-label">Информационный партнер</h6>*/}
                 </Link>
             </div>
-            <div className="d-flex justify-content-between align-items-center container">
-                <div className="partners-des">Информационный партнер</div>
-                <div className="partners-des">Технический партнер</div>
-                <div className="partners-des">Поставщик</div>
-                <div className="partners-des">Информационный партнер</div>
-                <div className="partners-des">Информационный партнер</div>
-            </div>
+            {/*<div className="d-flex justify-content-between align-items-center container">*/}
+            {/*    <div className="partners-des">Информационный партнер</div>*/}
+            {/*    <div className="partners-des">Технический партнер</div>*/}
+            {/*    <div className="partners-des">Поставщик</div>*/}
+            {/*    <div className="partners-des">Информационный партнер</div>*/}
+            {/*    <div className="partners-des">Информационный партнер</div>*/}
+            {/*</div>*/}
             <div  className="to-top" onClick={() => window.scrollTo(0, 0)}>
                     <span className="material-icons-outlined">
                      straight

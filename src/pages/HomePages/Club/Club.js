@@ -13,7 +13,7 @@ export const Club = () => {
         <>
             <div className="club-wrap ">
                 <div className="container ">
-                    <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+                    <Tab.Container  id="left-tabs-example" defaultActiveKey="first">
                         <Row className="d-flex flex-column">
                             <Col>
                                 <Nav variant="pills" className="flex-column">
@@ -44,7 +44,7 @@ export const Club = () => {
                                         <div className="d-flex flex-wrap">
                                             {SnipersData.map((i,index) => (
                                                 <Link to={`/club${i.id}`}
-                                                      className="d-flex  mt-3 col-3 justify-content-center"
+                                                      className="d-flex  mt-3 col-12 col-sm-6 col-lg-3 justify-content-center"
                                                       key={i.id}
                                                 >
                                                     <div className=" top-info-player">
@@ -73,7 +73,7 @@ export const Club = () => {
                                         </div>
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="second">
-                                        <div className="d-flex ">
+                                        <div className="d-flex mb-4">
                                             {SnipersData.map((i,index) => (
                                                 <div className="d-flex col-3 mt-3 justify-content-center" key={i.id}>
                                                     <div className=" top-info-player">

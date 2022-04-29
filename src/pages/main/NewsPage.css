@@ -46,6 +46,9 @@ text-decoration: none;
 }
 
 .news-image {
+    width: 315px;
+    height: 310px;
+
     transition: ease-in-out .2s;
 /*border-top-right-radius: 12px;*/
 /*border-top-left-radius: 12px;*/

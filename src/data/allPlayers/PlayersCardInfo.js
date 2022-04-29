@@ -12,6 +12,13 @@ export const PlayersCardInfo = [
         weight: 72,
         country: "Россия",
         grip: "Правый",
+        //regular2022
+        games:14,
+        goals:6,
+        assist:7,
+        score:13,
+        boxTime:14,
+        plusMinus:13,
         personalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14 и 2014/15 выступал за команду «Юта Гризлис» (Хоккейная лига Восточного побережья).\n" +
             "\n" +
             "После этого Бобков вернулся в Россию и дебютировал в КХЛ, играя за дальневосточный «Адмирал» (2015-2018). Затем Игорь выступал в составе «Авангарда» (2018-2021).\n" +
@@ -34,6 +41,13 @@ export const PlayersCardInfo = [
         weight: 72,
         country: "Россия",
         grip: "Правый",
+        //regular2022
+        games:14,
+        goals:6,
+        assist:7,
+        score:13,
+        boxTime:14,
+        plusMinus:13,
         personalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14 и 2014/15 выступал за команду «Юта Гризлис» (Хоккейная лига Восточного побережья).\n" +
             "\n" +
             "После этого Бобков вернулся в Россию и дебютировал в КХЛ, играя за дальневосточный «Адмирал» (2015-2018). Затем Игорь выступал в составе «Авангарда» (2018-2021).\n" +
@@ -56,6 +70,13 @@ export const PlayersCardInfo = [
         weight: 72,
         country: "Россия",
         grip: "Правый",
+         //regular2022
+        games:14,
+        goals:6,
+        assist:7,
+        score:13,
+        boxTime:14,
+        plusMinus:13,
         personalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14 и 2014/15 выступал за команду «Юта Гризлис» (Хоккейная лига Восточного побережья).\n" +
             "\n" +
             "После этого Бобков вернулся в Россию и дебютировал в КХЛ, играя за дальневосточный «Адмирал» (2015-2018). Затем Игорь выступал в составе «Авангарда» (2018-2021).\n" +
@@ -68,8 +89,8 @@ export const PlayersCardInfo = [
     },
     {
         id: 2,
-        image: "https://sun1-17.userapi.com/impf/Lf0vokOf0Uk30w2h9TlUo5UxwxLBkoU2wA_ihQ/W_jUzDNThFQ.jpg?size=382x629&quality=95&sign=4847221960b79670ff748b3f752bc575&type=album",
-        mainImage: "https://sun9-18.userapi.com/impf/M5jcrvKH4IngMV52B829v5rmc12difnG8UTd8w/RpTYO5430Ok.jpg?size=280x330&quality=95&sign=e958bf986315122614a948a8c3b9b1d9&type=album",
+        image: "https://sun9-80.userapi.com/s/v1/if2/JB_1yrCLbJusybTceFaecr68qjgZJh6yiSJbhkIbyVatule2lpATTIN-ZXFE4MqRyTJaebBZY3kJKHUHCFFWvQre.jpg?size=546x798&quality=95&type=album",
+        mainImage: "https://sun9-36.userapi.com/s/v1/if2/sW3CzHIeQYWwRzFzYIi0rx6Virbbn7fAjhyXJ6VaYLqgDnI0mTj0K3vQFTu4Qir4Q4u2iFqsjqAM9jFV51XBED_P.jpg?size=280x330&quality=95&type=album",
         number: 2,
         name: "Юлдашев Улугбек",
         position: "Защитник",
@@ -78,6 +99,13 @@ export const PlayersCardInfo = [
         weight: 72,
         country: "Россия",
         grip: "Правый",
+         //regular2022
+        games:14,
+        goals:6,
+        assist:7,
+        score:13,
+        boxTime:14,
+        plusMinus:13,
         personalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14 и 2014/15 выступал за команду «Юта Гризлис» (Хоккейная лига Восточного побережья).\n" +
             "\n" +
             "После этого Бобков вернулся в Россию и дебютировал в КХЛ, играя за дальневосточный «Адмирал» (2015-2018). Затем Игорь выступал в составе «Авангарда» (2018-2021).\n" +
@@ -91,8 +119,8 @@ export const PlayersCardInfo = [
     },
     {
         id: 8,
-        image: "https://sun1-17.userapi.com/impf/Lf0vokOf0Uk30w2h9TlUo5UxwxLBkoU2wA_ihQ/W_jUzDNThFQ.jpg?size=382x629&quality=95&sign=4847221960b79670ff748b3f752bc575&type=album",
-        mainImage: "https://sun9-18.userapi.com/impf/M5jcrvKH4IngMV52B829v5rmc12difnG8UTd8w/RpTYO5430Ok.jpg?size=280x330&quality=95&sign=e958bf986315122614a948a8c3b9b1d9&type=album",
+        image: "https://sun9-4.userapi.com/s/v1/if2/WL0HC148GXC_1Zb7N1o8VZPJV6AGiC8FPg_vd98X1iBsRtA42Q7ChjULuIQ-WYhoRzL8LNJFA31fVWdvFYUEQoIv.jpg?size=456x682&quality=95&type=album",
+        mainImage: "https://sun1-97.userapi.com/s/v1/if2/ArtkC-n9C93bMt7SqxD43KQypEXUUghLhmJRmDDEXIgUK7gZv1lOosvHYCatt47Xf8T8x7RzYM6tRNIB5jcE2BlB.jpg?size=212x263&quality=95&type=album",
         number: 8,
         name: "Екимов Артём ",
         position: "Защитник",
@@ -101,6 +129,13 @@ export const PlayersCardInfo = [
         weight: 72,
         country: "Россия",
         grip: "Правый",
+         //regular2022
+        games:14,
+        goals:6,
+        assist:7,
+        score:13,
+        boxTime:14,
+        plusMinus:13,
         personalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14 и 2014/15 выступал за команду «Юта Гризлис» (Хоккейная лига Восточного побережья).\n" +
             "\n" +
             "После этого Бобков вернулся в Россию и дебютировал в КХЛ, играя за дальневосточный «Адмирал» (2015-2018). Затем Игорь выступал в составе «Авангарда» (2018-2021).\n" +
@@ -124,6 +159,13 @@ export const PlayersCardInfo = [
         weight: 72,
         country: "Россия",
         grip: "Правый",
+         //regular2022
+        games:14,
+        goals:6,
+        assist:7,
+        score:13,
+        boxTime:14,
+        plusMinus:13,
         personalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14 и 2014/15 выступал за команду «Юта Гризлис» (Хоккейная лига Восточного побережья).\n" +
             "\n" +
             "После этого Бобков вернулся в Россию и дебютировал в КХЛ, играя за дальневосточный «Адмирал» (2015-2018). Затем Игорь выступал в составе «Авангарда» (2018-2021).\n" +
@@ -137,8 +179,8 @@ export const PlayersCardInfo = [
     },
     {
         id: 37,
-        image: "https://sun9-17.userapi.com/impf/I8AYIxa5EgArZU9STPklfnaxbq9pSEWSdOgwKw/QEBtvbQpU94.jpg?size=507x633&quality=95&sign=8e93ba486fa157b1a47125bd205c1fc9&type=album",
-        mainImage: "https://sun1-19.userapi.com/impf/ldSD_3a9MHBKf6_DV5ra9ZTzfYDbPknVrdI8-w/3qPLOWK_q8g.jpg?size=280x330&quality=95&sign=135faa0dfe9723490070f2e48e4b68fa&type=album",
+        image: "https://sun9-70.userapi.com/s/v1/if2/w9DQjKaYmV6k4oxbiW7Q7AQenPZgXN7V24HojuBKnquhr8c8hkRSX7AvDWXHE312ZQE-mgEYbJRkw8SLLwiQ20PN.jpg?size=421x641&quality=95&type=album",
+        mainImage: "https://sun1-93.userapi.com/s/v1/if2/laEBqQvcBt7gssj-f3VbpYuOdufCAw7RYnw3xPi7ejs78XmNpX9bmWX8q7ePLxLsSSWFdPJzvjd9PRiSfLrlOjjd.jpg?size=296x349&quality=95&type=album",
         number: 37,
         name: " Вешняков Михаил",
         position: "Защитник",
@@ -147,6 +189,13 @@ export const PlayersCardInfo = [
         weight: 72,
         country: "Россия",
         grip: "Правый",
+         //regular2022
+        games:14,
+        goals:6,
+        assist:7,
+        score:13,
+        boxTime:14,
+        plusMinus:13,
         personalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14 и 2014/15 выступал за команду «Юта Гризлис» (Хоккейная лига Восточного побережья).\n" +
             "\n" +
             "После этого Бобков вернулся в Россию и дебютировал в КХЛ, играя за дальневосточный «Адмирал» (2015-2018). Затем Игорь выступал в составе «Авангарда» (2018-2021).\n" +
@@ -169,6 +218,13 @@ export const PlayersCardInfo = [
         weight: 72,
         country: "Россия",
         grip: "Правый",
+         //regular2022
+        games:14,
+        goals:6,
+        assist:7,
+        score:13,
+        boxTime:14,
+        plusMinus:13,
         personalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14 и 2014/15 выступал за команду «Юта Гризлис» (Хоккейная лига Восточного побережья).\n" +
             "\n" +
             "После этого Бобков вернулся в Россию и дебютировал в КХЛ, играя за дальневосточный «Адмирал» (2015-2018). Затем Игорь выступал в составе «Авангарда» (2018-2021).\n" +
@@ -191,6 +247,13 @@ export const PlayersCardInfo = [
         weight: 72,
         country: "Россия",
         grip: "Правый",
+         //regular2022
+        games:14,
+        goals:6,
+        assist:7,
+        score:13,
+        boxTime:14,
+        plusMinus:13,
         personalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14 и 2014/15 выступал за команду «Юта Гризлис» (Хоккейная лига Восточного побережья).\n" +
             "\n" +
             "После этого Бобков вернулся в Россию и дебютировал в КХЛ, играя за дальневосточный «Адмирал» (2015-2018). Затем Игорь выступал в составе «Авангарда» (2018-2021).\n" +
@@ -203,7 +266,7 @@ export const PlayersCardInfo = [
     },
     {
         id: 96,
-        image: "https://sun1-57.userapi.com/impf/kiRu455-ACvJ4Ogp-0WuPlht-mbrlul-HRw1Qg/KeRNqf4FTtA.jpg?size=411x575&quality=95&sign=23f493eb15293fb3f6173c25a4df38cd&type=album",
+        image: "https://sun9-49.userapi.com/s/v1/if2/Xuf9Sx7F69WzPCs2inF8JjErT2V_W-h5IFbINecZYXWMWLA_QWLM-pfOcJozhk-BzEUWaJRMjy7b5yKA_9cpGy-5.jpg?size=395x594&quality=95&type=album",
         mainImage: "https://sun1-84.userapi.com/impf/jRxniY_uToJJNzgf1hoZLlRjJ2OhQVTvf1e94w/MvSFDQsblfE.jpg?size=280x330&quality=95&sign=78696dea09861b0027d3464de20d5afe&type=album",
         number: 96,
         name: "Ахметшин Нияз",
@@ -213,6 +276,13 @@ export const PlayersCardInfo = [
         weight: 72,
         country: "Россия",
         grip: "Правый",
+         //regular2022
+        games:14,
+        goals:6,
+        assist:7,
+        score:13,
+        boxTime:14,
+        plusMinus:13,
         personalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14 и 2014/15 выступал за команду «Юта Гризлис» (Хоккейная лига Восточного побережья).\n" +
             "\n" +
             "После этого Бобков вернулся в Россию и дебютировал в КХЛ, играя за дальневосточный «Адмирал» (2015-2018). Затем Игорь выступал в составе «Авангарда» (2018-2021).\n" +
@@ -223,20 +293,55 @@ export const PlayersCardInfo = [
         shortPersonalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14",
 
     },
-    //goalkep
     {
-        id: 30,
-        image: "https://sun1-27.userapi.com/impf/8XiYXBV8i0k8G2JDs8W3gXrUJJk89RtvfC32-Q/9jBTC62DbwY.jpg?size=374x591&quality=95&sign=eb64bf2bd8b18eff795b1b1b23f4fa28&type=album",
-        mainImage: "https://sun9-76.userapi.com/impf/1JtazHER6EQbsW5PMXd_XdN1jVa7VYpym9OyWQ/74VB7iKca0Y.jpg?size=280x330&quality=95&sign=344bbf7d4053db0e758d17898fe0e1b0&type=album",
-
-        number: 30,
-        name: "Мустафин Роберт",
-        position: "Защитник",
+        id: 17,
+        image: "https://sun9-84.userapi.com/s/v1/if2/LxAaN4_1QfB4gtkPS_8amNE5gkO4jNJkFOrKmj5IvSAmXQk90eanDwh2xLnVp7Kvz8TX7W4KQJXFadPYeDgF66Nd.jpg?size=384x682&quality=95&type=album",
+        mainImage: "https://sun1-27.userapi.com/s/v1/if2/aVyT2TLASdnrFbEKDoVNJxuSVqI84Mn7XttdtaHrb0qj6EdvUsCrM9-8HWIdR_Th35ZYnS8ZB_qBNOVnNOLmy0lH.jpg?size=212x256&quality=95&type=album",
+        number: 17,
+        name: "Каменов Женис",
+        position: "Нападающий",
         dateBirthday: "25.апрель.2004",
         height: 178,
         weight: 72,
         country: "Россия",
         grip: "Правый",
+        //regular2022
+        games:14,
+        goals:6,
+        assist:7,
+        score:13,
+        boxTime:14,
+        plusMinus:13,
+        personalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14 и 2014/15 выступал за команду «Юта Гризлис» (Хоккейная лига Восточного побережья).\n" +
+            "\n" +
+            "После этого Бобков вернулся в Россию и дебютировал в КХЛ, играя за дальневосточный «Адмирал» (2015-2018). Затем Игорь выступал в составе «Авангарда» (2018-2021).\n" +
+            "\n" +
+            "В составе сборной России принимал участие в юниорском (2009) и молодёжном (2010, 2011) чемпионатах мира.\n" +
+            "\n" +
+            "Достижения: серебряный призёр юниорского чемпионата мира (2009), обладатель Кубка Харламова (2010), чемпион мира среди молодёжи (2011), серебряный призёр чемпионата России (2019), обладатель Кубка Гагарина (2021), участник Матча Звёзд КХЛ (2017, 2019, 2020).",
+        shortPersonalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14",
+
+
+    },
+    //goalkep
+    {
+        id: 20,
+        image: "https://sun9-19.userapi.com/s/v1/if2/0Y3L-Yp-IFtgW7pa_UVaqOocXLzlj8ispT8AxWXcrchuehGNnhHuf3lzP5DzHvzmtUXPi5xM7qSGvb_1Bg0h-WB9.jpg?size=563x700&quality=95&type=album",
+        mainImage: "https://sun1-84.userapi.com/s/v1/if2/jrM8tSDEGsKCC7g1Hq-DMZ_Fc_bm6PegibHljtBfq76ZTKuHvEEygo1kHWhXABIMeLlTQW9-KwBOEYylLaN5503i.jpg?size=260x283&quality=95&type=album",
+
+        number: 20,
+        name: "Мустафин Роберт",
+        position: "Вратарь",
+        dateBirthday: "25.апрель.2004",
+        height: 178,
+        weight: 72,
+        country: "Россия",
+        grip: "Правый",
+        games:14,
+        wins:6,
+        saves:89.7,
+        safety:2.19,
+        DryGames:2,
         personalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14 и 2014/15 выступал за команду «Юта Гризлис» (Хоккейная лига Восточного побережья).\n" +
             "\n" +
             "После этого Бобков вернулся в Россию и дебютировал в КХЛ, играя за дальневосточный «Адмирал» (2015-2018). Затем Игорь выступал в составе «Авангарда» (2018-2021).\n" +
@@ -254,12 +359,17 @@ export const PlayersCardInfo = [
 
         number: 51,
         name: "Яворский Сергей",
-        position: "Защитник",
+        position: "Вратарь",
         dateBirthday: "25.апрель.2004",
         height: 178,
         weight: 72,
         country: "Россия",
         grip: "Правый",
+        games:14,
+        wins:6,
+        saves:89.7,
+        safety:2.19,
+        DryGames:2,
         personalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14 и 2014/15 выступал за команду «Юта Гризлис» (Хоккейная лига Восточного побережья).\n" +
             "\n" +
             "После этого Бобков вернулся в Россию и дебютировал в КХЛ, играя за дальневосточный «Адмирал» (2015-2018). Затем Игорь выступал в составе «Авангарда» (2018-2021).\n" +
@@ -272,16 +382,21 @@ export const PlayersCardInfo = [
     },
     {
         id: 81,
-        image: "https://sun1-27.userapi.com/impf/8XiYXBV8i0k8G2JDs8W3gXrUJJk89RtvfC32-Q/9jBTC62DbwY.jpg?size=374x591&quality=95&sign=eb64bf2bd8b18eff795b1b1b23f4fa28&type=album",
-        mainImage: "https://sun9-76.userapi.com/impf/1JtazHER6EQbsW5PMXd_XdN1jVa7VYpym9OyWQ/74VB7iKca0Y.jpg?size=280x330&quality=95&sign=344bbf7d4053db0e758d17898fe0e1b0&type=album",
+        image: "https://sun9-54.userapi.com/s/v1/if2/DvBpvXO-7cR29teABw4RmvQDucGok56p-Ie7wbAVxTZqAjsPU6ON4y3crQD9lq1YfEBLdxUwwMt7t3HnxR4mCofe.jpg?size=402x590&quality=95&type=album",
+        mainImage: "https://sun9-22.userapi.com/s/v1/if2/wIZ-y3Wz7aINgZoYx0KHnyzpe5aqhdPtPUuDEf5vvcvn5ZtSu2DqWJzFinOYv4zPw_R_VQQlhE_UMdpH8NTLqvGd.jpg?size=269x276&quality=95&type=album",
         number: 81,
-        name: "Сманцер сергей",
-        position: "Защитник",
+        name: "Сманцер Сергей",
+        position: "Вратарь",
         dateBirthday: "25.апрель.2004",
         height: 178,
         weight: 72,
         country: "Россия",
         grip: "Правый",
+        games:14,
+        wins:6,
+        saves:89.7,
+        safety:2.19,
+        DryGames:2,
         personalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14 и 2014/15 выступал за команду «Юта Гризлис» (Хоккейная лига Восточного побережья).\n" +
             "\n" +
             "После этого Бобков вернулся в Россию и дебютировал в КХЛ, играя за дальневосточный «Адмирал» (2015-2018). Затем Игорь выступал в составе «Авангарда» (2018-2021).\n" +
@@ -295,16 +410,23 @@ export const PlayersCardInfo = [
     //guard
     {
         id: 77,
-        image: "https://sun1-57.userapi.com/impf/kiRu455-ACvJ4Ogp-0WuPlht-mbrlul-HRw1Qg/KeRNqf4FTtA.jpg?size=411x575&quality=95&sign=23f493eb15293fb3f6173c25a4df38cd&type=album",
-        mainImage: "https://sun1-84.userapi.com/impf/jRxniY_uToJJNzgf1hoZLlRjJ2OhQVTvf1e94w/MvSFDQsblfE.jpg?size=280x330&quality=95&sign=78696dea09861b0027d3464de20d5afe&type=album",
+        image: "https://sun9-17.userapi.com/s/v1/if2/glxah1JSUXBz953XY20s9j8OoOfVxr1tDxnkN1ZW_8GMzrQY11EhkrkOuqhWZOQi_hLTkNuaiB8xeS5VbJ3oTCmP.jpg?size=381x704&quality=95&type=album",
+        mainImage: "https://sun9-2.userapi.com/s/v1/if2/VZI1ZQu7iEgLOgFAYSfTt4VyVKab8M6aTwZQAoMIZI82B6IZihZdNLRXnkhN3OeU1XTrsB1M1YY2CqFl37FhTOWx.jpg?size=270x310&quality=95&type=album",
         number: 77,
-        name: "Наумов Илья",
+        name: "Наумов Денис",
         position: "Защитник",
         dateBirthday: "25.апрель.2004",
         height: 178,
         weight: 72,
         country: "Россия",
         grip: "Правый",
+         //regular2022
+        games:14,
+        goals:6,
+        assist:7,
+        score:13,
+        boxTime:14,
+        plusMinus:13,
         personalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14 и 2014/15 выступал за команду «Юта Гризлис» (Хоккейная лига Восточного побережья).\n" +
             "\n" +
             "После этого Бобков вернулся в Россию и дебютировал в КХЛ, играя за дальневосточный «Адмирал» (2015-2018). Затем Игорь выступал в составе «Авангарда» (2018-2021).\n" +
@@ -325,7 +447,7 @@ export const PlayersCardInfo = [
     },
     {
         id: 18,
-        image: "https://sun1-57.userapi.com/impf/kiRu455-ACvJ4Ogp-0WuPlht-mbrlul-HRw1Qg/KeRNqf4FTtA.jpg?size=411x575&quality=95&sign=23f493eb15293fb3f6173c25a4df38cd&type=album",
+        image: "https://sun9-55.userapi.com/s/v1/if2/hm_glyY6raCvIdLmZuxue8z5L7qrN3BeBYXiEyLixPpt1TSC0m3FU8xVnaHcR5HyF5J5tKktu2qYd_UXAIb4KncG.jpg?size=507x682&quality=95&type=album",
         mainImage: "https://sun1-84.userapi.com/impf/jRxniY_uToJJNzgf1hoZLlRjJ2OhQVTvf1e94w/MvSFDQsblfE.jpg?size=280x330&quality=95&sign=78696dea09861b0027d3464de20d5afe&type=album",
         number: 18,
         name: "Мирзаев Альмир",
@@ -335,6 +457,13 @@ export const PlayersCardInfo = [
         weight: 72,
         country: "Россия",
         grip: "Правый",
+         //regular2022
+        games:14,
+        goals:6,
+        assist:7,
+        score:13,
+        boxTime:14,
+        plusMinus:13,
         personalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14 и 2014/15 выступал за команду «Юта Гризлис» (Хоккейная лига Восточного побережья).\n" +
             "\n" +
             "После этого Бобков вернулся в Россию и дебютировал в КХЛ, играя за дальневосточный «Адмирал» (2015-2018). Затем Игорь выступал в составе «Авангарда» (2018-2021).\n" +
@@ -357,6 +486,13 @@ export const PlayersCardInfo = [
         weight: 72,
         country: "Россия",
         grip: "Правый",
+         //regular2022
+        games:14,
+        goals:6,
+        assist:7,
+        score:13,
+        boxTime:14,
+        plusMinus:13,
         personalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14 и 2014/15 выступал за команду «Юта Гризлис» (Хоккейная лига Восточного побережья).\n" +
             "\n" +
             "После этого Бобков вернулся в Россию и дебютировал в КХЛ, играя за дальневосточный «Адмирал» (2015-2018). Затем Игорь выступал в составе «Авангарда» (2018-2021).\n" +
@@ -381,6 +517,13 @@ export const PlayersCardInfo = [
         weight: 72,
         country: "Россия",
         grip: "Правый",
+         //regular2022
+        games:14,
+        goals:6,
+        assist:7,
+        score:13,
+        boxTime:14,
+        plusMinus:13,
         personalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14 и 2014/15 выступал за команду «Юта Гризлис» (Хоккейная лига Восточного побережья).\n" +
             "\n" +
             "После этого Бобков вернулся в Россию и дебютировал в КХЛ, играя за дальневосточный «Адмирал» (2015-2018). Затем Игорь выступал в составе «Авангарда» (2018-2021).\n" +
@@ -394,8 +537,8 @@ export const PlayersCardInfo = [
     },
     {
         id: 7,
-        image: "https://sun1-27.userapi.com/impf/8XiYXBV8i0k8G2JDs8W3gXrUJJk89RtvfC32-Q/9jBTC62DbwY.jpg?size=374x591&quality=95&sign=eb64bf2bd8b18eff795b1b1b23f4fa28&type=album",
-        mainImage: "https://sun9-76.userapi.com/impf/1JtazHER6EQbsW5PMXd_XdN1jVa7VYpym9OyWQ/74VB7iKca0Y.jpg?size=280x330&quality=95&sign=344bbf7d4053db0e758d17898fe0e1b0&type=album",
+        image: "https://sun1-14.userapi.com/s/v1/if2/-9EjOmc4sDSKdMYz_9gPBXsIkU29RVgbg13XOhaiD6JguNO3kt5jf-p3K5MkrLtSFxZ7IlOLu5A84DC9GEDJYh2J.jpg?size=446x682&quality=95&type=album",
+        mainImage: "https://sun9-82.userapi.com/s/v1/if2/QlmYpn5wJeaPsYe05kbs_0fshDkKJyCx5xGvOGSAB6r9mXOoi1jmiAEUS_bQ6Sz5-5zEMO5lZqVPiRHh8tiChnvF.jpg?size=226x251&quality=95&type=album",
         number: 7,
         name: "Яворский Андрей",
         position: "Защитник",
@@ -404,6 +547,13 @@ export const PlayersCardInfo = [
         weight: 72,
         country: "Россия",
         grip: "Правый",
+         //regular2022
+        games:14,
+        goals:6,
+        assist:7,
+        score:13,
+        boxTime:14,
+        plusMinus:13,
         personalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14 и 2014/15 выступал за команду «Юта Гризлис» (Хоккейная лига Восточного побережья).\n" +
             "\n" +
             "После этого Бобков вернулся в Россию и дебютировал в КХЛ, играя за дальневосточный «Адмирал» (2015-2018). Затем Игорь выступал в составе «Авангарда» (2018-2021).\n" +
@@ -420,14 +570,33 @@ export const PlayersCardInfo = [
         image: "https://sun9-58.userapi.com/impg/a4NerXNjwRMwTXWqtK92pC5t7rDQXNaGH9rCJw/RsVUSymCF3Y.jpg?size=721x1080&quality=96&sign=320d63e88dcdf911b82de39bb58b511d&type=album",
         mainImage: "https://sun9-58.userapi.com/impg/a4NerXNjwRMwTXWqtK92pC5t7rDQXNaGH9rCJw/RsVUSymCF3Y.jpg?size=721x1080&quality=96&sign=320d63e88dcdf911b82de39bb58b511d&type=album",
         name: "Нигмедзянов Рамис Рафисович",
-        position: "Главный тренер"
+        position: "Главный тренер",
+        personalInfo:" Сергей Михайлович Абрамов родился 15 сентября 1959 года в Казани. Воспитанник «Ак Барса», мастер спорта, заслуженный тренер России.\n" +
+            "\n" +
+            "    Играл на позиции голкипера, выступал за команды: СКА (Куйбышев), «Нефтяник» (Лениногорск), «Спутник» (Альметьевск), СК им. Урицкого / «Итиль» / «Ак Барс» (Казань).\n" +
+            "\n" +
+            "Достижения в качестве игрока: чемпион России (1998), лучший голкипер российской Суперлиги (1994, 1995).\n" +
+            "\n" +
+            "    На тренерской работе – с 1999 года, всю тренерскую карьеру проработал в «Ак Барсе».",
+        shortPersonalInfo:" Сергей Михайлович Абрамов родился 15 сентября 1959 года в Казани. Воспитанник «Ак Барса», мастер спорта, заслуженный тренер России.",
+
     },
+
     {
         id: 98,
         image: "https://sun9-58.userapi.com/impg/a4NerXNjwRMwTXWqtK92pC5t7rDQXNaGH9rCJw/RsVUSymCF3Y.jpg?size=721x1080&quality=96&sign=320d63e88dcdf911b82de39bb58b511d&type=album",
         mainImage: "https://sun9-58.userapi.com/impg/a4NerXNjwRMwTXWqtK92pC5t7rDQXNaGH9rCJw/RsVUSymCF3Y.jpg?size=721x1080&quality=96&sign=320d63e88dcdf911b82de39bb58b511d&type=album",
         name: "Макаров Глеб Андреевич",
-        position: "Старший тренер,тренер по большинству"
+        position: "Старший тренер,тренер по большинству",
+        personalInfo:" Сергей Михайлович Абрамов родился 15 сентября 1959 года в Казани. Воспитанник «Ак Барса», мастер спорта, заслуженный тренер России.\n" +
+            "\n" +
+            "    Играл на позиции голкипера, выступал за команды: СКА (Куйбышев), «Нефтяник» (Лениногорск), «Спутник» (Альметьевск), СК им. Урицкого / «Итиль» / «Ак Барс» (Казань).\n" +
+            "\n" +
+            "Достижения в качестве игрока: чемпион России (1998), лучший голкипер российской Суперлиги (1994, 1995).\n" +
+            "\n" +
+            "    На тренерской работе – с 1999 года, всю тренерскую карьеру проработал в «Ак Барсе».",
+        shortPersonalInfo:" Сергей Михайлович Абрамов родился 15 сентября 1959 года в Казани. Воспитанник «Ак Барса», мастер спорта, заслуженный тренер России.",
+
     },
     //management
     {

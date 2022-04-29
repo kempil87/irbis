@@ -62,7 +62,7 @@ export const Shop = () => {
                                 <div className="product-name">{i.name}</div>
                                 <div className="d-flex justify-content-between mb-2 align-items-center">
                                     {i.salePrice ?(
-                                            <div>
+                                            <div className="d-flex">
                                                 <div className="product-price">{i.salePrice} ₽</div>
                                                 <div className="product-salePrice">{i.price} ₽</div>
                                             </div>

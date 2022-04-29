@@ -9,6 +9,8 @@ const PlayerIn = () => {
 
     const [showDes, setShowDes] = useState(false);
 
+
+
     return (
         <div className=" playerIn-wrap d-flex flex-column">
             <div className="container">
@@ -18,35 +20,48 @@ const PlayerIn = () => {
                     <span className="material-icons-outlined">
                         chevron_left
                     </span>
-                    Назад к команде
+                    Назад к клубу
                 </Link>
             </div>
             <div className="d-flex justify-content-center align-items-center">
                 <div className=" top-info-playerIn">
+
                     <img className="playerIn-img-main" src={playerIn.mainImage} alt="//"/>
-                    <div className="playerIn-number">{playerIn.number}</div>
+                    {playerIn.id <97 &&(
+                        <div className="playerIn-number">{playerIn.number}</div>
+                    )}
+
                 </div>
             </div>
             <div className="container d-flex align-items-center justify-content-center flex-column">
                 <div className=" d-flex align-items-center justify-content-center flex-column">
                     <div className="playerIn-name mb-2">{playerIn.name}</div>
-                    <div className=" mb-2">{playerIn.position}</div>
-                    <div className="mb-2">{playerIn.dateBirthday}</div>
+                    <div className="playerIn-position ">{playerIn.position}</div>
+                    <div className="playerIn-position mb-2">{playerIn.dateBirthday}</div>
                     <div className="d-flex playerIn-data">
-                        <div className="">Рост <br/>{playerIn.height}</div>
-                        <div className="">Вес <br/>{playerIn.weight}</div>
-                        <div className="">Страна <br/>{playerIn.country}</div>
-                        <div className="">Хват <br/>{playerIn.grip}</div>
+                        {playerIn.id <= 97 && (
+                            <>
+                                <div className="playerIn-data">Рост <br/>{playerIn.height}</div>
+                                <div className="playerIn-data">Вес <br/>{playerIn.weight}</div>
+                                <div className="playerIn-data">Страна <br/>{playerIn.country}</div>
+                                <div className="playerIn-data">Хват <br/>{playerIn.grip}</div>
+                            </>
+                        )}
                     </div>
-                    <div className="mb-2">{playerIn.dateBirthday}</div>
                 </div>
                 <div className=" d-flex align-items-center justify-content-center flex-column">
-                    <h4>Информация о игроке</h4>
+                    {playerIn.id >= 97   ? (
+                        <h4>Информация о сотруднике</h4>
+                    ):(
+                        <h4>Информация о игроке</h4>
+                    )}
+
+
                     {!showDes ?(
                         <>
-                            <div className="col-8 mb-2">{playerIn.shortPersonalInfo}...</div>
+                            <div className="playerIn-data col-8 mb-2">{playerIn.shortPersonalInfo}...</div>
                             <div onClick={() => setShowDes(!showDes)}>
-                                <div className="show-close d-flex align-items-center">
+                                <div className="show-close d-flex align-items-center mb-3">
                                     Подробнее
                                     <span className="material-icons-outlined">
                                           expand_more
@@ -57,9 +72,9 @@ const PlayerIn = () => {
 
                     ):(
                         <>
-                            <div className="col-8 mb-2">{playerIn.personalInfo}</div>
+                            <div className="playerIn-data col-8 mb-2">{playerIn.personalInfo}</div>
                             <div onClick={() => setShowDes(!showDes)}>
-                                <div className="show-close d-flex align-items-center">
+                                <div className="show-close d-flex align-items-center mb-3">
                                     Убрать
                                     <span className="material-icons-outlined">
                                            expand_less
@@ -70,6 +85,30 @@ const PlayerIn = () => {
                         )}
 
                 </div>
+                {playerIn.id <97 &&(
+                    <div>
+                        <h5 className="d-flex justify-content-center">Регулярный чемпионат 2021/22</h5>
+                        {playerIn.position !== "Вратарь" ? (
+                            <div className="d-flex ">
+                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Игр <p>{playerIn.games}</p> </div>
+                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Голов <p>{playerIn.goals}</p> </div>
+                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Передач<p>{playerIn.assist}</p> </div>
+                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Очков <p>{playerIn.score}</p> </div>
+                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Штрафное время <p>{playerIn.boxTime}</p> </div>
+                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">+ / - <p>{playerIn.plusMinus}</p> </div>
+                            </div>
+                        ):(
+                            <div className="d-flex ">
+                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Игр <p>{playerIn.games}</p> </div>
+                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Побед <p>{playerIn.wins}</p> </div>
+                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">% Сейвов<p>{playerIn.saves}</p> </div>
+                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Надежность <p>{playerIn.safety}</p> </div>
+                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Сухих игр <p>{playerIn.DryGames}</p> </div>
+                            </div>
+                        )}
+
+                    </div>
+                )}
             </div>
 
 

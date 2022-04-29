@@ -31,7 +31,7 @@ const NewsPage = () => {
                              style={{width: '100%', height: '100%'}}>
                             <div className="newsPage-top d-flex  justify-content-center">
 
-                                <img className="news-image" src={n.image} width="335" height="310" alt="Новость"/>
+                                <img className="news-image" src={n.image}  alt="Новость"/>
                                 <div className="news-badge">{n.badge}</div>
                             </div>
 

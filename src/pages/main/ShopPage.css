@@ -1,0 +1,49 @@
+.shopPage-wrap{
+    width: 100%;
+    background: #2b3751;
+    color: white;
+    height: 100%;
+}
+.product-size h6{
+    cursor: pointer;
+    margin-right: 11px;
+    padding-top: 4px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid #173460;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.productIn-badge{
+    text-transform: uppercase;
+    color: white;
+    background: #be1a30;
+    padding: 4px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 60;
+    font-size: 19px;
+}
+.byeBtn-wrap{
+    height: 25px;
+    margin-top: 35px;
+}
+.byeBtn{
+    padding: 6px 10px;
+    background: white;
+    width: 14%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 14px;
+    color: black;
+}
+.byeBtn:hover{
+    background: none;
+    color: white;
+    border: 1px solid white;
+}

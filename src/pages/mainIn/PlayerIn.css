@@ -53,23 +53,25 @@ position: relative;
 }
 
 .playerIn-name {
-    text-transform: uppercase;
     display: flex;
     justify-content: center;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    line-height: 1.2;
     align-items: center;
-    color: black;
-    font-size: 26px;
-    font-weight: 500;
+    color: #1b1b1b;
+    font-size: 33px;
+    font-weight: 700;
     bottom: 12px;
 }
 
 .playerIn-position {
-    display: flex;
-    align-items: center;
-    height: 36px;
-    color: #9fe6ea;
+    color: #4f4f4f;
     font-size: 16px;
     font-weight: 600;
+    display: flex;
+    align-items: center;
 }
 
 .playerIn-number {
@@ -89,4 +91,15 @@ position: relative;
     background-color: white;
     border-radius: 50%;
 
+}
+.playerIn-data{
+    color: #1b1b1b;
+    font-size: 14px;
+    font-weight: 600;
+}
+.playerIn-data p{
+    color: #4f4f4f;
+    font-size: 36px;
+    font-weight: 800;
+    font-style: italic;
 }

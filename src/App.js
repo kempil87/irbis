@@ -16,6 +16,7 @@ import NewsPage from "./pages/main/NewsPage";
 import NewsIn from "./pages/mainIn/NewsIn";
 import Error from "./components/Error/Error";
 import ShopPage from "./pages/main/ShopPage";
+import PartnersIn from "./pages/mainIn/PartnersIn";
 
 function App() {
 
@@ -39,7 +40,7 @@ function App() {
                     <Route path="/media" element={<MediaPage/>}/>
                     <Route path="/shop" element={<Shop/>}/>
                     <Route path="/shop:id" element={<ShopPage/>}/>
-                    <Route path="/partners" element={<Partners/>}/>
+                    <Route path="/partners" element={<PartnersIn/>}/>
                     <Route path="/404" element={<Error/>}/>
                     <Route
                         path="*"
