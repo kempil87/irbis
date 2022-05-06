@@ -97,3 +97,38 @@ color: #173460!important;
     /*border-color: #173460!important;*/
     border: none!important;
 }
+@media screen and (max-width: 576px){
+    .mediaIn-title {
+        margin-left: 0;
+        margin-top: 0;
+        font-weight: 600;
+        font-size: 22px;
+    }
+    .image-gallery-right-nav{
+       display: none;
+    }
+    .image-gallery-left-nav{
+        display: none;
+    }
+    .image-gallery-fullscreen-button{
+        transform: scale(.8);
+    }
+    .photograph {
+        font-size: 13px;
+        margin-left: 20px;
+        color: #173460;
+    }
+    .mediaIn-all {
+        margin: 0;
+        font-size: 13px;
+    }
+
+    .mediaIn-all span {
+        margin-right: 6px;
+    }
+
+    .mediaIn-date {
+        font-size: 13px;
+
+    }
+}

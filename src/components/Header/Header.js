@@ -6,6 +6,8 @@ import 'react-dropdown/style.css';
 
 export const Header = ({showMenu}) => {
 
+    const logo = "https://sun9-62.userapi.com/s/v1/if2/La4UMohDT8Rx0B4k0G406YlHw_jwZOPG9LA3MnVpDFX4WvCo1n9Yw6Jm_qAH9IVj30QMZnyWEOEjWc96_A4bnSX8.jpg?size=111x128&quality=95&type=album"
+
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -16,9 +18,9 @@ export const Header = ({showMenu}) => {
             <div className="header">
                 <div className="header-wrap">
                     <div className="header-left">
-                        <Link to="/">
+                        <Link to="/" className="irbis-logo">
                             <img className="irbis-logo" width="111" height="128"
-                                 src="https://xn--m1agla.xn--p1ai/wp-content/uploads/2021/12/Irbis-111x128.png"/>
+                                 src={logo}/>
                         </Link>
                         <h6 className="hashtag">#охотаначалась</h6>
                     </div>
@@ -26,7 +28,7 @@ export const Header = ({showMenu}) => {
 
                     <div className="header-navbar">
                         <div className="header-club-info d-flex align-items-center justify-content-between">
-                            <div className="header-club-name">Флорбольный клуб «Ирбис»</div>
+                            <div className="header-club-name d-none d-md-block">Флорбольный клуб «Ирбис»</div>
                             <div onClick={handleShow} className="header-club-city align-items-center ">
                                 Казань
                                 <span className="material-icons-outlined">
@@ -58,12 +60,11 @@ export const Header = ({showMenu}) => {
                             {/*<div to="/account" className="header-icon">*/}
                             {/*    <button onClick={handleShow} id="myBtn" className="btn-header">Войти</button>*/}
                             {/*</div>*/}
-
                         </div>
-                        <span onClick={showMenu} className="material-icons-outlined d-flex d-sm-none">
-                                menu
-                            </span>
 
+                        <div>
+                            <span style={{fontSize:30}} onClick={showMenu} className="material-icons-outlined d-block d-md-none">clear_all</span>
+                        </div>
                     </div>
                     {/*<div className="btn-header" onClick={setShow}>Войти</div>*/}
                 </div>
@@ -108,18 +109,20 @@ export const Header = ({showMenu}) => {
             {/*        <Link className="footer-mail-link" to="">Создать аккаунт</Link>*/}
             {/*    </Modal.Footer>*/}
             {/*</Modal>*/}
-            <Modal show={show} onHide={handleClose} animation={false}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Флорбольный клуб "Ирбис"</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <h5>ул. Краснококшайская , Казань</h5>
-                    <div className="d-flex justify-content-center align-items-center">
-                        <iframe  src="https://yandex.ru/map-widget/v1/-/CCUFQRXh3A" width="460" height="300" frameBorder="1"
-                                 allowFullScreen="true" />
-                    </div>
-                </Modal.Body>
-            </Modal>
+            <div>
+                <Modal show={show} onHide={handleClose} animation={false}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Флорбольный клуб "Ирбис"</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <h5>ул. Краснококшайская , Казань</h5>
+                        <div className="d-flex justify-content-center align-items-center">
+                            <iframe  src="https://yandex.ru/map-widget/v1/-/CCUFQRXh3A" width="460" height="300" frameBorder="1"
+                                     allowFullScreen="true" />
+                        </div>
+                    </Modal.Body>
+                </Modal>
+            </div>
 
         </>
     )

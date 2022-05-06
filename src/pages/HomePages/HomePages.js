@@ -10,7 +10,7 @@ export const HomePages = () => {
     return (
             <nav className="item-nav ">
                 <News/>
-                <Championship/>
+                {/*<Championship/>*/}
                 <Club/>
                 <Media/>
                 <Shop/>

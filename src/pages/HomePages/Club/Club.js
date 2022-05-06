@@ -17,8 +17,17 @@ export const Club = () => {
                         <Row className="d-flex flex-column">
                             <Col>
                                 <Nav variant="pills" className="flex-column">
-                                    <div className="d-flex justify-content-between">
-                                        <div className="tabs d-flex mt-5">
+                                    <div className="d-flex justify-content-between ">
+                                        <div className="tabs d-none d-lg-flex mt-5">
+                                            <h3 className="d-flex ">Топ Игроков</h3>
+                                            <Nav.Item>
+                                                <Nav.Link eventKey="first">Снайперы</Nav.Link>
+                                            </Nav.Item>
+                                            <Nav.Item>
+                                                <Nav.Link eventKey="second">Ассистенты</Nav.Link>
+                                            </Nav.Item>
+                                        </div>
+                                        <div className="tabs d-flex d-lg-none mt-5 flex-column">
                                             <h3 className="d-flex ">Топ Игроков</h3>
                                             <Nav.Item>
                                                 <Nav.Link eventKey="first">Снайперы</Nav.Link>
@@ -73,9 +82,9 @@ export const Club = () => {
                                         </div>
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="second">
-                                        <div className="d-flex mb-4">
+                                        <div className="d-flex mb-4 flex-wrap">
                                             {SnipersData.map((i,index) => (
-                                                <div className="d-flex col-3 mt-3 justify-content-center" key={i.id}>
+                                                <div className="d-flex col-12 col-sm-6 col-lg-3 mt-3 justify-content-center" key={i.id}>
                                                     <div className=" top-info-player">
                                                         <img className="player-img" src={i.image} alt="//"/>
                                                         {/*<img className="player-img-main" src={i.mainImage} alt="//"/>*/}

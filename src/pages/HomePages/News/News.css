@@ -10,6 +10,9 @@
 
 .carousel-news {
     padding:0 80px 0 80px;
+    width: 1140px;
+    height: 470px;
+
 }
 
 .Card-news {
@@ -59,7 +62,7 @@
     /*    background-image: url("https://sun9-13.userapi.com/impg/cKIB1tl53nH9XOjQOCWSbhzVdTVcY_chgBGWdg/2twkVi-aUII.jpg?size=1280x837&quality=96&sign=b9599ef2eccd1f3e753ae3a91b9d2088&type=album ");*/
     /*background-repeat: no-repeat;*/
 
-    width: 1140px;
+    width: 1040px;
     height: 470px;
 
 }
@@ -79,5 +82,33 @@ button.active {
     /*background-color: #173460 !important;*/
 }
 
+@media screen and (max-width: 576px){
+    .carousel-news {
+        padding:0 4px 0 4px;
+        width: 400px;
+        margin-bottom: 0;
 
+    }
+    .carousel-title {
+        color: white;
+        font-size: 14px!important;
+
+    }
+    .carousel-subtitle {
+        color: #bdbbbb;
+        font-size: 12px!important;
+    }
+    .carousel-back {
+        padding: 6px 5px;
+        bottom: -20px;
+        width: 400px;
+    }
+    .carousel-img {
+        height:382px;
+
+    }
+    button{
+        display: none;
+    }
+}
 

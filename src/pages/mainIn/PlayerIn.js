@@ -15,7 +15,15 @@ const PlayerIn = () => {
         <div className=" playerIn-wrap d-flex flex-column">
             <div className="container">
                 <Link
-                    className="mt-3 back-stack d-flex align-items-center justify-content-center"
+                    className="mt-3 back-stack d-none d-lg-flex align-items-center justify-content-center"
+                    to={"/club"}>
+                    <span className="material-icons-outlined">
+                        chevron_left
+                    </span>
+                    Назад к клубу
+                </Link>
+                <Link
+                    className="mt-3 back-stack d-flex d-lg-none align-items-center "
                     to={"/club"}>
                     <span className="material-icons-outlined">
                         chevron_left
@@ -25,8 +33,12 @@ const PlayerIn = () => {
             </div>
             <div className="d-flex justify-content-center align-items-center">
                 <div className=" top-info-playerIn">
+                    {playerIn.id >97 ?(
+                        <img className="playerIn-img-main" src={playerIn.image} alt="//"/>
+                    ):(
+                        <img className="playerIn-img-main" src={playerIn.mainImage} alt="//"/>
+                    )}
 
-                    <img className="playerIn-img-main" src={playerIn.mainImage} alt="//"/>
                     {playerIn.id <97 &&(
                         <div className="playerIn-number">{playerIn.number}</div>
                     )}
@@ -89,21 +101,21 @@ const PlayerIn = () => {
                     <div>
                         <h5 className="d-flex justify-content-center">Регулярный чемпионат 2021/22</h5>
                         {playerIn.position !== "Вратарь" ? (
-                            <div className="d-flex ">
-                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Игр <p>{playerIn.games}</p> </div>
-                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Голов <p>{playerIn.goals}</p> </div>
-                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Передач<p>{playerIn.assist}</p> </div>
-                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Очков <p>{playerIn.score}</p> </div>
-                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Штрафное время <p>{playerIn.boxTime}</p> </div>
-                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">+ / - <p>{playerIn.plusMinus}</p> </div>
+                            <div className="d-flex regular-statist justify-content-center">
+                                <div className="col-3 col-lg-2 playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Игр <p>{playerIn.games}</p> </div>
+                                <div className="col-3 col-lg-2 playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Голов <p>{playerIn.goals}</p> </div>
+                                <div className="col-3 col-lg-2 playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Передач<p>{playerIn.assist}</p> </div>
+                                <div className="col-3 col-lg-2 playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Очков <p>{playerIn.score}</p> </div>
+                                <div className="col-3 col-lg-2 playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Штраф.мин <p>{playerIn.boxTime}</p> </div>
+                                <div className="col-3 col-lg-2 playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">+ / - <p>{playerIn.plusMinus}</p> </div>
                             </div>
                         ):(
-                            <div className="d-flex ">
-                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Игр <p>{playerIn.games}</p> </div>
-                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Побед <p>{playerIn.wins}</p> </div>
-                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">% Сейвов<p>{playerIn.saves}</p> </div>
-                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Надежность <p>{playerIn.safety}</p> </div>
-                                <div className="playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Сухих игр <p>{playerIn.DryGames}</p> </div>
+                            <div className="d-flex regular-statist justify-content-center">
+                                <div className="col-3  playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Игр <p>{playerIn.games}</p> </div>
+                                <div className="col-3   playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Побед <p>{playerIn.wins}</p> </div>
+                                <div className="col-3  playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">% Сейвов<p>{playerIn.saves}</p> </div>
+                                <div className="col-3   playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Надежность <p>{playerIn.safety}</p> </div>
+                                <div className="col-3  playerIn-data m-2 d-flex flex-column text-center justify-content-center align-items-center">Сухих игр <p>{playerIn.DryGames}</p> </div>
                             </div>
                         )}
 

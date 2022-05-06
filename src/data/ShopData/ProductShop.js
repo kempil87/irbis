@@ -37,6 +37,14 @@ export const ProductShop = [
         badge: "Sale",
         salePrice: 1000
     },
+    {
+        id: 10006,
+        image: "https://sun1-87.userapi.com/impg/zN1Hn4MJo6C06cmB1TdBLdmOL5WpdoqXRPudhg/jM4HTfzIYUg.jpg?size=0x179&crop=0.176,0.071,0.62,0.929&quality=95&sign=3e128d0dca531d39698f098a117b3690",
+        price: 1600,
+        name: "Футболка ФБК Ирбис",
+        badge: "Sale",
+        salePrice: 1100
+    },
 
 ]
 export const ProductShopIn = [
@@ -110,6 +118,20 @@ export const ProductShopIn = [
         name: "Футболка ФБК Ирбис",
         badge: "Sale",
         salePrice: 1000,
+        amount:6
+    },
+    {
+        id: 10006,
+        images: [
+            {
+                image: "https://sun1-87.userapi.com/impg/zN1Hn4MJo6C06cmB1TdBLdmOL5WpdoqXRPudhg/jM4HTfzIYUg.jpg?size=0x179&crop=0.176,0.071,0.62,0.929&quality=95&sign=3e128d0dca531d39698f098a117b3690",            },
+            {
+                image: "https://sun1-87.userapi.com/impg/zN1Hn4MJo6C06cmB1TdBLdmOL5WpdoqXRPudhg/jM4HTfzIYUg.jpg?size=0x179&crop=0.176,0.071,0.62,0.929&quality=95&sign=3e128d0dca531d39698f098a117b3690",            },
+        ],
+        price: 1600,
+        name: "Футболка ФБК Ирбис",
+        badge: "Sale",
+        salePrice: 1100,
         amount:6
     },
 

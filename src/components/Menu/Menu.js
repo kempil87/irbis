@@ -1,17 +1,17 @@
 import React from 'react';
 import "./Menu.css"
 import {Link} from "react-router-dom";
-import IconSvgInst from "../../assets/icons/IconSvgInst";
-import IconSvgVk from "../../assets/icons/IconSvgVk";
-import {IconSvgTlg} from "../../assets/icons/IconSvgTlg";
+import {Footer} from "../Footer/Footer";
 
 export const Menu = ({closeMenu}) => {
+
     return (
-        <div className={"menu-active wrapper-window"} onClick={closeMenu}>
-            <span onClick={closeMenu} className="material-icons-outlined btn-close-menu">
-                    close
-                </span>
-            <div className="menu-wrapper" onClick={(event => event.stopPropagation())}>
+
+          <div className={"menu-active wrapper-window"} onClick={closeMenu}>
+             <span onClick={closeMenu} className="material-icons-outlined btn-close-menu">
+                     close
+                 </span>
+            <div className="menu-wrapper " onClick={(event => event.stopPropagation())}>
                 <div className="menu-header">
                     <Link onClick={closeMenu} to="/">
                         <img className="irbis-logo-menu"
@@ -20,7 +20,7 @@ export const Menu = ({closeMenu}) => {
                     </Link>
                     <h6 className="hashtag-menu">#охотаначалась</h6>
                 </div>
-                <div className="menu-body">
+                <div className="menu-body mb-5">
                     <div className="menu-content ">
                         <Link onClick={closeMenu} to="/" className="menu-link">Главная</Link>
                         <Link onClick={closeMenu} to="/news" className="menu-link">Новости</Link>
@@ -34,21 +34,11 @@ export const Menu = ({closeMenu}) => {
                         {/*</div>*/}
                     </div>
                 </div>
-                <div className="footer-menu">
-                    <div className="footer-social">
-                        <Link to="//vk.com/fbc_irbis" target="_blank">
-                            <IconSvgInst/>
-                        </Link>
-                        <Link to="//vk.com/fbc_irbis"  target="_blank">
-                            <IconSvgVk/>
-                        </Link>
-                        <Link to="//vk.com/fbc_irbis"  target="_blank">
-                            <IconSvgTlg/>
-                        </Link>
-                    </div>
-                </div>
+                <Footer/>
             </div>
-        </div>
+          </div>
+
+
     );
 };
 

@@ -28,7 +28,6 @@
     font-weight: 500;
     color: #173460;
     text-decoration: none;
-    display: flex;
     align-items: center;
 }
 
@@ -134,4 +133,20 @@ position: absolute;
     border-radius: 0!important;
     background-color: #173460;
     opacity: .84;
+}
+@media screen and (max-width: 576px){
+    .home-title-shop{
+        font-size: 18px;
+
+    }
+    .product-img-show{
+        width: 350px;
+        height: 350px;
+    }
+
+    .product-name {
+        position: static;
+
+    }
+
 }

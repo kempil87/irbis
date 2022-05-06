@@ -8,6 +8,14 @@ export const HomeNews = [
             "Увидимся в Вышке"
     },
     {
+        id:245,
+        image:"https://sun9-66.userapi.com/s/v1/ig2/3qQ0UxI1DtYabS2jF2PCbq-Sl9runBZ0XsHGkBOzZCvPFYFceaJp6V1kb8o6Tv1_mRfnPli4F52jmIf7YODklJ3a.jpg?size=1080x1080&quality=95&type=album",
+        date:"27.04.2022",
+        title:"Вступай в #Ирбисбанду!",
+        subtitle:"Мы дарим игровую футболку сезона 2021/2022 от ФБК «Ирбис» с твоей фамилией и любимым номером!"
+    },
+
+    {
         id:219,
         image:"https://sun9-28.userapi.com/s/v1/if2/MSruIH5EohzlAkAefLHNJsclEI2BOEEblThQUGQ-RwOwpNrXTiylOEcKeAhICX4kiyfHlRvnIpim49UH5CkQrqhk.jpg?size=1235x768&quality=95&type=album",
         date:"19.04.2022",

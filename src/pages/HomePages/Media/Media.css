@@ -27,6 +27,7 @@ color: white;
     position: relative;
     margin: 18px 0;
     cursor: pointer;
+    justify-content: center;
 
 }
 .photo-card:before{
@@ -88,6 +89,23 @@ color: white;
     position: absolute;
     opacity: .54;
     background: linear-gradient(45deg, black, #C5DDE8);
+}
+@media screen and (max-width: 576px){
+    .media-image-grad{
+        width: 100%;
+    }
+    .photo-card:before{
+        width: 93%;
+    }
+    .photo-card:after{
+        width: 86.5%;
+    }
+    .photo-card:hover:before{
+        width: 90%;
+    }
+    .photo-card:hover:after{
+        border-top: 16px solid rgba(253, 252, 252, 0.6);
+    }
 }
 .media-all{
     z-index: 92;

@@ -21,20 +21,33 @@ export const Media = () => {
                 </Link>
             </div>
             <div className="d-flex  ">
-                <div className=" container d-flex flex-wrap ">
+                <div className="  d-flex flex-wrap container justify-content-center">
                     {MediaData.slice(0,6).map((card) => (
 
-                        <Link to={`/media${card.id}`} key={card.id} className="col-sm-12 col-md-6 col-lg-4 d-flex flex-column photo-card">
-                            <img width="400" height='267' className="media-image" src={card.image} alt='фото'/>
-                            <div className="media-image-grad"/>
-                            <div className="media-all d-flex align-items-center">
-                                    <span className="material-icons-outlined">
-                                     image
-                                    </span>
-                                {card.all}
-                            </div>
-                            <div className="media-date">{card.date}</div>
-                            <div className="media-title">{card.name}</div>
+                        // <Link to={`/media${card.id}`} key={card.id} className="col-sm-12 col-md-6 col-lg-4 d-flex flex-column photo-card">
+                        //     <img width="400" height='267' className="media-image" src={card.image} alt='фото'/>
+                        //     <div className="media-image-grad"/>
+                        //     <div className="media-all d-flex align-items-center">
+                        //             <span className="material-icons-outlined">
+                        //              image
+                        //             </span>
+                        //         {card.all}
+                        //     </div>
+                        //     <div className="media-date">{card.date}</div>
+                        //     <div className="media-title">{card.name}</div>
+                        // </Link>
+                        <Link to={`/media${card.id}`} key={card.id} className=" col-11 col-lg-4 d-flex flex-column photo-card ">
+                        <img width="400" height='267' className="d-none d-lg-block media-image" src={card.image} alt='фото'/>
+                        <img width="380" height='247' className="d-block d-lg-none media-image col-12" src={card.image} alt='фото'/>
+                        <div className=" media-image-grad "/>
+                        <div className="media-all d-flex align-items-center">
+                        <span className="material-icons-outlined">
+                        image
+                        </span>
+                    {card.all}
+                        </div>
+                        <div className="media-date">{card.date}</div>
+                        <div className="media-title">{card.name}</div>
                         </Link>
                     ))}
 

@@ -1,9 +1,9 @@
 import React from "react";
 import "./Championship.css"
-import {Table} from "react-bootstrap";
 import {Link, useParams} from "react-router-dom";
 import {championshipData} from "../../../data/championshipData/championshipData";
 import {MediaData} from "../../../data/mediaData/MediaData";
+import TableChamp from "../../../helper/table/TableChamp";
 
 
 export const Championship = () => {
@@ -13,7 +13,7 @@ export const Championship = () => {
         <div className="champ-wrap">
             {/*<div className="page-tittle mt-3 ">Чемпионат</div>*/}
             <div className="d-sm-block d-md-flex justify-content-between">
-                <div className='col-6  mt-4'>
+                <div className='col-12 col-lg-6 mt-4 container'>
                     <div className="next-game ">
                         <div className="d-flex align-items-center">
                             <h5> СЛЕДУЮЩИЙ МАТЧ</h5>
@@ -77,7 +77,7 @@ export const Championship = () => {
                         </div>
                     </div>
                 </div>
-                <div className="mt-4">
+                <div className="mt-4 container">
                     <div className="table-info">
                         <div className="d-flex justify-content-around">
                             <h6>Сезон</h6>
@@ -88,148 +88,9 @@ export const Championship = () => {
                             <h6>I лига</h6>
                         </div>
                     </div>
-                    <Table striped bordered hover variant="dark">
-                        <thead>
-                        <tr>
-                            <th>№</th>
-                            <th>Команда</th>
-                            <th>И</th>
-                            <th>В</th>
-                            <th>ОТВ</th>
-                            <th>П</th>
-                            <th>ОТП</th>
-                            <th>ШВ</th>
-                            <th>+/-</th>
-                            <th>О</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>
-                                <img className="logo-table"
-                                     src="https://xn--m1agla.xn--p1ai/wp-content/uploads/2021/12/Irbis-111x128.png"
-                                />
-                                ИРБИС
-                            </td>
-                            <td>14</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>
-                                <img className="logo-table"
-                                     src="https://xn--m1agla.xn--p1ai/wp-content/uploads/2021/12/Irbis-111x128.png"
-                                />
-                                ИРБИС
-                            </td>
-                            <td>14</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>
-                                <img className="logo-table"
-                                     src="https://xn--m1agla.xn--p1ai/wp-content/uploads/2021/12/Irbis-111x128.png"
-                                />
-                                ИРБИС
-                            </td>
-                            <td>14</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td > <img className="logo-table"
-                                       src="https://xn--m1agla.xn--p1ai/wp-content/uploads/2021/12/Irbis-111x128.png"
-                            />ЯМАЛ</td>
-                            <td>14</td>
-                            <td>7</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td > <img className="logo-table"
-                                       src="https://xn--m1agla.xn--p1ai/wp-content/uploads/2021/12/Irbis-111x128.png"
-                            />СЕСТР. БОБРЫ</td>
-                            <td>14</td>
-                            <td>5</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td > <img className="logo-table"
-                                       src="https://xn--m1agla.xn--p1ai/wp-content/uploads/2021/12/Irbis-111x128.png"
-                            />СПАРТАК</td>
-                            <td>14</td>
-                            <td>3</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td > <img className="logo-table"
-                                       src="https://xn--m1agla.xn--p1ai/wp-content/uploads/2021/12/Irbis-111x128.png"
-                            />СЕВ. ВОЛКИ</td>
-                            <td>14</td>
-                            <td>3</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td > <img className="logo-table"
-                                       src="https://xn--m1agla.xn--p1ai/wp-content/uploads/2021/12/Irbis-111x128.png"
-                            />ОЛИМП (НН)</td>
-                            <td>14</td>
-                            <td>1</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td>13</td>
-                        </tr>
-                        </tbody>
-                    </Table>
+                    <TableChamp/>
                 </div>
             </div>
         </div>
-
     )
 }

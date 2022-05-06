@@ -103,3 +103,29 @@ position: relative;
     font-weight: 800;
     font-style: italic;
 }
+@media screen and (max-width: 576px){
+    .playerIn-img-main {
+        width: 240px;
+        height: 240px;
+    }
+    .playerIn-number {
+        bottom: 45px;
+    }
+    .back-stack {
+        width: 70%;
+    }
+    .show-close{
+        font-size: 13px!important;
+    }
+    .regular-statist{
+        flex-wrap: wrap;
+    }
+    .playerIn-data p{
+        font-size: 28px;
+    }.playerIn-data {
+        font-size: 13px;
+    }
+    .playerIn-name {
+        font-size: 29px;
+    }
+}

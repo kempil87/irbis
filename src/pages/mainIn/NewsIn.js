@@ -14,7 +14,7 @@ const NewsIn = () => {
         <div className="newsPage-wrap container">
             <div  className="mt-4">
                 <Link
-                      className="back-news d-flex align-items-center justify-content-center"
+                      className="back-news d-flex align-items-center "
                       to={"/news"}>
                     <span className="material-icons-outlined">
                         chevron_left
@@ -33,36 +33,41 @@ const NewsIn = () => {
                     <div className="newsIn-title  mt-2">{news.title}</div>
 
                     <div className="newsPageIn-top-grad"/>
-                    <img className="newsIn-image" src={news.image} width="700" height="560" alt="Новость"/>
-                    {showDes ? (
-                        <div className="newsIn-subtitle ">
-                            {news.subtitle}
-                            <div onClick={() => setShowDes(!showDes)}>
-                                <div className="show-close">
-                                    Убрать
+                    <img className="newsIn-image d-none d-lg-block" src={news.image} width="700" height="560" alt="Новость"/>
+                    <img className="newsIn-image d-block d-lg-none" src={news.image} width="300" height="260" alt="Новость"/>
+                    <div className="d-flex justify-content-center flex-column align-items-center">
+                        {showDes ? (
+                            <div className="newsIn-subtitle col-12 ">
+                                {news.subtitle}
+                                <div onClick={() => setShowDes(!showDes)}>
+                                    <div className="show-close">
+                                        Убрать
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ) : (
-                        <div className="newsIn-subtitle">
-                            {news.shortSubTitle}
-                            <div onClick={() => setShowDes(!showDes)}>
-                                <div  className="show-close">Показать полностью </div>
+                        ) : (
+                            <div className="newsIn-subtitle col-12 ">
+                                {news.shortSubTitle}
+                                <div onClick={() => setShowDes(!showDes)}>
+                                    <div  className="show-close">Показать полностью </div>
+                                </div>
                             </div>
-                        </div>
-                    )}
-                    {news.source ?(
-                        <div className="d-flex flex-column justify-content-center align-items-center">
-                            <h6 style={{color:'#837e7e'}}>Теги :</h6>
-                            <Link className="tags-link"  to={`/club${news.source}`}>{news.name}</Link>
-                        </div>
-                    ):(
-                        <div className="d-flex flex-column justify-content-center align-items-center">
-                            <h6 style={{color:'#837e7e'}}>Нет тегов</h6>
-                        </div>
-                    )}
+                        )}
+                        {news.source ?(
+                            <div className="d-flex flex-column justify-content-center align-items-center">
+                                <h6 style={{color:'#837e7e'}}>Теги :</h6>
+                                <Link className="tags-link"  to={`${news.source}`}>{news.name}</Link>
+                            </div>
+                        ):(
+                            <div className="d-flex flex-column justify-content-center align-items-center">
+                                <h6 style={{color:'#837e7e'}}>Нет тегов</h6>
+                            </div>
+                        )}
+
+                    </div>
+
                 </div>
-                <div className="d-flex justify-content-between container" >
+                <div className="d-none d-lg-flex justify-content-between container" >
                     <h4 style={{color:'#173460'}} className="page-tittle ">Смотри также</h4>
                     <Link style={{color:'#173460'}} to="/news" className="all-news">
                         Все Новости
@@ -71,10 +76,19 @@ const NewsIn = () => {
                     </span>
                     </Link>
                 </div>
-                <div className="d-flex flex-wrap">
+                <div className="d-flex d-lg-none justify-content-between container" >
+                    <h4 style={{color:'#173460'}} className="page-tittle ">Смотри также</h4>
+                    <Link style={{color:'#173460'}} to="/news" className="all-news">
+                        Все
+                        <span className="material-icons-outlined">
+                        arrow_right_alt
+                    </span>
+                    </Link>
+                </div>
+                <div className="d-flex flex-wrap ">
 
                     {shortNews.slice(0,4).map(n=>(
-                        <Link to={`/news${n.id}`} key={n.id} className="newsCard-wrap col-3 mt-4 mb-4 d-flex flex-column ">
+                        <Link to={`/news${n.id}`} key={n.id} className="newsCard-wrap col-12 col-lg-3 mt-4 mb-4 d-flex flex-column ">
                             <div className="d-flex flex-column justify-content-between align-items-center"
                                  style={{width:'100%',height:'100%'}}
                             >

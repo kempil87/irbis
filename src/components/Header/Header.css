@@ -289,3 +289,45 @@
 }
 
 
+/*media*/
+
+@media screen and (max-width: 576px){
+    .header {
+        height: 100px;
+    }
+    .header-navbar {
+        flex-direction: row;
+        margin: 0;
+    }
+    .header-wrap {
+        justify-content:space-around;
+    }
+    .header-left {
+        margin: 0;
+    }
+    .hashtag{
+        font-size: 14px;
+        margin: 0;
+        color: rgba(0, 0, 0, 0.8);
+        font-weight: 600;
+    }
+
+    .irbis-logo {
+        transform: scale(.7);
+
+    }
+    .header-club-city {
+        font-size: 14px;
+        margin-right: 8px;
+    }
+    .header-club-city span{
+        font-size: 16px;
+    }
+    .modal{
+        height: 100%;
+        width: 100%;
+    }
+    .modal-dialog{
+        transform: scale(.67);
+    }
+}

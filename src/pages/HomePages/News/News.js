@@ -20,8 +20,8 @@ export const News = () => {
                     </span>
                 </Link>
             </div>
-            <div className="mt-3 container">
-                <div className="carousel-news mb-5">
+            <div className="mt-5 d-flex justify-content-center">
+                <div className="carousel-news mb-0 mb-lg-5">
 
                         <Carousel
                             >
@@ -29,7 +29,7 @@ export const News = () => {
                                 <Carousel.Item key={news.id} >
                                     <Link to={`/news${news.id}`}>
                                     <img
-                                        className="carousel-img"
+                                        className="carousel-img d-block w-100"
                                         src={news.image}
                                         alt="First slide"
                                     />
