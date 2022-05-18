@@ -1,51 +1,55 @@
 import './App.css';
 import {Header} from "./components/Header/Header";
-import {Navigate, Route, Routes} from "react-router-dom";
-import {HomePages} from "./pages/HomePages/HomePages";
-import {Championship} from "./pages/HomePages/Championship/Championship";
-import {Partners} from "./pages/HomePages/Partners/Partners";
-import {Shop} from "./pages/HomePages/Shop/Shop";
+import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
+import {HomePages} from "./pages/HomePage/HomePages";
+import {Championship} from "./components/Championship/Championship";
+import {Partners} from "./components/Partners/Partners";
 import {Footer} from "./components/Footer/Footer"
 import {Menu} from "./components/Menu/Menu";
-import React, {useState} from "react";
-import ClubPage from "./pages/main/ClubPage";
-import MediaPage from "./pages/main/MediaPage";
-import PlayerIn from "./pages/mainIn/PlayerIn";
-import MediaPageIn from "./pages/mainIn/MediaPageIn";
-import NewsPage from "./pages/main/NewsPage";
-import NewsIn from "./pages/mainIn/NewsIn";
+import React, {useEffect, useState} from "react";
+import ClubPage from "./pages/ClubPage/ClubPage";
+import MediaPage from "./pages/MediaPage/MediaPage";
+import PlayerIn from "./pages/PlayerIn/PlayerIn";
+import MediaPageIn from "./pages/MediaPageIn/MediaPageIn";
+import NewsPage from "./pages/NewsPage/NewsPage";
+import NewsIn from "./pages/NewsIn/NewsIn";
 import Error from "./components/Error/Error";
-import ShopPage from "./pages/main/ShopPage";
-import PartnersIn from "./pages/mainIn/PartnersIn";
+import ShopPageIn from "./pages/ShopPageIn/ShopPageIn";
+import PartnersIn from "./pages/PartnersIn/PartnersIn";
+import {ShopPage} from "./pages/ShopPage/ShopPage";
+import { useLocation } from "react-router";
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
     const [openMenu,setOpenMenu] = useState(false)
 
-
-
     return (
-        <div className="App  d-flex flex-column flex-fill">
+        <div className="App d-flex flex-column flex-fill">
             <Header showMenu={()=> setOpenMenu(true)}/>
 
-            <div className=" flex-fill body-content ">
+            <div className="flex-fill">
                 <Routes>
-                    <Route path="/" element={<HomePages/>}/>
-                    <Route path="/championship" element={<Championship/>}/>
-                    <Route path="/club:id" element={<PlayerIn/>}/>
-                    <Route path="/club" element={<ClubPage/>}/>
-                    <Route path="/news" element={<NewsPage/>}/>
-                    <Route path="/news:id" element={<NewsIn/>}/>
-                    <Route path="/media:id" element={<MediaPageIn/>}/>
-                    <Route path="/media" element={<MediaPage/>}/>
-                    <Route path="/shop" element={<Shop/>}/>
-                    <Route path="/shop:id" element={<ShopPage/>}/>
-                    <Route path="/partners" element={<PartnersIn/>}/>
-                    <Route path="/404" element={<Error/>}/>
-                    <Route
-                        path="*"
-                        element={<Navigate to="/404" replace />}
-                    />
+                  <Route path="/" element={<HomePages/>}/>
+                  <Route path="/championship" element={<Championship/>}/>
+                  <Route path="/club/:_id" element={<PlayerIn/>}/>
+                  <Route path="/club" element={<ClubPage/>}/>
+                  <Route path="/news" element={<NewsPage/>}/>
+                  <Route path="/news:_id" element={<NewsIn/>}/>
+                  <Route path="/media:id" element={<MediaPageIn/>}/>
+                  <Route path="/media" element={<MediaPage/>}/>
+                  <Route path="/shop" element={<ShopPage/>}/>
+                  <Route path="/shop:_id" element={<ShopPageIn/>}/>
+                  <Route path="/partners" element={<PartnersIn/>}/>
+                  <Route path="/404" element={<Error/>}/>
+                  <Route
+                    path="*"
+                    element={<Navigate to="/404" replace />}
+                  />
                 </Routes>
             </div>
             <Partners/>

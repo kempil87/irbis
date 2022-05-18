@@ -27,7 +27,6 @@ export const PlayersCardInfo = [
             "\n" +
             "Достижения: серебряный призёр юниорского чемпионата мира (2009), обладатель Кубка Харламова (2010), чемпион мира среди молодёжи (2011), серебряный призёр чемпионата России (2019), обладатель Кубка Гагарина (2021), участник Матча Звёзд КХЛ (2017, 2019, 2020).",
         shortPersonalInfo:"На молодёжном уровне выступал в России за «Стальных Лисов», в Канаде – за «Лондон Найтс» (хоккейная лига Онтарио). Затем играл в клубах АХЛ «Сиракьюз Кранч» (2010-2012) и «Норфолк Адмиралс» (2012-2015). В сезонах 2013/14",
-
     },
     {
         id: 27,
@@ -60,7 +59,9 @@ export const PlayersCardInfo = [
     },
     {
         id: 6,
+
         image: "https://sun1-57.userapi.com/impf/kiRu455-ACvJ4Ogp-0WuPlht-mbrlul-HRw1Qg/KeRNqf4FTtA.jpg?size=411x575&quality=95&sign=23f493eb15293fb3f6173c25a4df38cd&type=album",
+
         mainImage: "https://sun1-84.userapi.com/impf/jRxniY_uToJJNzgf1hoZLlRjJ2OhQVTvf1e94w/MvSFDQsblfE.jpg?size=280x330&quality=95&sign=78696dea09861b0027d3464de20d5afe&type=album",
         number: 6,
         name: "Куницын Егор",
@@ -568,7 +569,9 @@ export const PlayersCardInfo = [
     {
         id: 99,
         image:"https://sun1-55.userapi.com/impf/WDAGAVJ56dQDGpy97dOYpzzCe5WYtzA5U52Okg/ejD83FHmNfo.jpg?size=300x300&quality=95&sign=df679c69720e91c96e9ed0e0f66ac58b&type=album",
+
         mainImage: "https://sun9-58.userapi.com/impg/a4NerXNjwRMwTXWqtK92pC5t7rDQXNaGH9rCJw/RsVUSymCF3Y.jpg?size=721x1080&quality=96&sign=320d63e88dcdf911b82de39bb58b511d&type=album",
+
         name: "Нигмедзянов Рамис Рафисович",
         position: "Главный тренер",
         personalInfo:" Сергей Михайлович Абрамов родился 15 сентября 1959 года в Казани. Воспитанник «Ак Барса», мастер спорта, заслуженный тренер России.\n" +

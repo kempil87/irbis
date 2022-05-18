@@ -87,7 +87,8 @@
     font-weight: 500;
     margin-left: 15px;
 }
-.header-club-city span{
+
+.header-club-city span {
     font-size: 20px;
 }
 
@@ -120,6 +121,7 @@
     width: 100%;
     transition: linear .2s;
 }
+
 .header-alink:hover {
 
     color: #173460;
@@ -146,7 +148,7 @@
     outline: none;
     /*border-color:transparent!important;*/
     box-shadow: none !important;
-    font-size:15px!important; ;
+    font-size: 15px !important;;
     margin-right: 6px;
     margin-left: 8px;
 }
@@ -159,6 +161,7 @@
 .dropdown-menu {
     border-radius: 0 !important;
     background-color: #173460 !important;
+
 }
 
 .dropdown-menu p {
@@ -287,26 +290,44 @@
     height: 45px;
     border: 1px solid rgba(0, 0, 0, 0.2) !important;
 }
+.burger-back{
+    z-index: 1000;
+    justify-content: center; display: flex; align-items: center;
+    padding: 4px;
+    border-radius: 50%;
+}
 
 
 /*media*/
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 576px) {
     .header {
         height: 100px;
     }
+
+    .burger-back{
+        position: fixed;
+        z-index: 1000;
+        right: 4px;
+        top: 33px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
     .header-navbar {
         flex-direction: row;
         margin: 0;
     }
+
     .header-wrap {
-        justify-content:space-around;
+        justify-content: space-around;
     }
+
     .header-left {
         margin: 0;
     }
-    .hashtag{
-        font-size: 14px;
+
+    .hashtag {
+        font-size: 13px;
         margin: 0;
         color: rgba(0, 0, 0, 0.8);
         font-weight: 600;
@@ -316,18 +337,23 @@
         transform: scale(.7);
 
     }
+
     .header-club-city {
         font-size: 14px;
-        margin-right: 8px;
+        margin-right: 28px;
+        margin-left: 0;
     }
-    .header-club-city span{
+
+    .header-club-city span {
         font-size: 16px;
     }
-    .modal{
+
+    .modal {
         height: 100%;
         width: 100%;
     }
-    .modal-dialog{
+
+    .modal-dialog {
         transform: scale(.67);
     }
 }

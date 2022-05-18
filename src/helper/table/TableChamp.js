@@ -4,7 +4,7 @@ import {Table} from "react-bootstrap";
 const TableChamp = () => {
     return (
         <div>
-            <Table striped bordered hover variant="dark">
+            <Table style={{zIndex: 100}} striped bordered hover variant="dark">
                 <thead >
                 <tr>
                     <th>№</th>

@@ -1,0 +1,212 @@
+.club-wrap {
+    width: 100%;
+    background-color: rgb(23, 52, 96);
+
+}
+
+.nav-link {
+    font-family: 'Montserrat', sans-serif !important;
+    background: none !important;
+    cursor: pointer;
+    background: #1c252b!important;
+    border-radius: 24px!important;
+    box-shadow: none!important;
+    padding: 5px 10px!important;
+    margin-right: 6px!important;
+    margin-left: 12px;
+}
+.nav-link active{
+    background: none !important;
+    border: 1px solid #1c252b!important;
+    border-radius: 24px!important;
+    box-shadow: none!important;
+}
+
+.tabs a {
+    color: #7e7e7e;
+}
+
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, .6) !important;
+}
+
+.all-players {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+}
+
+.all-players:hover {
+    color: white;
+}
+
+.all-players:hover > span { /*стиль для всех span - прямых наследников div */
+    transform: translateX(8px);
+    transition: ease .2s;
+}
+
+.all-players span {
+    margin-left: 5px;
+    transition: ease .2s;
+}
+
+.top-info-player {
+    position: relative;
+    width: 296px;
+    height: 424px;
+    cursor: pointer;
+    transition: ease .3s;
+
+}
+
+.top-info-player:hover {
+    transition: ease .3s;
+    transform: translateY(-8px);
+}
+
+.player-img {
+    position: absolute;
+    opacity: .5;
+    width: 100%;
+    height: 100%;
+    transition: ease .3s;
+}
+
+
+.player-img:hover {
+    opacity: .78;
+    transition: ease .3s;
+}
+
+.player-img-main {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+
+}
+
+.player-name {
+    position: absolute;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 55px;
+    color: white;
+    font-size: 19px;
+    font-weight: 500;
+    left: 13%;
+
+}
+
+.player-position {
+    position: absolute;
+    padding: 16px;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    height: 44px;
+
+    color: rgb(152, 205, 206);
+    /*color: rgba(51, 144, 236, 0.7);*/
+background-color: rgba(0, 0, 0, 0.7);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.player-number {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    color: #173460;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: white;
+
+}
+
+.player-games {
+    position: absolute;
+    bottom: 8px;
+    left: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.player-goal {
+    position: absolute;
+    bottom: 8px;
+    left: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.player-assist {
+    position: absolute;
+    bottom: 8px;
+    left: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.player-score {
+    position: absolute;
+    bottom: 8px;
+    left: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+.best-players-wrap{
+
+}
+@media screen and (max-width: 576px){
+    .best-players-wrap{
+        width:120vw;
+        overflow-x: auto;
+    }
+    .best-players{
+        margin: .4rem;
+    }
+}
