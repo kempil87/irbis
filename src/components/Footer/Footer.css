@@ -33,9 +33,7 @@
 }.footer-mid{
      margin-left: 14px;
 }
-.footer-left{
-    justify-content: center;
-}
+
 @media screen and (max-width: 576px){
 
     .footer-wrap{

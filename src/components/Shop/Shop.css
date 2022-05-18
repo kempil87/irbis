@@ -1,6 +1,5 @@
 .shop-wrap {
     padding: 40px;
-
 }
 
 
@@ -144,6 +143,10 @@
 }
 
 @media screen and (max-width: 576px) {
+    .shop-wrap {
+        padding: 15px;
+    }
+
     .home-title-shop {
         font-size: 18px;
 

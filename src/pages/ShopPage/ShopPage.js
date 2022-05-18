@@ -24,7 +24,7 @@ export const ShopPage = () => {
     },
     mobile: {
       breakpoint: {max: 576, min: 0},
-      items: 2
+      items: 1
     }
   };
 
@@ -67,7 +67,6 @@ export const ShopPage = () => {
           className=""
         >
           {product.map((i) => (
-
             <div className="container product-card mt-3" key={i._id}>
               <div className="d-flex flex-column align-items-center product-top">
                 <img className="product-img" src={i.image}/>
@@ -97,7 +96,7 @@ export const ShopPage = () => {
         </Carousel>
       </div>
 
-      <div style={{width:'100vw'}}  className="d-flex d-lg-none overflow-auto  align-items-center ">
+      <div style={{width: '100vw'}} className="d-flex d-lg-none overflow-auto  align-items-center ">
         {ProductShop.slice(0, 3).map((i) => (
 
           <div className=" product-card m-1 " key={i.id}>
