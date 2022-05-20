@@ -77,7 +77,7 @@ const PlayerIn = () => {
                     </div>
                 </div>
                 <div className=" d-flex align-items-center justify-content-center flex-column">
-                    {playersIn.number >0   ? (
+                    {playersIn.number <0   ? (
                         <h4>Информация о сотруднике</h4>
                     ):(
                         <h4>Информация о игроке</h4>

@@ -15,6 +15,7 @@ export const News = () => {
 
   const getHomeNews = () => {
     api.get(`/news`).then((res) =>{
+      console.log(123123, res)
       setHomeNews(res.data)
     })
   }
