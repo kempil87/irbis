@@ -12,7 +12,8 @@ export const Championship = () => {
     return (
         <div className="champ-wrap">
             {/*<div className="page-tittle mt-3 ">Чемпионат</div>*/}
-            <div className="d-sm-block d-md-flex justify-content-between">
+            <div className="d-flex flex-column flex-lg-row justify-content-between">
+
                 <div className='col-12 col-lg-6 mt-4 container'>
                     <div className="next-game ">
                         <div className="d-flex align-items-center">
@@ -24,6 +25,7 @@ export const Championship = () => {
                        <h6>Информация о следующем матче появится в ближайшее время<br/>
                            Следите за нашими новостями</h6>
                     </div>
+
                     <div className="prev-game">
                         <h5> ПРЕДЫДУЩИЙ МАТЧ</h5>
                         <div className="d-flex justify-content-around mt-2">
@@ -77,6 +79,7 @@ export const Championship = () => {
                         </div>
                     </div>
                 </div>
+
                 <div className="mt-4 container d-flex justify-content-center flex-column">
                     <div className="table-info">
                         <div className="d-flex justify-content-around">

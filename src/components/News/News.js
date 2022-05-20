@@ -55,7 +55,7 @@ export const News = () => {
                     <div className="carousel-back">
                       <h6 className="">{news.date}</h6>
                       <h3 className="carousel-title">{news.title}</h3>
-                      <p className="carousel-subtitle">{news.subtitle}</p>
+                      <p className="carousel-subtitle">{news.subtitle.slice(0,80)} ...</p>
                     </div>
                   </Carousel.Caption>
                 </Link>
