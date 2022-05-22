@@ -64,15 +64,32 @@
     color: white;
     position: absolute;
     bottom: 0;
+    animation-name: example;
+    animation-duration: 4s;
 }
 
 
 .carousel-img {
     object-fit: cover;
-    height: 500px;
+    height: 81.4vh;
+}
+
+.carousel-img-back{
+    background: rgba(0, 0, 0, 0.35);
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes example {
+    0% {scale: 0}
+    100% {scale: 1}
 }
 
 .carousel-caption {
+    animation-name: example;
+    animation-duration: 4s;
     display: flex;
     justify-content: center;
     top: 1.25rem !important;
@@ -80,6 +97,11 @@
 }
 
 .carousel-indicators {
+}
+.carousel-title {
+    color: white;
+    font-size: 40px!important;
+z-index: 14;
 }
 
 

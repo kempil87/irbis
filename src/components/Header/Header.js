@@ -1,8 +1,10 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "./Header.css"
-import {Link, NavLink} from "react-router-dom";
+import {Link, NavLink, useParams} from "react-router-dom";
 import {Button, Dropdown, Modal} from "react-bootstrap";
 import 'react-dropdown/style.css';
+import {api} from "../../base/axios";
+import {News} from "../News/News";
 
 export const Header = ({showMenu}) => {
 
@@ -11,11 +13,27 @@ export const Header = ({showMenu}) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const {_id} = useParams()
+  const [homeNews, setHomeNews] = useState([]);
+
+
+  const getHomeNews = () => {
+    api.get(`/news`).then((res) =>{
+      console.log(123123, res)
+      setHomeNews(res.data)
+    })
+  }
+
+
+
+  useEffect(() => {
+    getHomeNews()
+  }, [_id])
 
 
   return (
-    <>
-      <div className="header">
+    <div className="">
+      <div className="header ">
         <div className="header-wrap">
           <div className="header-left">
             <Link to="/" className="irbis-logo">
@@ -127,6 +145,8 @@ export const Header = ({showMenu}) => {
         </Modal>
       </div>
 
-    </>
+
+
+    </div>
   )
 }

@@ -1,11 +1,11 @@
 .header {
     width: 100%;
     height: 130px;
+    background: none;
     background-image: url("http://sun9-79.userapi.com/c851536/v851536877/e65ff/puZ839ZX_Xc.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     border-bottom: 1px solid #173460;
-
 }
 
 .header-wrap {

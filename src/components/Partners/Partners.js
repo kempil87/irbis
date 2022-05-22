@@ -3,9 +3,9 @@ import "./Partners.css"
 
 export const Partners = () => {
     return (
-        <div className="partners">
+        <div className="partners ">
             <h4 className="page-tittle-partners col-9 col-lg-12">Партнеры и спонсоры ФБК Ирбис</h4>
-            <div className="row justify-content-center justify-content-md-between align-items-center container">
+            <div className="row justify-content-center justify-content-md-between align-items-center container ">
                 <a href="/" target={"_blank"} className="sponsor-item">
                     <img className="cover"
                          src="https://2sticker.ru/wa-data/public/shop/products/04/webp/86/12/1286/images/3604/3604.750.webp"

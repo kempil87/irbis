@@ -1,6 +1,6 @@
 import './App.css';
 import {Header} from "./components/Header/Header";
-import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
+import { Navigate, Route, Routes} from "react-router-dom";
 import {HomePages} from "./pages/HomePage/HomePages";
 import {Championship} from "./components/Championship/Championship";
 import {Partners} from "./components/Partners/Partners";
@@ -39,11 +39,11 @@ function App() {
                   <Route path="/club/:_id" element={<PlayerIn/>}/>
                   <Route path="/club" element={<ClubPage/>}/>
                   <Route path="/news" element={<NewsPage/>}/>
-                  <Route path="/news:_id" element={<NewsIn/>}/>
-                  <Route path="/media:id" element={<MediaPageIn/>}/>
+                  <Route path="/news/:_id" element={<NewsIn/>}/>
+                  <Route path="/media/:_id" element={<MediaPageIn/>}/>
                   <Route path="/media" element={<MediaPage/>}/>
                   <Route path="/shop" element={<ShopPage/>}/>
-                  <Route path="/shop:_id" element={<ShopPageIn/>}/>
+                  <Route path="/shop/:_id" element={<ShopPageIn/>}/>
                   <Route path="/partners" element={<PartnersIn/>}/>
                   <Route path="/404" element={<Error/>}/>
                   <Route

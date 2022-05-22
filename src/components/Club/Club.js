@@ -3,10 +3,13 @@ import "./Club.css"
 import {Col, Nav, Row, Tab, Tabs} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import {api} from "../../base/axios";
+import Loader from "../Loader/Loader";
 
 export const Club = () => {
   const [key, setKey] = useState('home');
   const [topPlayers, setTopPlayers] = useState([]);
+  const [loader, setLoader] = useState(true);
+
 
   const snipers = topPlayers.sort((a, b) => a.goals - b.goals)
   const assists = topPlayers.sort((a, b) => a.assist - b.assist)
@@ -14,6 +17,7 @@ export const Club = () => {
   const getTopPlayers = () => {
     api.get('/club').then((res) => {
       setTopPlayers(res.data.slice(0, 4))
+      setLoader(false)
     })
   }
 
@@ -62,68 +66,72 @@ export const Club = () => {
                   </div>
                 </Nav>
               </Col>
-              <Col>
-                <Tab.Content>
-                  <Tab.Pane eventKey="first">
-                    <div className="d-flex mb-4 row best-players-wrap">
-                      {snipers.map((i, index) => (
-                        <div className="d-flex col-sm-6 col-lg-3 best-players justify-content-center" key={i.id}>
-                          <Link to={`/club/${i._id}`} className=" top-info-player">
-                            <img className="player-img" src={i.image} alt="//"/>
-                            <img className="player-img-main" src={i.mainImage} alt="//"/>
-                            <div className="player-name mb-2">{i.name}</div>
-                            <div className="player-number">{i.number}</div>
-                            {i.position === "Вратарь" ? (
-                              <>
-                                <div className="player-games mb-2">И <br/>{i.games}</div>
-                                <div className="player-goal mb-2">ОБ <br/>{i.goals}</div>
-                                <div className="player-assist mb-2">% <br/>{i.assist}</div>
-                                <div className="player-score mb-2">КН <br/>{i.score}</div>
-                              </>
-                            ) : (
-                              <>
-                                <div className="player-games mb-2">И <br/>{i.games}</div>
-                                <div className="player-goal mb-2">Г <br/>{i.goals}</div>
-                                <div className="player-assist mb-2">А <br/>{i.assist}</div>
-                                <div className="player-score mb-2">О <br/>{i.score}</div>
-                              </>
-                            )}
-                          </Link>
-                        </div>
-                      ))}
-                    </div>
-                  </Tab.Pane>
-                  <Tab.Pane eventKey="second">
-                    <div className="d-flex mb-4 row best-players-wrap">
-                      {assists.map((i, index) => (
-                        <div className="d-flex col-sm-6 col-lg-3 best-players justify-content-center" key={i.id}>
-                          <Link to={`/club${i._id}`} className=" top-info-player">
-                            <img className="player-img" src={i.image} alt="//"/>
-                            {/*<img className="player-img-main" src={i.mainImage} alt="//"/>*/}
-                            <div className="player-name mb-2">{i.name}</div>
-                            <div className="player-number">{i.number}</div>
-                            {i.position === "Вратарь" ? (
-                              <>
-                                <div className="player-games mb-2">И <br/>{i.games}</div>
-                                <div className="player-goal mb-2">ОБ <br/>{i.goals}</div>
-                                <div className="player-assist mb-2">% <br/>{i.assist}</div>
-                                <div className="player-score mb-2">КН <br/>{i.score}</div>
-                              </>
-                            ) : (
-                              <>
-                                <div className="player-games mb-2">И <br/>{i.games}</div>
-                                <div className="player-goal mb-2">Г <br/>{i.goals}</div>
-                                <div className="player-assist mb-2">А <br/>{i.assist}</div>
-                                <div className="player-score mb-2">О <br/>{i.score}</div>
-                              </>
-                            )}
-                          </Link>
-                        </div>
-                      ))}
-                    </div>
-                  </Tab.Pane>
-                </Tab.Content>
-              </Col>
+              {loader?(
+                <Loader/>
+              ):(
+                <Col>
+                  <Tab.Content>
+                    <Tab.Pane eventKey="first">
+                      <div className="d-flex mb-4 row best-players-wrap">
+                        {snipers.map((i, index) => (
+                          <div className="d-flex col-sm-6 col-lg-3 best-players justify-content-center" key={i._id}>
+                            <Link to={`/club/${i._id}`} className=" top-info-player">
+                              <img className="player-img" src={i.image} alt="//"/>
+                              <img className="player-img-main" src={i.mainImage} alt="//"/>
+                              <div className="player-name mb-2">{i.name}</div>
+                              <div className="player-number">{i.number}</div>
+                              {i.position === "Вратарь" ? (
+                                <>
+                                  <div className="player-games mb-2">И <br/>{i.games}</div>
+                                  <div className="player-goal mb-2">ОБ <br/>{i.goals}</div>
+                                  <div className="player-assist mb-2">% <br/>{i.assist}</div>
+                                  <div className="player-score mb-2">КН <br/>{i.score}</div>
+                                </>
+                              ) : (
+                                <>
+                                  <div className="player-games mb-2">И <br/>{i.games}</div>
+                                  <div className="player-goal mb-2">Г <br/>{i.goals}</div>
+                                  <div className="player-assist mb-2">А <br/>{i.assist}</div>
+                                  <div className="player-score mb-2">О <br/>{i.score}</div>
+                                </>
+                              )}
+                            </Link>
+                          </div>
+                        ))}
+                      </div>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="second">
+                      <div className="d-flex mb-4 row best-players-wrap">
+                        {assists.map((i, index) => (
+                          <div className="d-flex col-sm-6 col-lg-3 best-players justify-content-center" key={i._id}>
+                            <Link to={`/club${i._id}`} className=" top-info-player">
+                              <img className="player-img" src={i.image} alt="//"/>
+                              {/*<img className="player-img-main" src={i.mainImage} alt="//"/>*/}
+                              <div className="player-name mb-2">{i.name}</div>
+                              <div className="player-number">{i.number}</div>
+                              {i.position === "Вратарь" ? (
+                                <>
+                                  <div className="player-games mb-2">И <br/>{i.games}</div>
+                                  <div className="player-goal mb-2">ОБ <br/>{i.goals}</div>
+                                  <div className="player-assist mb-2">% <br/>{i.assist}</div>
+                                  <div className="player-score mb-2">КН <br/>{i.score}</div>
+                                </>
+                              ) : (
+                                <>
+                                  <div className="player-games mb-2">И <br/>{i.games}</div>
+                                  <div className="player-goal mb-2">Г <br/>{i.goals}</div>
+                                  <div className="player-assist mb-2">А <br/>{i.assist}</div>
+                                  <div className="player-score mb-2">О <br/>{i.score}</div>
+                                </>
+                              )}
+                            </Link>
+                          </div>
+                        ))}
+                      </div>
+                    </Tab.Pane>
+                  </Tab.Content>
+                </Col>
+              )}
             </Row>
           </Tab.Container>
         </div>

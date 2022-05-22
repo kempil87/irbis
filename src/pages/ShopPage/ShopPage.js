@@ -5,9 +5,12 @@ import "../../components/Shop/Shop.css"
 import {Link, useParams} from "react-router-dom";
 import {ProductShop} from "../../data/ShopData/ProductShop";
 import {api} from "../../base/axios";
+import Loader from "../../components/Loader/Loader";
 
 export const ShopPage = () => {
   const [product, setProduct] = useState([])
+  const [loader, setLoader] = useState(true);
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -31,7 +34,7 @@ export const ShopPage = () => {
   const getProduct = () => {
     api.get('/products').then((res) => {
       setProduct(res.data)
-      console.log(res.data)
+      setLoader(false)
     })
   }
 
@@ -58,74 +61,81 @@ export const ShopPage = () => {
 
         </Link>
       </div>
-
-      <div className="d-none d-lg-block">
-        <Carousel
-          swipeable={false}
-          draggable={false}
-          responsive={responsive}
-          className=""
-        >
-          {product.map((i) => (
-            <div className="container product-card mt-3" key={i._id}>
-              <div className="d-flex flex-column align-items-center product-top">
-                <img className="product-img" src={i.image}/>
-                {i.badge && (
-                  <div className="product-badge">{i.badge}</div>
-                )}
-              </div>
-              <div>
-                <div className="product-name">{i.name}</div>
-                <div className="d-flex justify-content-between mb-2 align-items-center">
-                  {i.salePrice ? (
-                    <div className="d-flex">
-                      <div className="product-price">{i.salePrice} ₽</div>
-                      <div className="product-salePrice">{i.price} ₽</div>
-                    </div>
-                  ) : (
-
-                    <div className="product-price">{i.price} ₽</div>
-                  )}
-
-                  <Link to={`/shop${i._id}`} className="product-btn">Смотреть</Link>
-                </div>
-              </div>
-            </div>
-
-          ))}
-        </Carousel>
-      </div>
-
-      <div style={{width: '100vw'}} className="d-flex d-lg-none overflow-auto  align-items-center ">
-        {ProductShop.slice(0, 3).map((i) => (
-
-          <div className=" product-card m-1 " key={i.id}>
-            <div className="d-flex flex-column align-items-center product-top">
-              <img className="product-img" src={i.image}/>
-              {i.badge && (
-                <div className="product-badge">{i.badge}</div>
-              )}
-            </div>
-            <div>
-              <div className="product-name">{i.name}</div>
-              <div className="d-flex justify-content-between mb-2 align-items-center">
-                {i.salePrice ? (
-                  <div className="d-flex">
-                    <div className="product-price">{i.salePrice} ₽</div>
-                    <div className="product-salePrice">{i.price} ₽</div>
+      {loader ? (
+        <Loader/>
+      ):(
+        <>
+          <div className="d-none d-lg-block">
+            <Carousel
+              swipeable={false}
+              draggable={false}
+              responsive={responsive}
+              className=""
+            >
+              {product.map((i) => (
+                <div className="container product-card mt-3" key={i._id}>
+                  <div className="d-flex flex-column align-items-center product-top">
+                    <img className="product-img" src={i.image}/>
+                    {i.badge && (
+                      <div className="product-badge">{i.badge}</div>
+                    )}
                   </div>
-                ) : (
+                  <div>
+                    <div className="product-name">{i.name}</div>
+                    <div className="d-flex justify-content-between mb-2 align-items-center">
+                      {i.salePrice ? (
+                        <div className="d-flex">
+                          <div className="product-price">{i.salePrice} ₽</div>
+                          <div className="product-salePrice">{i.price} ₽</div>
+                        </div>
+                      ) : (
 
-                  <div className="product-price">{i.price} ₽</div>
-                )}
+                        <div className="product-price">{i.price} ₽</div>
+                      )}
 
-                <Link to={`/shop${i.id}`} className="product-btn">Смотреть</Link>
-              </div>
-            </div>
+                      <Link to={`/shop/${i._id}`} className="product-btn">Смотреть</Link>
+                    </div>
+                  </div>
+                </div>
+
+              ))}
+            </Carousel>
           </div>
 
-        ))}
-      </div>
+          <div style={{width: '100vw'}} className="d-flex d-lg-none overflow-auto  align-items-center ">
+            {ProductShop.slice(0, 3).map((i) => (
+
+              <div className=" product-card m-1 " key={i.id}>
+                <div className="d-flex flex-column align-items-center product-top">
+                  <img className="product-img" src={i.image}/>
+                  {i.badge && (
+                    <div className="product-badge">{i.badge}</div>
+                  )}
+                </div>
+                <div>
+                  <div className="product-name">{i.name}</div>
+                  <div className="d-flex justify-content-between mb-2 align-items-center">
+                    {i.salePrice ? (
+                      <div className="d-flex">
+                        <div className="product-price">{i.salePrice} ₽</div>
+                        <div className="product-salePrice">{i.price} ₽</div>
+                      </div>
+                    ) : (
+
+                      <div className="product-price">{i.price} ₽</div>
+                    )}
+
+                    <Link to={`/shop${i.id}`} className="product-btn">Смотреть</Link>
+                  </div>
+                </div>
+              </div>
+
+            ))}
+          </div>
+        </>
+      )}
+
+
     </div>
   )
 }
