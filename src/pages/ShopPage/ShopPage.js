@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "../../components/Shop/Shop.css"
-import {Link, useParams} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {ProductShop} from "../../data/ShopData/ProductShop";
 import {api} from "../../base/axios";
 import Loader from "../../components/Loader/Loader";
@@ -10,6 +10,12 @@ import Loader from "../../components/Loader/Loader";
 export const ShopPage = () => {
   const [product, setProduct] = useState([])
   const [loader, setLoader] = useState(true);
+  const [check, setCheck] = React.useState(false)
+
+
+  const addToCheck = () => {
+    setCheck(!check)
+  }
 
   const responsive = {
     superLargeDesktop: {
@@ -31,6 +37,7 @@ export const ShopPage = () => {
     }
   };
 
+
   const getProduct = () => {
     api.get('/products').then((res) => {
       setProduct(res.data)
@@ -38,20 +45,22 @@ export const ShopPage = () => {
     })
   }
 
+
+
+
   useEffect(() => {
     getProduct()
   }, [])
 
   return (
+
     <div id="a" className="shop-wrap container">
+
       <div className="d-flex justify-content-between">
         <div className="home-title-shop mb-3 col-8">Магазин Атрибутики ФБК Ирбиса</div>
         <Link to="/shop" className="all-shop d-none d-lg-flex">
           Все Товары
-          <span className="material-icons-outlined">
-                        arrow_right_alt
-                    </span>
-
+          <span className="material-icons-outlined">arrow_right_alt</span>
         </Link>
         <Link to="/shop" className="all-shop d-flex d-lg-none">
           Все
@@ -63,7 +72,7 @@ export const ShopPage = () => {
       </div>
       {loader ? (
         <Loader/>
-      ):(
+      ) : (
         <>
           <div className="d-none d-lg-block">
             <Carousel
@@ -75,7 +84,7 @@ export const ShopPage = () => {
               {product.map((i) => (
                 <div className="container product-card mt-3" key={i._id}>
                   <div className="d-flex flex-column align-items-center product-top">
-                    <img className="product-img" src={i.image}/>
+                    <img className="product-img" src={i.image} alt='товар'/>
                     {i.badge && (
                       <div className="product-badge">{i.badge}</div>
                     )}
@@ -92,8 +101,11 @@ export const ShopPage = () => {
 
                         <div className="product-price">{i.price} ₽</div>
                       )}
-
                       <Link to={`/shop/${i._id}`} className="product-btn">Смотреть</Link>
+                      <span onClick={addToCheck} style={{fontWeight: 200, marginLeft: 8}}
+                            className='material-icons-outlined'>
+                        {check ? 'done' : 'add'}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -104,10 +116,9 @@ export const ShopPage = () => {
 
           <div style={{width: '100vw'}} className="d-flex d-lg-none overflow-auto  align-items-center ">
             {ProductShop.slice(0, 3).map((i) => (
-
               <div className=" product-card m-1 " key={i.id}>
                 <div className="d-flex flex-column align-items-center product-top">
-                  <img className="product-img" src={i.image}/>
+                  <img className="product-img" src={i.image} alt='товар'/>
                   {i.badge && (
                     <div className="product-badge">{i.badge}</div>
                   )}
@@ -126,16 +137,14 @@ export const ShopPage = () => {
                     )}
 
                     <Link to={`/shop${i.id}`} className="product-btn">Смотреть</Link>
+
                   </div>
                 </div>
               </div>
-
             ))}
           </div>
         </>
       )}
-
-
     </div>
   )
 }

@@ -71,7 +71,7 @@ const ClubPage = () => {
                       <div className="d-flex  flex-wrap ">
                         {goalkepper.map((i, index) => (
                           <Link to={`/club/${i._id}`} className="d-flex col-12 col-lg-3 justify-content-center"
-                                key={i.id}>
+                                key={i._id}>
                             <div className=" top-info-allPlayer">
                               <img className="player-img" src={i.image} alt="//"/>
                               <img className="player-img-main" src={i.mainImage} alt="//"/>
@@ -85,7 +85,7 @@ const ClubPage = () => {
                       <div className="d-flex  flex-wrap">
                         {guard.map((i, index) => (
                           <Link to={`/club/${i._id}`} className="d-flex col-12 col-lg-3 justify-content-center"
-                                key={i.id}>
+                                key={i._id}>
                             <div className=" top-info-allPlayer">
                               <img className="player-img" src={i.image} alt="//"/>
                               <img className="player-img-main" src={i.mainImage} alt="//"/>
@@ -99,7 +99,7 @@ const ClubPage = () => {
                       <div className="d-flex flex-wrap" style={{maxWidth: '100%'}}>
                         {forward.map((i, index) => (
                           <Link to={`/club/${i._id}`} className="d-flex col-12 col-lg-3 justify-content-center"
-                                key={i.id}>
+                                key={i._id}>
                             <div className=" top-info-allPlayer">
                               <img className="player-img" src={i.image} alt="//"/>
                               <img className="player-img-main" src={i.mainImage} alt="//"/>

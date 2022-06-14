@@ -24,16 +24,10 @@ const NewsIn = () => {
             setNews(res.data)
         })
     }
-    // const getHNews = () => {
-    //     api.get(`/hnews/${_id}`).then((res) =>{
-    //         setNews(res.data)
-    //     })
-    // }
 
     useEffect(() => {
         getShortNews()
         getNews()
-        // getHNews()
     }, [_id])
 
     return (
@@ -85,7 +79,7 @@ const NewsIn = () => {
                           {news?.source ?(
                             <div className="d-flex flex-column justify-content-center align-items-center">
                                 <h6 style={{color:'#837e7e'}}>Теги :</h6>
-                                <Link className="tags-link"  to={`${news?.source}`}>{news?.tag}</Link>
+                                <Link className="tags-link"  to={`/club/${news?.source}`}>{news?.tag}</Link>
                             </div>
                           ):(
                             <div className="d-flex flex-column justify-content-center align-items-center">

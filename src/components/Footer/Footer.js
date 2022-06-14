@@ -21,7 +21,7 @@ export const Footer = () => {
               <h5>Контакты</h5>
               <div className=" mt-2">
                 <div className="mb-3">+79033415510</div>
-                <Link title="Инстаграм" className="footer-icons" to="//vk.com/fbc_irbis" target="_blank">
+                <Link title="Инстаграм" className="footer-icons" to="//www.instagram.com/fbc_irbis" target="_blank">
                   <IconSvgInst/>
                 </Link>
                 <Link title="ВКонтакте" className="footer-icons" to="//vk.com/fbc_irbis" target="_blank">
@@ -37,8 +37,8 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className="d-flex flex-column flex-lg-row col-sm-8">
-            <div className="footer-mid d-flex mt-5 col-sm-7">
+          <div className="d-flex flex-column flex-lg-row ">
+            <div className="footer-mid ">
               <h6 className="">При использовании материалов ссылка на официальный сайт Флорбольного Клуба «Ирбис»
                 обязательна.
                 <p className="mt-2">Copyright 2009-2018</p>

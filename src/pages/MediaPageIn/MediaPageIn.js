@@ -56,8 +56,7 @@ const MediaPageIn = () => {
                           {/*    disableThumbnailScroll={true}*/}
                           {/*/>*/}
                           <img src={media.image}/>
-
-                          {media.videoSource ?(
+                          {media.videoSource &&(
                             <div className="mt-2">
                                 <h5>Видео</h5>
                                 <iframe width="580" height="375" src={media.videoSource}
@@ -65,9 +64,8 @@ const MediaPageIn = () => {
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowFullScreen/>
                             </div>
-                          ):(
-                            <h5>Нет Видео</h5>
                           )}
+
                           <h6 className="d-none d-lg-flex justify-content-center mt-5 mb-5" style={{color: "gray", fontSize: 12}}>
                               Использование фотоматериалов разрешается при наличии активной гиперссылки на официальный сайт ФБК
                               "Ирбис"

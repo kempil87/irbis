@@ -1,0 +1,44 @@
+.drawer-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    overflow: hidden;
+    z-index: 1300;
+}
+.drawer-content::-webkit-scrollbar {
+    width: 6px;
+}
+.drawer-content::-webkit-scrollbar-thumb {
+    width: 6px;
+    background-color: #173460;
+    border-radius: 3px;
+}
+
+.drawer-menu{
+    position: absolute;
+    right: 0;
+    width: 26%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    animation-name: cart;
+    animation-duration: .7s;
+}
+
+@keyframes cart {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.drawer-top{
+    border-bottom: 3px solid #173460;
+}
+.total-top{
+    font-weight: 600;
+    font-size: 24px;
+}

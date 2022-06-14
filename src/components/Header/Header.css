@@ -81,7 +81,7 @@
 
 .header-club-city {
     cursor: pointer;
-    color: rgba(0, 0, 0, .4);
+    color: rgba(0, 0, 0, .6);
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 500;
@@ -295,6 +295,15 @@
     justify-content: center; display: flex; align-items: center;
     padding: 4px;
     border-radius: 50%;
+}
+
+
+/*Корзина*/
+
+
+.drawer{
+    cursor: pointer;
+    color: rgba(0, 0, 0, .6);
 }
 
 

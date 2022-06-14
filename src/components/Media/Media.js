@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import "./Media.css"
 import {Link} from "react-router-dom";
-import {MediaData} from "../../data/mediaData/MediaData";
 import {api} from "../../base/axios";
 import Loader from "../Loader/Loader";
 
@@ -41,8 +40,8 @@ export const Media = () => {
         <div className="d-flex">
           <div className="d-flex flex-row flex-wrap container justify-content-between">
             {homeMedia.map((card) => (
-              <Link to={`/media/${card._id}`} key={card._id} className="col-12 col-md-6 col-lg-4 d-flex flex-column photo-card ">
-                <img className="media-image" src={card.image} alt='фото'/>
+              <Link to={`/media/${card._id}`} key={card._id} className="col-12 col-md-6 col-lg-4 d-flex flex-column photo-card align-items-center">
+                <img className="med col-11" src={card.image} alt='фото'/>
                 <div className=" media-image-grad "/>
                 <div className="media-all d-flex align-items-center">
                   <span className="material-icons-outlined">image</span>
