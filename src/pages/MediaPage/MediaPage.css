@@ -1,0 +1,59 @@
+.photo-card-page {
+    color: white;
+    position: relative;
+    margin: 18px 0;
+    cursor: pointer;
+}
+
+.photo-card-page:before {
+    position: absolute;
+    content: '';
+    border-top: 8px solid rgba(253, 252, 252, 0.7);
+    opacity: .9;
+    left: 4%;
+    width: 86%;
+    height: 100%;
+    z-index: 78;
+    bottom: 7px;
+    transition: ease-in .34s;
+}
+
+.photo-card-page:after {
+    bottom: 12px;
+    left: 7%;
+    position: absolute;
+    content: '';
+    border-top: 13px solid rgba(253, 252, 252, 0.6);
+    opacity: .6;
+    z-index: 78;
+    width: 80%;
+    height: 100%;
+    transition: ease-in .34s;
+}
+
+.photo-card-page:hover:before {
+    width: 80%;
+    left: 6%;
+    transition: ease-in .34s;
+    border-top: 10px solid rgba(253, 252, 252, 0.6);
+    bottom: 10px;
+}
+
+.photo-card-page:hover:after {
+    border-top: 16px solid rgba(253, 252, 252, 0.6);
+    bottom: 15px;
+    width: 75%;
+    left: 8.2%;
+    transition: ease-in .34s;
+}
+
+.photo-card-page:hover .media-image-grad {
+    transition: ease-in .34s;
+    opacity: .16;
+    /*box-shadow: 0 10px  15px rgba(253, 252, 252, 0.3);*/
+}
+
+.photo-card-page:hover > div {
+    color: white;
+
+}

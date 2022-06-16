@@ -18,7 +18,7 @@ export const News = () => {
 
   const getHomeNews = () => {
     api.get(`/news`).then((res) =>{
-      setHomeNews(res.data)
+      setHomeNews(res.data.slice(0,4).reverse())
       setLoader(false)
     })
   }

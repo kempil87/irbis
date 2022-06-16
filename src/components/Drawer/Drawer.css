@@ -42,3 +42,9 @@
     font-weight: 600;
     font-size: 24px;
 }
+
+@media screen and (max-width: 576px) {
+    .drawer-menu{
+        width: 100%;
+    }
+}

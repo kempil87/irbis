@@ -3,15 +3,13 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "../../components/Shop/Shop.css"
 import {Link} from "react-router-dom";
-import {ProductShop} from "../../data/ShopData/ProductShop";
 import {api} from "../../base/axios";
 import Loader from "../../components/Loader/Loader";
 
 export const ShopPage = () => {
   const [product, setProduct] = useState([])
   const [loader, setLoader] = useState(true);
-  const [check, setCheck] = React.useState(false)
-
+  const [check, setCheck] = useState(false)
 
   const addToCheck = () => {
     setCheck(!check)
@@ -19,7 +17,6 @@ export const ShopPage = () => {
 
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: {max: 4000, min: 3000},
       items: 5
     },
@@ -37,25 +34,20 @@ export const ShopPage = () => {
     }
   };
 
-
   const getProduct = () => {
     api.get('/products').then((res) => {
       setProduct(res.data)
+      console.log(res.data)
       setLoader(false)
     })
   }
-
-
-
 
   useEffect(() => {
     getProduct()
   }, [])
 
   return (
-
     <div id="a" className="shop-wrap container">
-
       <div className="d-flex justify-content-between">
         <div className="home-title-shop mb-3 col-8">Магазин Атрибутики ФБК Ирбиса</div>
         <Link to="/shop" className="all-shop d-none d-lg-flex">
@@ -64,10 +56,7 @@ export const ShopPage = () => {
         </Link>
         <Link to="/shop" className="all-shop d-flex d-lg-none">
           Все
-          <span className="material-icons-outlined">
-                        arrow_right_alt
-                    </span>
-
+          <span className="material-icons-outlined">arrow_right_alt</span>
         </Link>
       </div>
       {loader ? (
@@ -85,9 +74,7 @@ export const ShopPage = () => {
                 <div className="container product-card mt-3" key={i._id}>
                   <div className="d-flex flex-column align-items-center product-top">
                     <img className="product-img" src={i.image} alt='товар'/>
-                    {i.badge && (
-                      <div className="product-badge">{i.badge}</div>
-                    )}
+                    {i.badge && (<div className="product-badge">{i.badge}</div>)}
                   </div>
                   <div>
                     <div className="product-name">{i.name}</div>
@@ -98,7 +85,6 @@ export const ShopPage = () => {
                           <div className="product-salePrice">{i.price} ₽</div>
                         </div>
                       ) : (
-
                         <div className="product-price">{i.price} ₽</div>
                       )}
                       <Link to={`/shop/${i._id}`} className="product-btn">Смотреть</Link>
@@ -109,19 +95,16 @@ export const ShopPage = () => {
                     </div>
                   </div>
                 </div>
-
               ))}
             </Carousel>
           </div>
 
           <div style={{width: '100vw'}} className="d-flex d-lg-none overflow-auto  align-items-center ">
-            {ProductShop.slice(0, 3).map((i) => (
+            {product.map((i) => (
               <div className=" product-card m-1 " key={i.id}>
                 <div className="d-flex flex-column align-items-center product-top">
                   <img className="product-img" src={i.image} alt='товар'/>
-                  {i.badge && (
-                    <div className="product-badge">{i.badge}</div>
-                  )}
+                  {i.badge && (<div className="product-badge">{i.badge}</div>)}
                 </div>
                 <div>
                   <div className="product-name">{i.name}</div>
@@ -132,12 +115,9 @@ export const ShopPage = () => {
                         <div className="product-salePrice">{i.price} ₽</div>
                       </div>
                     ) : (
-
                       <div className="product-price">{i.price} ₽</div>
                     )}
-
                     <Link to={`/shop${i.id}`} className="product-btn">Смотреть</Link>
-
                   </div>
                 </div>
               </div>

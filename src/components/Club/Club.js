@@ -6,16 +6,16 @@ import {api} from "../../base/axios";
 import Loader from "../Loader/Loader";
 
 export const Club = () => {
-  const [topPlayers, setTopPlayers] = useState([]);
+  const [assists, setAssists] = useState([]);
+  const [snipers, setSnipers] = useState([]);
   const [loader, setLoader] = useState(true);
 
 
-  const assists = topPlayers.sort((a, b) => a.assist - b.assist)
-  const snipers = topPlayers.sort((a, b) => b.goals - a.goals)
 
   const getTopPlayers = () => {
     api.get('/club').then((res) => {
-      setTopPlayers(res.data.slice(0, 4))
+      setAssists(res.data.slice(0, 4).sort((a, b) => Number(b?.assist) - Number(a?.assist)))
+      setSnipers(res.data.slice(0, 4).sort((a, b) => Number(b?.goals) - Number(a?.goals)))
       setLoader(false)
     })
   }
@@ -76,7 +76,12 @@ export const Club = () => {
                           <div className="d-flex col-sm-6 col-lg-3 best-players justify-content-center" key={i._id}>
                             <Link to={`/club/${i._id}`} className=" top-info-player">
                               <img className="player-img" src={i.image} alt="//"/>
-                              <img className="player-img-main" src={i.mainImage} alt="//"/>
+                              {i.mainImage ?(
+                                <img className="player-img-main" src={i.mainImage} alt="//"/>
+                              ):(
+                                <img className="player-img-main" src='https://www.ak-bars.ru/img/placeholders/player-card-placeholder.png' alt=""/>
+                              )
+                              }
                               <div className="player-name mb-2">{i.name}</div>
                               <div className="player-number">{i.number}</div>
                               <div className="player-games mb-2">И<br/>{i.games}</div>
@@ -96,21 +101,26 @@ export const Club = () => {
                       <div className="d-flex mb-4 row best-players-wrap">
                         {assists.map((i, index) => (
                           <div className="d-flex col-sm-6 col-lg-3 best-players justify-content-center" key={i._id}>
-                              <Link to={`/club/${i._id}`} className=" top-info-player">
-                                <img className="player-img" src={i.image} alt="//"/>
-                                {/*<img className="player-img-main" src={i.mainImage} alt="//"/>*/}
-                                <div className="player-name mb-2">{i.name}</div>
-                                <div className="player-number">{i.number}</div>
-                                <div className="player-games mb-2">И<br/>{i.games}</div>
-                                <div className="player-goal mb-2">{i.position === 'Вратарь' ? 'ОБ' : 'Г'}<br/>{i.goals}</div>
-                                <div
-                                  className="player-assist mb-2"> {i.position === 'Вратарь' ? '%' : 'А'}<br/>{i.assist}
-                                </div>
-                                <div
-                                  className="player-score mb-2"> {i.position === 'Вратарь' ? 'КН' : 'О'}<br/>{i.score}
-                                </div>
+                            <Link to={`/club/${i._id}`} className=" top-info-player">
+                              <img className="player-img" src={i.image} alt="//"/>
+                              {i.mainImage ? (
+                                <img className="player-img-main" src={i.mainImage} alt=""/>
+                              ):(
+                                <img className="player-img-main" src='https://www.ak-bars.ru/img/placeholders/player-card-placeholder.png' alt=""/>
+                              )}
+                              <div className="player-name mb-2">{i.name}</div>
+                              <div className="player-number">{i.number}</div>
+                              <div className="player-games mb-2">И<br/>{i.games}</div>
+                              <div className="player-goal mb-2">{i.position === 'Вратарь' ? 'ОБ' : 'Г'}<br/>{i.goals}
+                              </div>
+                              <div
+                                className="player-assist mb-2"> {i.position === 'Вратарь' ? '%' : 'А'}<br/>{i.assist}
+                              </div>
+                              <div
+                                className="player-score mb-2"> {i.position === 'Вратарь' ? 'КН' : 'О'}<br/>{i.score}
+                              </div>
 
-                              </Link>
+                            </Link>
 
                           </div>
                         ))}

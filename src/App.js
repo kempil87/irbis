@@ -40,7 +40,7 @@ function App() {
     {
       id: 10001,
       image: "https://sun1-87.userapi.com/impg/zN1Hn4MJo6C06cmB1TdBLdmOL5WpdoqXRPudhg/jM4HTfzIYUg.jpg?size=0x179&crop=0.176,0.071,0.62,0.929&quality=95&sign=3e128d0dca531d39698f098a117b3690",
-      price: 3200,
+      price: 5200,
       name: "Футболка ФБК Ирбис",
       badge: "Хит продаж"
     },
@@ -84,8 +84,6 @@ function App() {
       salePrice: 690
     },
   ])
-
-
 
 
   return (

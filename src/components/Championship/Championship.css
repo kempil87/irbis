@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 .next-game{
     display: flex;
@@ -15,8 +16,6 @@ background: white;
     padding: 22px 30px;
 }
 .irbis-logo-game{
-    width: 111px;
-    height: 128px;
     margin-left: 15px;
     transform: scale(.75);
 }
@@ -29,7 +28,20 @@ background: white;
     align-items: center;
     background: black;
     padding: 22px 30px;
-}.prev-game h5{
+    height: 277px;
+}
+.prev-game-light{
+    color: rgba(0, 0, 0, 0.8);
+    flex-direction: column;
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    padding: 22px 30px;
+    height: 277px;
+}
+.prev-game h5{
    font-size: 18px;
 }
 .next-game h5{
@@ -42,8 +54,8 @@ background: white;
     align-items: center;
 }
 .logo-game-prev{
-
-    transform: scale(.71);
+    object-fit: cover;
+    width: 80px;
 }
 .game-info{
     display: flex;
@@ -73,8 +85,11 @@ background: white;
     align-items: center;
 }
 .game-place{
+    width: 270px;
 display: flex;
     align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 .game-place span{
     margin-right: 6px;
@@ -140,15 +155,16 @@ font-size: 17px;
     font-weight: 500!important;
 }
 .logo-table{
-    width: 26px;
-    height: 20px;
+   object-fit: cover;
+    height: 25px;
     margin-right: 8px;
 }
 .table-info{
-    background: #212529;
+    background: #33373a;
     padding: 20px;
     color: #c9c9c9 !important;
-    margin-bottom: 40px;
+    margin-bottom: 58px;
+    margin-top: -3px;
     width: 100%;
 
 }

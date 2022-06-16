@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import './MediaPage.css'
 import {Link, useParams} from "react-router-dom";
 import {api} from "../../base/axios";
 import Loader from "../../components/Loader/Loader";
@@ -29,7 +30,7 @@ const MediaPage = () => {
           <div className="d-flex  mt-2">
             <div className=" align-items-center container d-flex flex-wrap  ">
               {media.map(m => (
-                <Link to={`/media/${m._id}`} key={m._id} className=" col-11 col-lg-4 d-flex flex-column photo-card">
+                <Link to={`/media/${m._id}`} key={m._id} className=" col-11 col-lg-4 d-flex flex-column photo-card-page">
                   <img width="400" height='267' className="d-none d-lg-block media-image " src={m.image} alt='фото'/>
                   <img width="380" height='247' className="d-block d-lg-none media-image col-12" src={m.image} alt='фото'/>
                   <div className=" media-image-grad col-3"/>

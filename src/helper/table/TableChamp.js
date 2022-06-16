@@ -1,151 +1,67 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Table} from "react-bootstrap";
+import {api} from "../../base/axios";
 
 const TableChamp = () => {
-    return (
-        <div>
-            <Table style={{zIndex: 100}} striped bordered hover variant="dark">
-                <thead >
-                <tr>
-                    <th>№</th>
-                    <th className="d-none d-lg-block">Команда</th>
-                    <th className="d-block d-lg-none"></th>
-                    <th>И</th>
-                    <th>В</th>
-                    <th>ОТВ</th>
-                    <th>П</th>
-                    <th>ОТП</th>
-                    <th>ШВ</th>
-                    <th>+/-</th>
-                    <th>О</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>1</td>
-                    <td className="d-flex align-items-center">
-                        <img className="logo-table "
-                             src="https://xn--m1agla.xn--p1ai/wp-content/uploads/2021/12/Irbis-111x128.png"
-                        /><div style={{fontSize:14}} className="d-none d-lg-block">
-                        ИРБИС</div>
-                    </td>
-                    <td>14</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td className="d-flex align-items-center">
-                        <img className="logo-table "
-                             src="https://xn--m1agla.xn--p1ai/wp-content/uploads/2021/12/Irbis-111x128.png"
-                        /><div style={{fontSize:14}} className="d-none d-lg-block">
-                        ТЕХНИК</div>
-                    </td>
-                    <td>14</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td className="d-flex align-items-center">
-                        <img className="logo-table "
-                             src="https://xn--m1agla.xn--p1ai/wp-content/uploads/2021/12/Irbis-111x128.png"
-                     /><div style={{fontSize:14}} className="d-none d-lg-block">
-                        КОЛЬЧУГА</div>
-                    </td>
-                    <td>14</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td  className="d-flex align-items-center"> <img className="logo-table "
-                               src="https://xn--m1agla.xn--p1ai/wp-content/uploads/2021/12/Irbis-111x128.png"
-                    /><div style={{fontSize:14}} className="d-none d-lg-block">ЯМАЛ</div></td>
-                    <td>14</td>
-                    <td>7</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td  className="d-flex align-items-center"> <img className="logo-table "
-                               src="https://xn--m1agla.xn--p1ai/wp-content/uploads/2021/12/Irbis-111x128.png"
-                    /><div style={{fontSize:14}} className="d-none d-lg-block">СЕСТР. БОБРЫ</div></td>
-                    <td>14</td>
-                    <td>5</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td  className="d-flex align-items-center"> <img className="logo-table "
-                               src="https://xn--m1agla.xn--p1ai/wp-content/uploads/2021/12/Irbis-111x128.png"
-                    /><div style={{fontSize:14}} className="d-none d-lg-block">СПАРТАК</div></td>
-                    <td>14</td>
-                    <td>3</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td  className="d-flex align-items-center"> <img className="logo-table "
-                               src="https://xn--m1agla.xn--p1ai/wp-content/uploads/2021/12/Irbis-111x128.png"
-                    /><div style={{fontSize:14}} className="d-none d-lg-block">СЕВ. ВОЛКИ</div></td>
-                    <td>14</td>
-                    <td>3</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td  className="d-flex align-items-center"> <img className="logo-table "
-                               src="https://xn--m1agla.xn--p1ai/wp-content/uploads/2021/12/Irbis-111x128.png"
-                    /><div style={{fontSize:14}} className="d-none d-lg-block">ОЛИМП (НН)</div></td>
-                    <td>14</td>
-                    <td>1</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                    <td>13</td>
-                </tr>
-                </tbody>
-            </Table>
-        </div>
-    );
+  const [table, setTable] = useState([]);
+
+
+  const getTable = () => {
+    api.get('/table').then((res) => {
+      setTable(res.data)
+    })
+  }
+
+  useEffect(() => {
+    getTable()
+  }, [])
+
+  return (
+    <div>
+      <Table style={{zIndex: 100,marginTop:36}} striped bordered hover variant="dark">
+        <thead>
+        <tr>
+          <th>№</th>
+          <th className="d-none d-lg-block">Команда</th>
+          <th className="d-block d-lg-none"></th>
+          <th>И</th>
+          <th>В</th>
+          <th>ОТВ</th>
+          <th>П</th>
+          <th>ОТП</th>
+          <th>ЗМ</th>
+          <th>ПМ</th>
+          <th>О</th>
+        </tr>
+        </thead>
+        <tbody>
+        {table
+        .slice()
+        .sort((a, b) => b.score - a.score)
+        .map((obj,index)=>(
+          <tr key={obj._id}>
+          <td className='text-center'>{index +1}</td>
+          <td className="d-flex align-items-center">
+          <img className="logo-table "
+          alt='logo-table'
+          src={obj.logoTeam}
+          />
+          <div style={{fontSize:14}} className="d-none d-lg-block">{obj.nameTeam}</div>
+          </td>
+          <td className='text-center'>{obj.games}</td>
+          <td className='text-center'>{obj.wins}</td>
+          <td className='text-center'>{obj.winsOverTime}</td>
+          <td className='text-center'>{obj.loss}</td>
+          <td className='text-center'>{obj.loseOverTime}</td>
+          <td className='text-center'>{obj.goalBall}</td>
+          <td className='text-center'>{obj.missBall}</td>
+          <td className='text-center'>{obj.score}</td>
+          </tr>
+          ))}
+        </tbody>
+      </Table>
+    </div>
+  );
 };
 
 export default TableChamp;
