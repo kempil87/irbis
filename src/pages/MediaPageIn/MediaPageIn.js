@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Link, useParams} from "react-router-dom";
 import "react-image-gallery/styles/css/image-gallery.css";
-import ImageGallery from 'react-image-gallery';
 import "./MediaPageIn.css"
 import {api} from "../../base/axios";
 import Loader from "../../components/Loader/Loader";
@@ -21,9 +20,6 @@ const MediaPageIn = () => {
     useEffect(() => {
         getMedia()
     }, [_id])
-
-    // const gallery = info.photo.map(i => i.image)
-
 
     return (
         <div style={{width:'100%'}}  className="container d-flex  justify-content-center flex-column">
@@ -55,11 +51,11 @@ const MediaPageIn = () => {
                           {/*    items={media.image}*/}
                           {/*    disableThumbnailScroll={true}*/}
                           {/*/>*/}
-                          <img src={media.image}/>
+                          <img className='mediaIn-image' src={media.image} alt='mediaIn-image'/>
                           {media.videoSource &&(
                             <div className="mt-2">
                                 <h5>Видео</h5>
-                                <iframe width="580" height="375" src={media.videoSource}
+                                <iframe width="580" height="375" className='media-page-video' src={media.videoSource}
                                         title="YouTube video player" frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowFullScreen/>
@@ -74,14 +70,10 @@ const MediaPageIn = () => {
                               Использование фотоматериалов разрешается при наличии активной гиперссылки на официальный сайт ФБК
                               "Ирбис"
                           </h6>
-
                       </div>
                   </div>
-
               </>
             )}
-
-
         </div>
     );
 };

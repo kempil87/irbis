@@ -168,6 +168,25 @@ font-size: 17px;
     width: 100%;
 
 }
+
+.prompt-enter {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+.prompt-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 800ms, transform 800ms;
+}
+.prompt-exit {
+    opacity: 1;
+}
+.prompt-exit-active {
+    opacity: 0;
+    transform: translateY(0px);
+    transition: opacity 800ms, transform 800ms;
+}
+
 @media screen and (max-width: 576px){
     .table{
         transform: scale(.95);

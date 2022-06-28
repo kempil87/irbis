@@ -7,6 +7,7 @@
     background: rgba(0,0,0,0.6);
     overflow: hidden;
     z-index: 1300;
+    display: flex;
 }
 .drawer-content::-webkit-scrollbar {
     width: 6px;
@@ -27,6 +28,7 @@
     animation-duration: .7s;
 }
 
+
 @keyframes cart {
     0% {
         transform: translateX(100%);
@@ -35,12 +37,33 @@
         transform: translateX(0);
     }
 }
+
 .drawer-top{
     border-bottom: 3px solid #173460;
 }
 .total-top{
     font-weight: 600;
     font-size: 24px;
+}
+.cart-clear-text{
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: pre-wrap;
+}
+.cart-clear-link{
+    text-decoration: none;
+    padding: 12px 24px;
+    background: rgba(23, 52, 96, 0.85);
+    border-radius: 24px;
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    white-space: pre-wrap;
+    color: white;
+}
+.cart-clear-link:hover{
+    color: rgba(255, 255, 255, 0.7);
 }
 
 @media screen and (max-width: 576px) {

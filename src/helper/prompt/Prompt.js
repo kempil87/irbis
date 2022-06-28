@@ -1,5 +1,6 @@
 import React from 'react';
 import './Prompt.css'
+import {CSSTransition} from "react-transition-group";
 
 const Prompt = ({prompt}) => {
 

@@ -5,6 +5,7 @@ import TableChamp from "../../helper/table/TableChamp";
 import {api} from "../../base/axios";
 import Loader from "../Loader/Loader";
 import Prompt from "../../helper/prompt/Prompt";
+import {CSSTransition} from "react-transition-group";
 
 
 export const Championship = () => {
@@ -14,8 +15,7 @@ export const Championship = () => {
 
   const getMatch = () => {
     api.get('/championship').then((res) => {
-      setMatchDay(res.data.slice(0,2).reverse())
-      console.log(res.data)
+      setMatchDay(res.data.slice(0, 2).reverse())
       setLoader(false)
     })
   }
@@ -66,13 +66,13 @@ export const Championship = () => {
                       {match.place}
                     </div>
                     <div className="game-link-wrap">
-                      {match.photo &&(
-                        <Link  className="d-flex flex-column game-link" to={`/media/${match.photo}`}>
+                      {match.photo && (
+                        <Link className="d-flex flex-column game-link" to={`/media/${match.photo}`}>
                           <span className="material-icons-outlined">photo_camera</span>
                           <h6>Фото</h6>
                         </Link>
                       )}
-                      {match.video &&(
+                      {match.video && (
                         <a className="d-flex flex-column game-link" target="_blank" href={`${match.video}`}>
                           <span className="material-icons-outlined">live_tv</span>
                           <h6>Трансляция</h6>
@@ -108,21 +108,30 @@ export const Championship = () => {
           </div>
         </div>
       )}
-      <div>
+      <div className='prompt'>
         {!prompt ? (
           <>
-            <div onClick={() => setPrompt(true)} style={{color:"white",cursor:"pointer"}} className='d-flex align-items-center justify-content-center'>
+            <div onClick={() => setPrompt(true)} style={{color: "white", cursor: "pointer"}}
+                 className='d-flex align-items-center justify-content-center'>
               Развернуть подсказку
-              <span className="material-symbols-outlined">expand_more</span>
+              {/*<span className="material-symbols-outlined">expand_more</span>*/}
             </div>
           </>
-        ):(
-          <div onClick={() => setPrompt(false)} style={{color:"white",cursor:"pointer"}} className='d-flex align-items-center justify-content-center'>
-          Свернуть подсказку
-          <span className="material-symbols-outlined">expand_less</span>
-        </div>
+        ) : (
+          <div onClick={() => setPrompt(false)} style={{color: "white", cursor: "pointer"}}
+               className='d-flex align-items-center justify-content-center'>
+            Свернуть подсказку
+            {/*<span className="material-symbols-outlined">expand_less</span>*/}
+          </div>
         )}
-        <Prompt prompt={prompt} setPrompt={setPrompt}/>
+        <CSSTransition
+          in={prompt}
+          timeout={800}
+          classNames="prompt"
+          unmountOnExit
+        >
+          <Prompt prompt={prompt} setPrompt={setPrompt}/>
+        </CSSTransition>
       </div>
     </div>
   )

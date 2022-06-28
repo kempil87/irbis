@@ -1,10 +1,10 @@
 import React, { useState} from "react";
 import "./Header.css"
 import {Link, NavLink} from "react-router-dom";
-import {Dropdown, Modal} from "react-bootstrap";
+import { Modal} from "react-bootstrap";
 import 'react-dropdown/style.css';
 
-export const Header = ({showMenu,setShowCart}) => {
+export const Header = ({setShowCart,showMenu}) => {
 
   const logo = "https://xn--m1agla.xn--p1ai/wp-content/uploads/2021/12/Irbis-111x128.png"
 
@@ -18,7 +18,7 @@ export const Header = ({showMenu,setShowCart}) => {
       <div className="header ">
         <div className="header-wrap">
           <div className="header-left">
-            <Link to="/" className="irbis-logo">
+            <Link to="/irbis" className="irbis-logo">
               <img className="irbis-logo" width="111" height="128" alt='irbis-logo'
                    src={logo}/>
             </Link>
@@ -40,25 +40,13 @@ export const Header = ({showMenu,setShowCart}) => {
 
             </div>
             <div className="header-content d-none d-sm-flex">
-              <NavLink to="/" className={({isActive}) => isActive ? "header-alink" : "header-link"}>Главная</NavLink>
+              <NavLink to="/irbis" className={({isActive}) => isActive ? "header-alink" : "header-link"}>Главная</NavLink>
               <NavLink to="/news"
                        className={({isActive}) => isActive ? "header-alink" : "header-link"}>Новости</NavLink>
               <NavLink to="/championship"
                        className={({isActive}) => isActive ? "header-alink" : "header-link"}>Чемпионат</NavLink>
               <NavLink to="/club" className={({isActive}) => isActive ? "header-alink" : "header-link"}>Клуб</NavLink>
-              <Dropdown>
-                <Dropdown.Toggle id="dropdown-basic" className="header-link">
-                  Медиа
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                  <p>
-                    <Link to="/media" className="header-link-drop">Фото</Link>
-                  </p>
-                  <p>
-                    <a href="/media#video" className="header-link-drop">Видео</a>
-                  </p>
-                </Dropdown.Menu>
-              </Dropdown>
+                <NavLink to="/media" className={({isActive}) => isActive ? "header-alink" : "header-link"}>Медиа</NavLink>
               <NavLink to="/shop"
                        className={({isActive}) => isActive ? "header-alink" : "header-link"}>Магазин</NavLink>
               <NavLink to="/partners"
@@ -85,9 +73,6 @@ export const Header = ({showMenu,setShowCart}) => {
           </Modal.Body>
         </Modal>
       </div>
-
-
-
     </div>
   )
 }

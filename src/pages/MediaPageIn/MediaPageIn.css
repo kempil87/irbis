@@ -131,4 +131,12 @@ color: #173460!important;
         font-size: 13px;
 
     }
+    .mediaIn-image{
+        width: 470px;
+        object-fit: cover;
+    }
+    .media-page-video{
+        width: 320px;
+        height: 220px;
+    }
 }

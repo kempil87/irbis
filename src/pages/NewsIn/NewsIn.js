@@ -3,30 +3,35 @@ import {Link, useParams} from "react-router-dom";
 import "./NewsIn.css"
 import {api} from "../../base/axios";
 import Loader from "../../components/Loader/Loader";
+import {useDispatch, useSelector} from "react-redux";
+import {newsSlice} from "../../redux/reducers/NewsSlice";
+import {fetchNews, fetchNewsIn} from "../../redux/actions/newsAction";
 
 const NewsIn = () => {
-    const {_id} = useParams()
+  const {_id} = useParams()
     const [showDes, setShowDes] = useState(false);
-    const [news, setNews] = useState([]);
+    const [newss, setNewss] = useState([]);
     const [shortNews, setShortNews] = useState([]);
     const [loader, setLoader] = useState(true);
+    const dispatch = useDispatch()
+    const {isLoading,news,newsIn,error} = useSelector((state => state.newsReducer))
 
-
-    const getShortNews = () => {
-        api.get(`/news`).then((res) =>{
-            setShortNews(res.data.filter(i => i._id !== _id).slice(0,4))
-            setLoader(false)
-        })
-    }
+    // const getShortNews = () => {
+    //     api.get(`/news`).then((res) =>{
+    //         setShortNews(res.data.filter(i => i._id !== _id).slice(0,4))
+    //         setLoader(false)
+    //     })
+    // }
 
     const getNews = () => {
         api.get(`/news/${_id}`).then((res) =>{
-            setNews(res.data)
+            setNewss(res.data)
         })
     }
 
     useEffect(() => {
-        getShortNews()
+        dispatch(fetchNews())
+        // dispatch(fetchNewsIn())
         getNews()
     }, [_id])
 
@@ -42,26 +47,26 @@ const NewsIn = () => {
                     Назад к новостям
                 </Link>
             </div>
-            {loader ? (
+            {isLoading ? (
               <Loader/>
             ):(
+
               <div className="c d-flex justify-content-around align-items-center flex-column"
                    style={{width: '100%', height: '100%'}}>
-
                   <div className="newsInPage-bottom justify-content-center d-flex flex-column ">
                       <div className="d-flex mb-4 align-items-center">
-                          <div className="newsIn-badge">{news?.badge}</div>
-                          <div className="newsIn-date ">{news?.date}</div>
+                          <div className="newsIn-badge">{newss?.badge}</div>
+                          <div className="newsIn-date ">{newss?.date}</div>
                       </div>
-                      <div className="newsIn-title  mt-2">{news?.title}</div>
+                      <div className="newsIn-title  mt-2">{newss?.title}</div>
 
                       <div className="newsPageIn-top-grad"/>
-                      <img className="newsIn-image d-none d-lg-block" src={news?.image} width="700" height="560" alt="Новость"/>
-                      <img className="newsIn-image d-block d-lg-none" src={news?.image} width="300" height="260" alt="Новость"/>
+                      <img className="newsIn-image d-none d-lg-block" src={newss?.image} width="700" height="560" alt="Новость"/>
+                      <img className="newsIn-image d-block d-lg-none" src={newss?.image} width="300" height="260" alt="Новость"/>
                       <div className="d-flex justify-content-center flex-column align-items-center">
                           {showDes ? (
                             <div className="newsIn-subtitle col-12 ">
-                                {news?.subtitle}
+                                {newss?.subtitle}
                                 <div onClick={() => setShowDes(!showDes)}>
                                     <div className="show-close">
                                         Убрать
@@ -70,16 +75,16 @@ const NewsIn = () => {
                             </div>
                           ) : (
                             <div className="newsIn-subtitle col-12 ">
-                                {news?.shortSubTitle}
+                                {newss?.shortSubTitle}
                                 <div onClick={() => setShowDes(!showDes)}>
                                     <div  className="show-close">Показать полностью </div>
                                 </div>
                             </div>
                           )}
-                          {news?.source ?(
+                          {newss?.source ?(
                             <div className="d-flex flex-column justify-content-center align-items-center">
                                 <h6 style={{color:'#837e7e'}}>Теги :</h6>
-                                <Link className="tags-link"  to={`/club/${news?.source}`}>{news?.tag}</Link>
+                                <Link className="tags-link"  to={`/club/${news?.source}`}>{newss?.tag}</Link>
                             </div>
                           ):(
                             <div className="d-flex flex-column justify-content-center align-items-center">
@@ -110,7 +115,7 @@ const NewsIn = () => {
                   </div>
                   <div className="d-flex flex-wrap ">
 
-                      {shortNews.map(n=>(
+                      {news.filter(i => i._id !== _id).slice(0,4).map(n=>(
                         <Link to={`/news/${n._id}`} key={n._id} className="newsCard-wrap col-12 col-lg-3 mt-4 mb-4 d-flex flex-column ">
                             <div className="d-flex flex-column justify-content-between align-items-center"
                                  style={{width:'100%',height:'100%'}}

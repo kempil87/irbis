@@ -9,6 +9,14 @@ html, body, #root {
     height: 100%;
     /*overflow: hidden;*/
 }
+::-webkit-scrollbar{
+    width: 9px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+::-webkit-scrollbar-thumb{
+    width: 9px;
+    background-color: #9cb1be;
+}
 
 #root {
     width: 100%;

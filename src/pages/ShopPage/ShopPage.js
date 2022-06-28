@@ -3,13 +3,14 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "../../components/Shop/Shop.css"
 import {Link} from "react-router-dom";
-import {api} from "../../base/axios";
 import Loader from "../../components/Loader/Loader";
+import {useDispatch, useSelector} from "react-redux";
+import {fetchShop} from "../../redux/actions/shopAction";
 
 export const ShopPage = () => {
-  const [product, setProduct] = useState([])
-  const [loader, setLoader] = useState(true);
   const [check, setCheck] = useState(false)
+  const dispatch = useDispatch()
+  const {product,isLoading} = useSelector((state => state.shopReducer))
 
   const addToCheck = () => {
     setCheck(!check)
@@ -34,16 +35,9 @@ export const ShopPage = () => {
     }
   };
 
-  const getProduct = () => {
-    api.get('/products').then((res) => {
-      setProduct(res.data)
-      console.log(res.data)
-      setLoader(false)
-    })
-  }
-
   useEffect(() => {
-    getProduct()
+    // getProduct()
+    dispatch(fetchShop())
   }, [])
 
   return (
@@ -59,7 +53,7 @@ export const ShopPage = () => {
           <span className="material-icons-outlined">arrow_right_alt</span>
         </Link>
       </div>
-      {loader ? (
+      {isLoading ? (
         <Loader/>
       ) : (
         <>
@@ -98,30 +92,31 @@ export const ShopPage = () => {
               ))}
             </Carousel>
           </div>
-
-          <div style={{width: '100vw'}} className="d-flex d-lg-none overflow-auto  align-items-center ">
-            {product.map((i) => (
-              <div className=" product-card m-1 " key={i.id}>
-                <div className="d-flex flex-column align-items-center product-top">
-                  <img className="product-img" src={i.image} alt='товар'/>
-                  {i.badge && (<div className="product-badge">{i.badge}</div>)}
-                </div>
-                <div>
-                  <div className="product-name">{i.name}</div>
-                  <div className="d-flex justify-content-between mb-2 align-items-center">
-                    {i.salePrice ? (
-                      <div className="d-flex">
-                        <div className="product-price">{i.salePrice} ₽</div>
-                        <div className="product-salePrice">{i.price} ₽</div>
-                      </div>
-                    ) : (
-                      <div className="product-price">{i.price} ₽</div>
-                    )}
-                    <Link to={`/shop${i.id}`} className="product-btn">Смотреть</Link>
+          <div className='d-flex justify-content-center'>
+            <div style={{width: '100vw'}} className="d-flex d-lg-none overflow-auto align-items-center sm-shop-wrap">
+              {product.map((i) => (
+                <div className=" product-card m-1 " key={i._id}>
+                  <div className="d-flex flex-column align-items-center product-top">
+                    <img className="product-img" src={i.image} alt='товар'/>
+                    {i.badge && (<div className="product-badge">{i.badge}</div>)}
+                  </div>
+                  <div>
+                    <div className="product-name">{i.name}</div>
+                    <div className="d-flex justify-content-between mb-2 align-items-center">
+                      {i.salePrice ? (
+                        <div className="d-flex">
+                          <div className="product-price">{i.salePrice} ₽</div>
+                          <div className="product-salePrice">{i.price} ₽</div>
+                        </div>
+                      ) : (
+                        <div className="product-price">{i.price} ₽</div>
+                      )}
+                      <Link to={`/shop${i.id}`} className="product-btn">Смотреть</Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </>
       )}

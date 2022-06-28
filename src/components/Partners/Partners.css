@@ -10,7 +10,6 @@
 
 .cover {
     width: 115px;
-
     object-fit: contain;
 }
 
@@ -21,12 +20,6 @@
 }
 
 .sponsor-item {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     text-decoration: none;
 }
 
@@ -68,5 +61,8 @@
     .sponsors-banner {
         width: 100px;
         height: 100px;
+    }
+    .sponsor-item {
+        margin: 15px;
     }
 }

@@ -117,7 +117,6 @@ const ClubPage = () => {
                                 key={i._id}>
                             <div className=" top-info-allPlayer">
                               <img className="player-img" src={i.image} alt="//"/>
-                              {/*<img className="player-img-main" src={i.mainImage} alt="//"/>*/}
                               <div className="player-name mb-2">{i.name}</div>
                               <div className="player-position col-10">{i.position}</div>
                             </div>

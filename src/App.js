@@ -19,6 +19,7 @@ import PartnersIn from "./pages/PartnersIn/PartnersIn";
 import {ShopPage} from "./pages/ShopPage/ShopPage";
 import {useLocation} from "react-router";
 import Drawer from "./components/Drawer/Drawer";
+import {OrdersPage} from "./pages/OrdersPage/OrdersPage";
 
 function App() {
   const location = useLocation();
@@ -29,60 +30,24 @@ function App() {
 
   const [openMenu, setOpenMenu] = useState(false)
   const [showCart, setShowCart] = useState(false)
+
   const [cartItems, setCartItems] = useState([
     {
       id: 10001,
       image: "https://sun1-87.userapi.com/impg/zN1Hn4MJo6C06cmB1TdBLdmOL5WpdoqXRPudhg/jM4HTfzIYUg.jpg?size=0x179&crop=0.176,0.071,0.62,0.929&quality=95&sign=3e128d0dca531d39698f098a117b3690",
       price: 3200,
       name: "Футболка ФБК Ирбис",
-      badge: "Хит продаж"
+      badge: "Хит продаж",
+      salePrice:''
     },
     {
       id: 10001,
       image: "https://sun1-87.userapi.com/impg/zN1Hn4MJo6C06cmB1TdBLdmOL5WpdoqXRPudhg/jM4HTfzIYUg.jpg?size=0x179&crop=0.176,0.071,0.62,0.929&quality=95&sign=3e128d0dca531d39698f098a117b3690",
       price: 5200,
       name: "Футболка ФБК Ирбис",
-      badge: "Хит продаж"
-    },
-    {
-      id: 10002,
-      image: "https://sun1-22.userapi.com/impg/0gSIzcDuBGkbnpOvKEB70LP0vkn6Wwi6xMeKEA/cJscfY7Qhn4.jpg?size=179x0&crop=0.016,0.188,0.976,0.651&quality=95&sign=ec7d0bca2f900ab92f9a2140cbad3a90",
-      price: 690,
-      name: "Питьевая бутылка с логотипом клуба Oxdog",
-      badge: "Новинка"
-    },
-    {
-      id: 10003,
-      image: "https://sun1-97.userapi.com/impg/fQDy3509d1jBCWzz3FQ1Ji62zVVUrroJctOYzQ/8Fkej7yY_XE.jpg?size=0x179&crop=0.008,0.008,0.984,0.984&quality=95&sign=fd4b7dce4cae2a7d6ae34455e65d0e52",
-      price: 990,
-      name: "Шарф ФБК Ирбис",
-      badge: "Sale",
-      salePrice: 690
-    },
-    {
-      id: 10003,
-      image: "https://sun1-97.userapi.com/impg/fQDy3509d1jBCWzz3FQ1Ji62zVVUrroJctOYzQ/8Fkej7yY_XE.jpg?size=0x179&crop=0.008,0.008,0.984,0.984&quality=95&sign=fd4b7dce4cae2a7d6ae34455e65d0e52",
-      price: 990,
-      name: "Шарф ФБК Ирбис",
-      badge: "Sale",
-      salePrice: 690
-    },
-    {
-      id: 10003,
-      image: "https://sun1-97.userapi.com/impg/fQDy3509d1jBCWzz3FQ1Ji62zVVUrroJctOYzQ/8Fkej7yY_XE.jpg?size=0x179&crop=0.008,0.008,0.984,0.984&quality=95&sign=fd4b7dce4cae2a7d6ae34455e65d0e52",
-      price: 990,
-      name: "Шарф ФБК Ирбис",
-      badge: "Sale",
-      salePrice: 690
-    },
-    {
-      id: 10003,
-      image: "https://sun1-97.userapi.com/impg/fQDy3509d1jBCWzz3FQ1Ji62zVVUrroJctOYzQ/8Fkej7yY_XE.jpg?size=0x179&crop=0.008,0.008,0.984,0.984&quality=95&sign=fd4b7dce4cae2a7d6ae34455e65d0e52",
-      price: 990,
-      name: "Шарф ФБК Ирбис",
-      badge: "Sale",
-      salePrice: 690
-    },
+      badge: "Хит продаж",
+      salePrice:'4000'
+    }
   ])
 
 
@@ -92,7 +57,7 @@ function App() {
 
       <div className="flex-fill">
         <Routes>
-          <Route path="/" element={<HomePages/>}/>
+          <Route path="/irbis" element={<HomePages/>}/>
           <Route path="/championship" element={<Championship/>}/>
           <Route path="/club/:_id" element={<PlayerIn/>}/>
           <Route path="/club" element={<ClubPage/>}/>
@@ -100,6 +65,7 @@ function App() {
           <Route path="/news/:_id" element={<NewsIn/>}/>
           <Route path="/media/:_id" element={<MediaPageIn/>}/>
           <Route path="/media" element={<MediaPage/>}/>
+          <Route path="/shop/orders" element={<OrdersPage/>}/>
           <Route path="/shop" element={<ShopPage/>}/>
           <Route path="/shop/:_id" element={<ShopPageIn/>}/>
           <Route path="/partners" element={<PartnersIn/>}/>
@@ -116,7 +82,7 @@ function App() {
         <Menu closeMenu={() => setOpenMenu(false)}/>
       )}
       {showCart && (
-        <Drawer items={cartItems} closeCart={() => setShowCart(false)}/>
+        <Drawer showCart={showCart} items={cartItems} closeCart={() =>setShowCart(false)}/>
       )}
 
     </div>

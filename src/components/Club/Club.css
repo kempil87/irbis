@@ -212,6 +212,9 @@
     }
 
     .best-players {
-        margin: .4rem;
+        margin: 12px;
+    }
+    .best-players:nth-child(1) {
+        margin-left:0 ;
     }
 }

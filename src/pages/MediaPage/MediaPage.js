@@ -50,7 +50,7 @@ const MediaPage = () => {
             <h4>Все видео</h4>
             <div className="all-video d-flex overflow-auto container">
               {media.map(v => (
-                <div className="col-12 col-lg-3 m-1">
+                <div key={v._id} className="col-12 col-lg-3 m-1">
                   {v.videoSource !== "" && (
                     <iframe className="m-1" height='170' src={v.videoSource}
                              allow="autoplay; encrypted-media; fullscreen; picture-in-picture;"

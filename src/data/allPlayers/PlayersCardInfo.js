@@ -120,8 +120,10 @@ export const PlayersCardInfo = [
     },
     {
         id: 8,
-        image: "https://sun9-4.userapi.com/s/v1/if2/WL0HC148GXC_1Zb7N1o8VZPJV6AGiC8FPg_vd98X1iBsRtA42Q7ChjULuIQ-WYhoRzL8LNJFA31fVWdvFYUEQoIv.jpg?size=456x682&quality=95&type=album",
-        mainImage: "https://sun1-97.userapi.com/s/v1/if2/ArtkC-n9C93bMt7SqxD43KQypEXUUghLhmJRmDDEXIgUK7gZv1lOosvHYCatt47Xf8T8x7RzYM6tRNIB5jcE2BlB.jpg?size=212x263&quality=95&type=album",
+        image: `https://sun9-4.userapi.com/s/v1/if2/WL0HC148GXC_1Zb7N1o8VZPJV6AGiC8FPg_vd98X1iBsRtA42Q
+        7ChjULuIQ-WYhoRzL8LNJFA31fVWdvFYUEQoIv.jpg?size=456x682&quality=95&type=album`,
+        mainImage: `https://sun1-97.userapi.com/s/v1/if2/ArtkC-n9C93bMt7SqxD43KQypEXUUghLhmJRmDDEXIgUK7gZv
+        1lOosvHYCatt47Xf8T8x7RzYM6tRNIB5jcE2BlB.jpg?size=212x263&quality=95&type=album`,
         number: 8,
         name: "Екимов Артём ",
         position: "Защитник",

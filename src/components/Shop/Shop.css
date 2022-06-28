@@ -186,4 +186,11 @@
     .product-salePrice {
         width: 60px;
     }
+     .sm-shop-wrap::-webkit-scrollbar {
+       display: none;
+    }
+
+     .sm-shop-wrap::-webkit-scrollbar-thumb {
+        display: none;
+    }
 }

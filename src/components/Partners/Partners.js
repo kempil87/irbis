@@ -1,21 +1,19 @@
 import React from "react";
 import "./Partners.css"
+import OxdogSvg from "../../assets/OxdogSvg";
 
 export const Partners = () => {
     return (
         <div className="partners ">
             <h4 className="page-tittle-partners col-9 col-lg-12">Партнеры и спонсоры ФБК Ирбис</h4>
-            <div className="row justify-content-center justify-content-md-between align-items-center container ">
+            <div className="d-flex flex-wrap justify-content-center justify-content-md-between align-items-center container ">
                 <a href="https://www.radiorecord.ru/" target={"_blank"} className="sponsor-item">
                     <img className="cover"
                          src="https://2sticker.ru/wa-data/public/shop/products/04/webp/86/12/1286/images/3604/3604.750.webp"
                          alt='sponsor'/>
-
                 </a>
                 <a href="https://www.oxdog.net/" target={"_blank"} className="sponsor-item">
-                    <img className="cover"
-                         src="https://mass-images.pro/files/preview/4/10/df8985ae264d4f5939ba363d4a84e29d.png?1655376935712"
-                         alt='sponsor'/>
+                    <OxdogSvg/>
                 </a>
                 <a href="https://suvarionline.ru/" target={"_blank"} className="sponsor-item">
                     <img className="cover"

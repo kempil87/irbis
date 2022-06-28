@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const BagPage = () => {
+export const OrdersPage = () => {
   return (
     <div>
-      BagPage
+      OrdersPage
     </div>
   );
 };
