@@ -124,14 +124,7 @@ export const Championship = () => {
             {/*<span className="material-symbols-outlined">expand_less</span>*/}
           </div>
         )}
-        <CSSTransition
-          in={prompt}
-          timeout={800}
-          classNames="prompt"
-          unmountOnExit
-        >
           <Prompt prompt={prompt} setPrompt={setPrompt}/>
-        </CSSTransition>
       </div>
     </div>
   )

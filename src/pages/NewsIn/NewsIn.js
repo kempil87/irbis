@@ -6,6 +6,82 @@ import Loader from "../../components/Loader/Loader";
 import {useDispatch, useSelector} from "react-redux";
 import {newsSlice} from "../../redux/reducers/NewsSlice";
 import {fetchNews, fetchNewsIn} from "../../redux/actions/newsAction";
+import {Rating} from "@mui/material";
+
+const commentList = [
+  {
+    id:1,
+  comment:'С днем рождения владик,удачи !!',
+    date:'13.06.2022',
+    user:{
+      avatar:'https://photos.wbstatic.net/img/10079512/small/PersonalPhoto.jpg?timer=1659260267682',
+      name:'Наиля',
+      rating:4
+    }
+  },
+  {
+    id:12,
+  comment:'С днем рождения владик,удачи !!',
+    date:'13.06.2022',
+    user:{
+      avatar:'https://photos.wbstatic.net/img/10079512/small/PersonalPhoto.jpg?timer=1659260267682',
+      name:'Наиля',
+      rating:4
+    }
+  },
+  {
+    id:123,
+  comment:'С днем рождения владик,удачи !!',
+    date:'13.06.2022',
+    user:{
+      avatar:'https://photos.wbstatic.net/img/10079512/small/PersonalPhoto.jpg?timer=1659260267682',
+      name:'Наиля',
+      rating:4
+    }
+  },
+  {
+    id:2,
+  comment:'С днем рождения владик,удачи !!',
+    date:'13.06.2022',
+    user:{
+      avatar:'https://photos.wbstatic.net/img/10079512/small/PersonalPhoto.jpg?timer=1659260267682',
+      name:'Наиля',
+      rating:2
+    }
+  },
+  {
+    id:3,
+  comment:'С днем рождения владик,удачи !!',
+    date:'13.06.2022',
+    user:{
+      avatar:'https://photos.wbstatic.net/img/10079512/small/PersonalPhoto.jpg?timer=1659260267682',
+      name:'Наиля',
+      rating:4
+    }
+  },
+  {
+    id:4,
+  comment:'С днем рождения владик,удачи !!',
+    date:'13.06.2022',
+    user:{
+      avatar:'https://photos.wbstatic.net/img/10079512/small/PersonalPhoto.jpg?timer=1659260267682',
+      name:'Наиля',
+      rating:5
+    }
+  },
+  {
+    id:5,
+  comment:'С днем рождения владик,удачи !!',
+    date:'13.06.2022',
+    user:{
+      avatar:'https://photos.wbstatic.net/img/10079512/small/PersonalPhoto.jpg?timer=1659260267682',
+      name:'Наиля',
+      rating:4
+    }
+  },
+]
+
+
 
 const NewsIn = () => {
   const {_id} = useParams()
@@ -134,6 +210,17 @@ const NewsIn = () => {
                         </Link>
                       ))}
                   </div>
+                <div className='d-flex overflow-auto mb-5'>
+                  {commentList.map((com) => (
+                      <div key={com.id} className='m-3 col-sm-12 col-lg-3 '>
+                        <h6>{com.comment}</h6>
+                        <h6 style={{fontSize:13,color:'grey'}}>{com.date}</h6>
+                        <h6>{com.user.name}</h6>
+                        <img style={{objectFit:'contain',borderRadius:'50%',width:60,marginRight:14}} src={com.user.avatar} alt={'user.avatar'}/>
+                        <Rating name="read-only" value={com.user.rating} readOnly />
+                      </div>
+                  ))}
+                </div>
               </div>
             )}
 

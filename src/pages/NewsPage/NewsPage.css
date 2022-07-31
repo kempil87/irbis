@@ -18,6 +18,10 @@
     color: black;
     transition: ease-in-out .3s;
 }
+.newsCard-wrap:hover img{
+    transform: scale(1.03);
+    transition: .3s linear;
+}
 
 .newsHome-tittle {
     color: #173460;
@@ -30,15 +34,15 @@
     height: 310px;
 }
 
-.newsPage-top:hover img {
-    transform: translate(0, -5px);
-    transition: ease-in-out .2s;
-}
+/*.newsPage-top:hover img {*/
+/*    transform: translate(0, -5px);*/
+/*    transition: ease-in-out .2s;*/
+/*}*/
 
-.newsPage-top:hover .news-badge {
-    transform: translate(0, -5px);
-    transition: ease-in-out .2s;
-}
+/*.newsPage-top:hover .news-badge {*/
+/*    transform: translate(0, -5px);*/
+/*    transition: ease-in-out .2s;*/
+/*}*/
 
 .newsPage-top-grad {
     /*background: linear-gradient(270deg, #173460, white);*/

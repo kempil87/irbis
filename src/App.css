@@ -11,10 +11,12 @@ html, body, #root {
 }
 ::-webkit-scrollbar{
     width: 9px;
+    height: 9px;
     background-color: rgba(0, 0, 0, 0.6);
 }
 ::-webkit-scrollbar-thumb{
     width: 9px;
+    height: 9px;
     background-color: #9cb1be;
 }
 

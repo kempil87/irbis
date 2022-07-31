@@ -6,7 +6,8 @@ import Loader from "../../components/Loader/Loader";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchNews} from "../../redux/actions/newsAction";
 import {newsSlice} from "../../redux/reducers/NewsSlice";
-
+import {IconButton, InputAdornment, TextField} from "@mui/material";
+import ClearRoundedIcon from '@mui/icons-material/ClearRounded';
 const NewsPage = () => {
 
   const [showMore, setShowMore] = useState(true);
@@ -33,17 +34,29 @@ const NewsPage = () => {
     <div className="newsPage-wrap container">
       <div className='d-flex justify-content-between align-items-center'>
         <h4 className="newsHome-tittle mt-4">Все новости</h4>
-        <div className="input-group">
-          <input
+        {/*<div className="input-group">*/}
+          <TextField
             type="text"
+            label='Поиск новостей'
+            color={'primary'}
+            sx={{height:30}}
             value={searchNews}
-            onChange={(e) => dispatch(filterNews(e.target.value))} required/>
-          <span className="placeholder">Поиск новостей...</span>
-          {searchNews && (
-            <div className='position-absolute del-news'
-                 onClick={clear}>X</div>
-          )}
-        </div>
+            onChange={(e) => dispatch(filterNews(e.target.value))}
+            InputProps={{
+              endAdornment:(
+                <InputAdornment position="end">
+                  {searchNews && (
+                  <IconButton onClick={() => dispatch(clearFieldsNews(''))}>
+                      <ClearRoundedIcon/>
+                  </IconButton>
+                  )}
+                </InputAdornment>
+              )
+            }}
+          />
+          {/*<span className="placeholder">Поиск новостей...</span>*/}
+
+        {/*</div>*/}
       </div>
 
       {isLoading ? (
@@ -51,8 +64,7 @@ const NewsPage = () => {
       ) : (
         <>
           {filterNewsData.length === 0 ? (
-            <h5 style={{height: '70vh', marginLeft: 400}}
-                className='d-flex justify-content-between align-items-center'>По вашему запросу ничего не найдено
+            <h5 className='d-flex justify-content-between align-items-center mt-5'>По вашему запросу ничего не найдено
               :(</h5>
           ) : (
             <>
@@ -68,7 +80,9 @@ const NewsPage = () => {
                     <div className="d-flex flex-column justify-content-between align-items-center"
                          style={{width: '100%', height: '100%'}}>
                       <div className="newsPage-top d-flex  justify-content-center">
-                        <img className="news-image" src={n.image} alt="Новость"/>
+                        <div style={{overflow:'hidden',width:334,height:315 }}>
+                          <img className="news-image" src={n.image} alt="Новость"/>
+                        </div>
                         <div className="news-badge">{n.badge}</div>
                       </div>
                       <div className="newsPage-bottom d-flex flex-column  justify-content-center">

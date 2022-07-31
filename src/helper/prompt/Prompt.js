@@ -32,8 +32,7 @@ const Prompt = ({prompt}) => {
   ]
 
   return (
-    <div className='container prompt-wrap'>
-      {prompt &&(
+    <div className={prompt ? 'container prompt-wrap opacity-100 ':'container prompt-wrap opacity-0 '}>
         <div className='d-flex flex-wrap mt-3'>
           {promptItem.map((i,index) =>(
             <div key={index} className='col-3 d-flex flex-column justify-content-center '>
@@ -42,7 +41,6 @@ const Prompt = ({prompt}) => {
             </div>
           ))}
         </div>
-      )}
     </div>
   );
 };
