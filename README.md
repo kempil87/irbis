@@ -2,7 +2,53 @@
 
 https://kempil87.github.io/
 
+for chartJs 
 
+const options = {
+    responsive: true,
+    borderRadius:14,
+    borderSkipped:false,
+    barThickness: 28,
+    scales: {
+      xAxis: {
+
+        grid:{
+          display:false,
+          drawBorder:false
+        },
+
+      },
+      yAxis: {
+        ticks: {
+          display: false,
+        },
+        grid:{
+          display:false,
+
+          drawBorder:false
+        }
+      },
+    },
+    plugins: {
+      legend: {
+        display: false
+      },
+      tooltip: {
+        backgroundColor:'rgba(0,0,0,0.7)',
+        titleColor:'#2effbe',
+        // position:'top',
+        padding:6,
+        bodyColor:'#9bc7b1',
+        displayColors:false,
+        callbacks: {
+          label: function(context) {
+            // Залогай context . там много интересного
+            return  context?.formattedValue
+          }
+        },
+      }
+    }
+  };
 
 # Getting Started with Create React App
 
